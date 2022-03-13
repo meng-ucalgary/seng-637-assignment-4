@@ -502,53 +502,53 @@ public class DataUtilitiesTest {
         assertEquals(5.23, result, .000000001d);
     }
 
-    @Test
-    public void calculateRowTotalFirstRowInvalidColumnBLB() {
-        mockingContext.checking(new Expectations() {
-            {
-                one(values).getColumnCount();
-                will(returnValue(3));
-            }
-        });
+//    @Test
+//    public void calculateRowTotalFirstRowInvalidColumnBLB() {
+//        mockingContext.checking(new Expectations() {
+//            {
+//                one(values).getColumnCount();
+//                will(returnValue(3));
+//            }
+//        });
+//
+//        double result = DataUtilities.calculateRowTotal(values, 0, new int[] { -1 });
+//        assertEquals(0, result, .000000001d);
+//    }
 
-        double result = DataUtilities.calculateRowTotal(values, 0, new int[] { -1 });
-        assertEquals(0, result, .000000001d);
-    }
+//    @Test
+//    public void calculateRowTotalMaxRowsMaxColumn() {
+//        mockingContext.checking(new Expectations() {
+//            {
+//                one(values).getColumnCount();
+//                will(returnValue(3));
+//                one(values).getValue(Integer.MAX_VALUE, 0);
+//                will(returnValue(7.16));
+//                one(values).getValue(Integer.MAX_VALUE, Integer.MAX_VALUE);
+//                will(returnValue(3.14));
+//            }
+//        });
+//
+//        double result = DataUtilities.calculateRowTotal(values, Integer.MAX_VALUE, new int[] { 0, Integer.MAX_VALUE });
+//        assertEquals(10.3, result, .000000001d);
+//    }
 
-    @Test
-    public void calculateRowTotalMaxRowsMaxColumn() {
-        mockingContext.checking(new Expectations() {
-            {
-                one(values).getColumnCount();
-                will(returnValue(3));
-                one(values).getValue(Integer.MAX_VALUE, 0);
-                will(returnValue(7.16));
-                one(values).getValue(Integer.MAX_VALUE, Integer.MAX_VALUE);
-                will(returnValue(3.14));
-            }
-        });
-
-        double result = DataUtilities.calculateRowTotal(values, Integer.MAX_VALUE, new int[] { 0, Integer.MAX_VALUE });
-        assertEquals(10.3, result, .000000001d);
-    }
-
-    @Test
-    public void calculateRowTotalBelowMaxRowsBelowMaxColumn() {
-        mockingContext.checking(new Expectations() {
-            {
-                one(values).getColumnCount();
-                will(returnValue(3));
-                one(values).getValue(Integer.MAX_VALUE - 1, 0);
-                will(returnValue(7.16));
-                one(values).getValue(Integer.MAX_VALUE - 1, Integer.MAX_VALUE - 1);
-                will(returnValue(3.14));
-            }
-        });
-
-        double result = DataUtilities.calculateRowTotal(values, Integer.MAX_VALUE - 1,
-                new int[] { 0, Integer.MAX_VALUE - 1 });
-        assertEquals(10.3, result, .000000001d);
-    }
+//    @Test
+//    public void calculateRowTotalBelowMaxRowsBelowMaxColumn() {
+//        mockingContext.checking(new Expectations() {
+//            {
+//                one(values).getColumnCount();
+//                will(returnValue(3));
+//                one(values).getValue(Integer.MAX_VALUE - 1, 0);
+//                will(returnValue(7.16));
+//                one(values).getValue(Integer.MAX_VALUE - 1, Integer.MAX_VALUE - 1);
+//                will(returnValue(3.14));
+//            }
+//        });
+//
+//        double result = DataUtilities.calculateRowTotal(values, Integer.MAX_VALUE - 1,
+//                new int[] { 0, Integer.MAX_VALUE - 1 });
+//        assertEquals(10.3, result, .000000001d);
+//    }
 
     @Test
     public void calculateRowTotalWithMaxValue() {
@@ -1057,54 +1057,54 @@ public class DataUtilitiesTest {
         assertEquals(0, result, .000000001d);
     }
 
-    @Test
-    public void calculateColumnTotalInvalidRowBLBFirstColumn() {
-        mockingContext.checking(new Expectations() {
-            {
-                one(values).getRowCount();
-                will(returnValue(3));
-            }
-        });
+//    @Test
+//    public void calculateColumnTotalInvalidRowBLBFirstColumn() {
+//        mockingContext.checking(new Expectations() {
+//            {
+//                one(values).getRowCount();
+//                will(returnValue(3));
+//            }
+//        });
+//
+//        double result = DataUtilities.calculateColumnTotal(values, 0, new int[] { -1 });
+//        assertEquals(0, result, .000000001d);
+//    }
 
-        double result = DataUtilities.calculateColumnTotal(values, 0, new int[] { -1 });
-        assertEquals(0, result, .000000001d);
-    }
+//    @Test
+//    public void calculateColumnTotalMaxRowsMaxColumn() {
+//        mockingContext.checking(new Expectations() {
+//            {
+//                one(values).getRowCount();
+//                will(returnValue(3));
+//                one(values).getValue(0, Integer.MAX_VALUE);
+//                will(returnValue(2.5));
+//                one(values).getValue(Integer.MAX_VALUE, Integer.MAX_VALUE);
+//                will(returnValue(5.0));
+//            }
+//        });
+//
+//        double result = DataUtilities.calculateColumnTotal(values, Integer.MAX_VALUE,
+//                new int[] { 0, Integer.MAX_VALUE });
+//        assertEquals(7.5, result, .000000001d);
+//    }
 
-    @Test
-    public void calculateColumnTotalMaxRowsMaxColumn() {
-        mockingContext.checking(new Expectations() {
-            {
-                one(values).getRowCount();
-                will(returnValue(3));
-                one(values).getValue(0, Integer.MAX_VALUE);
-                will(returnValue(2.5));
-                one(values).getValue(Integer.MAX_VALUE, Integer.MAX_VALUE);
-                will(returnValue(5.0));
-            }
-        });
-
-        double result = DataUtilities.calculateColumnTotal(values, Integer.MAX_VALUE,
-                new int[] { 0, Integer.MAX_VALUE });
-        assertEquals(7.5, result, .000000001d);
-    }
-
-    @Test
-    public void calculateColumnTotalBelowMaxRowsBelowMaxColumn() {
-        mockingContext.checking(new Expectations() {
-            {
-                one(values).getRowCount();
-                will(returnValue(3));
-                one(values).getValue(0, Integer.MAX_VALUE - 1);
-                will(returnValue(2.5));
-                one(values).getValue(Integer.MAX_VALUE - 1, Integer.MAX_VALUE - 1);
-                will(returnValue(5.0));
-            }
-        });
-
-        double result = DataUtilities.calculateColumnTotal(values, Integer.MAX_VALUE - 1,
-                new int[] { 0, Integer.MAX_VALUE - 1 });
-        assertEquals(7.5, result, .000000001d);
-    }
+//    @Test
+//    public void calculateColumnTotalBelowMaxRowsBelowMaxColumn() {
+//        mockingContext.checking(new Expectations() {
+//            {
+//                one(values).getRowCount();
+//                will(returnValue(3));
+//                one(values).getValue(0, Integer.MAX_VALUE - 1);
+//                will(returnValue(2.5));
+//                one(values).getValue(Integer.MAX_VALUE - 1, Integer.MAX_VALUE - 1);
+//                will(returnValue(5.0));
+//            }
+//        });
+//
+//        double result = DataUtilities.calculateColumnTotal(values, Integer.MAX_VALUE - 1,
+//                new int[] { 0, Integer.MAX_VALUE - 1 });
+//        assertEquals(7.5, result, .000000001d);
+//    }
 
     @Test
     public void calculateColumnTotalWithMaxValue() {
