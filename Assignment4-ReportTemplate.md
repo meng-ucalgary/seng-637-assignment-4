@@ -12,10 +12,10 @@
 - [A discussion on the effect of equivalent mutants on mutation score accuracy](#a-discussion-on-the-effect-of-equivalent-mutants-on-mutation-score-accuracy)
 - [A discussion of what could have been done to improve the mutation score of the test suites](#a-discussion-of-what-could-have-been-done-to-improve-the-mutation-score-of-the-test-suites)
 - [Need for mutation testing](#need-for-mutation-testing)
-- [Explain your SELENUIM test case design process](#explain-your-SELENUIM-test-case-design-process)
+- [Explain your SELENUIM test case design process](#explain-your-selenium-test-case-design-process)
 - [Explain the use of assertions and checkpoints](#explain-the-use-of-assertions-and-checkpoints)
 - [How did you test each functionaity with different test data](#how-did-you-test-each-functionaity-with-different-test-data)
-- [Selenium vs Sikulix](#selenium-vs-Sikulix)
+- [Selenium vs Sikulix](#selenium-vs-sikulix)
 - [Division of team work](#division-of-team-work)
 - [Difficulties, challenges, and lessons learned](#difficulties-challenges-and-lessons-learned)
 - [Comments and feedback](#comments-and-feedback)
@@ -25,11 +25,47 @@
 
 ## Video demo
 
-Link to the video demonstration of coverage metrics is _TBA_.
+Link to the video demonstration of killed/surviving mutants and is _TBA_.
 
 ## Analysis of 10 mutants of the Range class
 
 ## Mutation score and statistics
+
+After commenting out failing test cases in Assignment 3, we ran mutation tests on `Range` and `DataUtilities`.
+
+- **Mutation score of Range - before**
+
+   <img src="images/Range_Mutants_Score_Before.png" alt="Range_Mutants_Score_Before" width="600" style="border: 1px solid black">
+
+- **Mutation statistics of Range - before**
+
+   <img src="images/Range_Mutants_Statistics_Before.png" alt="Range_Mutants_Statistics_Before" height="250" style="border: 1px solid black">
+
+- **Mutation score of DataUtilities - before**
+
+   <img src="images/DataUtilities_Mutants_Score_Before.png" alt="DataUtilities_Mutants_Score_Before" width="600" style="border: 1px solid black">
+
+- **Mutation statistics of DataUtilities - before**
+
+   <img src="images/DataUtilities_Mutants_Statistics_Before.png" alt="DataUtilities_Mutants_Statistics_Before" height="400" style="border: 1px solid black">
+
+After adding more test cases, we again ran mutation tests on `Range` and `DataUtilities`.
+
+- **Mutation score of Range - after**
+
+   <img src="images/Range_Mutants_Score_After.png" alt="Range_Mutants_Score_After" height="60" style="border: 1px solid black">
+
+- **Mutation statistics of Range - after**
+
+   <img src="images/Range_Mutants_Statistics_After.png" alt="Range_Mutants_Statistics_After" height="250" style="border: 1px solid black">
+
+- **Mutation score of DataUtilities - after**
+
+   <img src="images/DataUtilities_Mutants_Score_After.png" alt="DataUtilities_Mutants_Score_After" height="60" style="border: 1px solid black">
+
+- **Mutation statistics of DataUtilities - after**
+
+   <img src="images/DataUtilities_Mutants_Statistics_After.png" alt="DataUtilities_Mutants_Statistics_After" height="250" style="border: 1px solid black">
 
 ## Analysis drawn on the effectiveness of each of the test classes
 
@@ -62,7 +98,7 @@ Mutation testing is required to test the effectiveness of the test suite. It pro
 
 ## Explain the use of assertions and checkpoints
 
-## how did you test each functionaity with different test data
+## How did you test each functionaity with different test data
 
 ## Selenium vs Sikulix
 
