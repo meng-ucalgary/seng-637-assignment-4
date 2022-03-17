@@ -1,4 +1,4 @@
-# SENG-637 Assignment 3
+# SENG-637 Assignment 4
 
 **Topic** - Mutation Testing and Web app testing
 
@@ -35,37 +35,37 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
 - **Mutation score of Range - before**
 
-   <img src="images/Range_Mutants_Score_Before.png" alt="Range_Mutants_Score_Before" width="600" style="border: 1px solid black">
+  ![Range_Mutants_Score_Before](images/Range_Mutants_Score_Before.png)
 
 - **Mutation statistics of Range - before**
 
-   <img src="images/Range_Mutants_Statistics_Before.png" alt="Range_Mutants_Statistics_Before" height="250" style="border: 1px solid black">
+  ![Range_Mutants_Statistics_Before](images/Range_Mutants_Statistics_Before.png)
 
 - **Mutation score of DataUtilities - before**
 
-   <img src="images/DataUtilities_Mutants_Score_Before.png" alt="DataUtilities_Mutants_Score_Before" width="600" style="border: 1px solid black">
+  ![DataUtilities_Mutants_Score_Before](images/DataUtilities_Mutants_Score_Before.png)
 
 - **Mutation statistics of DataUtilities - before**
 
-   <img src="images/DataUtilities_Mutants_Statistics_Before.png" alt="DataUtilities_Mutants_Statistics_Before" height="400" style="border: 1px solid black">
+  ![DataUtilities_Mutants_Statistics_Before](images/DataUtilities_Mutants_Statistics_Before.png)
 
 After adding more test cases, we again ran mutation tests on `Range` and `DataUtilities`.
 
 - **Mutation score of Range - after**
 
-   <img src="images/Range_Mutants_Score_After.png" alt="Range_Mutants_Score_After" height="60" style="border: 1px solid black">
+  ![Range_Mutants_Score_After](images/Range_Mutants_Score_After.png)
 
 - **Mutation statistics of Range - after**
 
-   <img src="images/Range_Mutants_Statistics_After.png" alt="Range_Mutants_Statistics_After" height="250" style="border: 1px solid black">
+  ![Range_Mutants_Statistics_After](images/Range_Mutants_Statistics_After.png)
 
 - **Mutation score of DataUtilities - after**
 
-   <img src="images/DataUtilities_Mutants_Score_After.png" alt="DataUtilities_Mutants_Score_After" height="60" style="border: 1px solid black">
+  ![DataUtilities_Mutants_Score_After](images/DataUtilities_Mutants_Score_After.png)
 
 - **Mutation statistics of DataUtilities - after**
 
-   <img src="images/DataUtilities_Mutants_Statistics_After.png" alt="DataUtilities_Mutants_Statistics_After" height="250" style="border: 1px solid black">
+  ![DataUtilities_Mutants_Statistics_After](images/DataUtilities_Mutants_Statistics_After.png)
 
 ## Analysis drawn on the effectiveness of each of the test classes
 
