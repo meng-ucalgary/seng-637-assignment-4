@@ -195,17 +195,23 @@ public class RangeTest {
     public void intersectsWithInput0And0() {
         assertTrue(this.exampleRange.intersects(0, 0));
     }
+    
+    
 
-//    @Test
-//    public void intersectsWithInputNaNAnd1() {
-//        assertTrue(this.exampleRange.intersects(Double.NaN, 1));
-//    }
+    @Test
+    public void intersectsWithInputNaNAnd1() {
+        assertFalse(this.exampleRange.intersects(Double.NaN, 1));
+    }
 
     // new test cases ---------------------------------------------------------
-//    @Test
-//    public void intersectsWithReverse() {
-//        assertTrue(this.exampleRange.intersects(-6, -9));
-//    }
+    @Test
+    public void intersectsWithReverse() {
+        assertFalse(this.exampleRange.intersects(-6, -9));
+    }
+    @Test
+    public void intersectsWithSameNumber() {
+        assertFalse(this.exampleRange.intersects('@', '@'));
+    }
     // ------------------------------------------------------------------------
 
     // test cases for expandToInclude -----------------------------------------
