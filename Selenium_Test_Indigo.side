@@ -7,21 +7,21 @@
     "id": "cf75c910-1cfd-4833-964d-51a1602e0fd8",
     "name": "Login_1_incorrect_password",
     "commands": [{
-      "id": "d633a931-a574-460e-8b70-84d38e074696",
+      "id": "4fcdbb61-c944-4452-bb10-50ccd7a0627f",
       "comment": "",
       "command": "open",
       "target": "/en-ca/",
       "targets": [],
       "value": ""
     }, {
-      "id": "681c033d-3249-41ed-9c8c-e50e817a2953",
+      "id": "26ec333c-e783-4e82-bb96-20406f709ece",
       "comment": "",
       "command": "setWindowSize",
-      "target": "946x708",
+      "target": "989x740",
       "targets": [],
       "value": ""
     }, {
-      "id": "b65e073b-4fce-4bc0-b6f8-45998bbfe93b",
+      "id": "eec388d8-6b64-4266-b0d9-b9d9a4363d5f",
       "comment": "",
       "command": "click",
       "target": "css=.hamburger-menu__button > .site-header__icon-svg",
@@ -30,22 +30,22 @@
       ],
       "value": ""
     }, {
-      "id": "cbd2c829-130b-4612-9350-bb0f337da694",
+      "id": "f476ff57-5692-40a1-85c8-ec93487978d9",
       "comment": "",
       "command": "click",
       "target": "css=.hamburger-menu__sign-in-link",
       "targets": [
         ["css=.hamburger-menu__sign-in-link", "css:finder"],
         ["xpath=//a[contains(text(),'sign in')]", "xpath:link"],
-        ["xpath=//div[@id='react_BcIOhfn7UkSiirXNOCRisw']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//div[@id='react_bqAwmNgVKUeGAqur4UuG1w']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/sign-in.html?link-usage=Header%3A%20sign%20in&ReturnUrl=https%3A%2F%2Fwww.chapters.indigo.ca%2Fen-ca%2F')]", "xpath:href"],
         ["xpath=//div[2]/div/div[2]/div/div/a", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "bcc75770-9f4c-49f7-8134-d9f7335df94f",
+      "id": "52fccdde-ffe1-4255-9cca-b0cc4feb5020",
       "comment": "",
-      "command": "type",
+      "command": "click",
       "target": "id=sign-in-email",
       "targets": [
         ["id=sign-in-email", "id"],
@@ -55,9 +55,9 @@
         ["xpath=//div[@id='sign-in-create-account-section']/div/div/form/div[2]/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "sengassignment@mail.com"
+      "value": ""
     }, {
-      "id": "c8650d73-65c8-4804-acf4-edd59226bd5f",
+      "id": "acfa7ad7-f7e2-4c11-bed9-1e754d58d064",
       "comment": "",
       "command": "click",
       "target": "id=sign-in-password",
@@ -71,7 +71,7 @@
       ],
       "value": ""
     }, {
-      "id": "89c43cf9-60a1-4e87-baaa-1dc71ab920a8",
+      "id": "47936e41-fc05-4fb2-8f7b-446c8e330fdb",
       "comment": "",
       "command": "type",
       "target": "id=sign-in-password",
@@ -83,9 +83,9 @@
         ["xpath=//div[@id='sign-in-create-account-section']/div/div/form/div[3]/input", "xpath:idRelative"],
         ["xpath=//div[3]/input", "xpath:position"]
       ],
-      "value": "incorrectpassword"
+      "value": "invalidpassword"
     }, {
-      "id": "06ab6a33-f7ae-4feb-a583-b71a6853b68e",
+      "id": "9c28e893-70da-40f5-af13-448ca78cd140",
       "comment": "",
       "command": "click",
       "target": "css=.button",
@@ -97,14 +97,14 @@
       ],
       "value": ""
     }, {
-      "id": "892d432a-0a1c-4a52-bb41-7987e0007f9a",
+      "id": "5d7ca62c-048c-46d1-8e33-55b37b718b0e",
       "comment": "",
       "command": "runScript",
-      "target": "window.scrollTo(0,320.79998779296875)",
+      "target": "window.scrollTo(0,286.3999938964844)",
       "targets": [],
       "value": ""
     }, {
-      "id": "4566a910-9601-4e74-ac39-8566c1bb5dd3",
+      "id": "e84de627-bb9a-48db-8e7a-99c62522e658",
       "comment": "",
       "command": "verifyText",
       "target": "css=.form__errors-list-item",
@@ -116,7 +116,7 @@
       ],
       "value": "Incorrect email address and/or password"
     }, {
-      "id": "aef43e86-8af5-4d32-99f1-74b981d6619b",
+      "id": "710141e6-5aef-45d9-8126-91c51b75de63",
       "comment": "",
       "command": "close",
       "target": "",
@@ -127,21 +127,21 @@
     "id": "5416d6fa-773c-4148-8e36-45789a21d4df",
     "name": "Login_2_correct_password",
     "commands": [{
-      "id": "ad3754e7-61dd-466c-8f32-9ead8d223893",
+      "id": "8fb65c77-7c3c-4a7e-bb74-0a9109401f7b",
       "comment": "",
       "command": "open",
       "target": "/en-ca/",
       "targets": [],
       "value": ""
     }, {
-      "id": "481d4f53-3eaf-49ca-b142-25b211f7b992",
+      "id": "8b97204f-b4fe-41e9-afc6-f9e637dd6406",
       "comment": "",
       "command": "setWindowSize",
-      "target": "946x708",
+      "target": "1022x736",
       "targets": [],
       "value": ""
     }, {
-      "id": "8d98db6b-f4c3-419a-a7c3-37b6a84e944a",
+      "id": "5be45ca8-296f-422e-aaae-8f1e30bf2ac5",
       "comment": "",
       "command": "click",
       "target": "css=.hamburger-menu__button > .site-header__icon-svg",
@@ -150,20 +150,20 @@
       ],
       "value": ""
     }, {
-      "id": "d299df9f-4548-47cc-87f1-13c1f954732b",
+      "id": "03e99d19-aaf4-46fa-bf10-4ef032d4abcd",
       "comment": "",
       "command": "click",
       "target": "css=.hamburger-menu__sign-in-link",
       "targets": [
         ["css=.hamburger-menu__sign-in-link", "css:finder"],
         ["xpath=//a[contains(text(),'sign in')]", "xpath:link"],
-        ["xpath=//div[@id='react_BcIOhfn7UkSiirXNOCRisw']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//div[@id='react_2DyQr1IPl0OgmXEj8x1Uiw']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/sign-in.html?link-usage=Header%3A%20sign%20in&ReturnUrl=https%3A%2F%2Fwww.chapters.indigo.ca%2Fen-ca%2F')]", "xpath:href"],
         ["xpath=//div[2]/div/div[2]/div/div/a", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "b9f47ed3-a3bd-4b51-b384-25e8b5faa000",
+      "id": "647c0927-842c-46ae-8233-465837f495f9",
       "comment": "",
       "command": "click",
       "target": "id=sign-in-email",
@@ -177,21 +177,7 @@
       ],
       "value": ""
     }, {
-      "id": "62b05314-8220-4245-9bdc-deca12c11f0a",
-      "comment": "",
-      "command": "type",
-      "target": "id=sign-in-email",
-      "targets": [
-        ["id=sign-in-email", "id"],
-        ["name=email", "name"],
-        ["css=#sign-in-email", "css:finder"],
-        ["xpath=//input[@id='sign-in-email']", "xpath:attributes"],
-        ["xpath=//div[@id='sign-in-create-account-section']/div/div/form/div[2]/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "sengassignment@mail.com"
-    }, {
-      "id": "0259442b-b6e4-46ba-9ff8-cbdf950bb547",
+      "id": "ecfbf858-c29c-4ebf-aca9-1cb092b49dc3",
       "comment": "",
       "command": "click",
       "target": "id=sign-in-password",
@@ -205,7 +191,7 @@
       ],
       "value": ""
     }, {
-      "id": "da8a3cea-4cde-4bf6-ac4d-ba1ade3e8c55",
+      "id": "78450015-25d2-48fe-9f8e-c005ad0d6579",
       "comment": "",
       "command": "type",
       "target": "id=sign-in-password",
@@ -219,7 +205,7 @@
       ],
       "value": "itsBlueNotIndigo"
     }, {
-      "id": "32247370-9f12-480e-84e2-d10fab376482",
+      "id": "177f3490-fae4-4560-9df1-a6af5e1a488e",
       "comment": "",
       "command": "click",
       "target": "css=.button",
@@ -231,7 +217,7 @@
       ],
       "value": ""
     }, {
-      "id": "f5e50bbc-3f4b-481f-ac9d-2f95be6c4444",
+      "id": "1526e474-6993-49a6-9196-b849ae4db3b4",
       "comment": "",
       "command": "click",
       "target": "css=.hamburger-menu__button > .site-header__icon-svg",
@@ -240,44 +226,78 @@
       ],
       "value": ""
     }, {
-      "id": "bdb031d7-7e2b-4dfe-8ed4-eb1c88bc741d",
+      "id": "e92c56a9-2aaf-4ab9-aad0-3e6ee0da49e5",
       "comment": "",
       "command": "verifyText",
-      "target": "css=.hamburger-menu__greeting",
+      "target": "css=.hamburger-menu__greeting > .service-link__greeting-name",
       "targets": [
-        ["css=.hamburger-menu__greeting", "css:finder"],
-        ["xpath=//div[@id='react_BcIOhfn7UkSiirXNOCRisw']/div/div/div[2]/div/div[2]/div/div/div/span", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div/span", "xpath:position"]
+        ["css=.hamburger-menu__greeting > .service-link__greeting-name", "css:finder"],
+        ["xpath=//div[@id='react_2DyQr1IPl0OgmXEj8x1Uiw']/div/div/div[2]/div/div[2]/div/div/div/span/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/span/span", "xpath:position"]
       ],
-      "value": "hello, seng"
+      "value": "seng"
     }, {
-      "id": "76befd53-dc1d-44a0-8234-a78713353e34",
+      "id": "98051b10-1c59-4fa6-bb1f-53ea951b2ca8",
       "comment": "",
       "command": "click",
-      "target": "css=.hamburger-menu__signout",
+      "target": "css=.hamburger-service__link-wrapper:nth-child(1) > .common-link",
       "targets": [
-        ["css=.hamburger-menu__signout", "css:finder"],
-        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
-        ["xpath=//div[@id='react_BcIOhfn7UkSiirXNOCRisw']/div/div/div[2]/div/div[2]/div/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div[2]/div/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'(sign out)')]", "xpath:innerText"]
+        ["css=.hamburger-service__link-wrapper:nth-child(1) > .common-link", "css:finder"],
+        ["xpath=//a[contains(text(),'account centre')]", "xpath:link"],
+        ["xpath=//div[@id='react_2DyQr1IPl0OgmXEj8x1Uiw']/div/div/div[2]/div/div[2]/div[2]/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/?link-usage=Header%3A%20account%20centre')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/div/div/a", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "49fa5736-5fa1-4cfb-b0f4-cd7c2f83c1cf",
+      "id": "5d5e3562-ca59-49e7-b983-119bf8b024e8",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.account-details-tile__email",
+      "targets": [
+        ["css=.account-details-tile__email", "css:finder"],
+        ["xpath=//div[@id='react_0HMG84T7A9VTQ']/section/div/div[2]/table/tbody/tr[2]/td/span", "xpath:idRelative"],
+        ["xpath=//tr[2]/td/span", "xpath:position"]
+      ],
+      "value": "sengassignment@mail.com"
+    }, {
+      "id": "bce72fe9-8639-42c1-bc49-b4e6b88d8305",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=sign out",
+      "targets": [
+        ["linkText=sign out", "linkText"],
+        ["css=.nav__logout", "css:finder"],
+        ["xpath=//a[contains(text(),'sign out')]", "xpath:link"],
+        ["xpath=//div[@id='react_0HMG84T7A9VU1']/header/div[2]/a", "xpath:idRelative"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "064b404f-5dbe-4048-92e4-f1eea220080d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hamburger-menu__button > .site-header__icon-svg",
+      "targets": [
+        ["css=.hamburger-menu__button > .site-header__icon-svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0529303-dd21-4e87-84a6-cf624bb93cfc",
       "comment": "",
       "command": "verifyText",
       "target": "css=.hamburger-menu__sign-in-link",
       "targets": [
         ["css=.hamburger-menu__sign-in-link", "css:finder"],
         ["xpath=//a[contains(text(),'sign in')]", "xpath:link"],
-        ["xpath=//div[@id='react_BcIOhfn7UkSiirXNOCRisw']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//div[@id='react_2DyQr1IPl0OgmXEj8x1Uiw']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/sign-in.html?link-usage=Header%3A%20sign%20in&ReturnUrl=https%3A%2F%2Fwww.chapters.indigo.ca%2Fen-ca%2F')]", "xpath:href"],
         ["xpath=//div[2]/div/div[2]/div/div/a", "xpath:position"]
       ],
       "value": "SIGN IN"
     }, {
-      "id": "8de77f76-1935-4b5a-9290-52d32de85ed1",
+      "id": "6a2117af-4d17-4678-be69-b94cfe2a1738",
       "comment": "",
       "command": "close",
       "target": "",
@@ -685,43 +705,43 @@
     "id": "fba469c3-9f52-45bf-9b6a-e332742006cd",
     "name": "EmailPreferences_1_opt_out",
     "commands": [{
-      "id": "840edd86-84e9-4357-b47f-452c0191e46e",
+      "id": "47b77613-d87d-4238-bb2e-19f618ac1108",
       "comment": "",
       "command": "open",
       "target": "/en-ca/",
       "targets": [],
       "value": ""
     }, {
-      "id": "4f022f52-1e3a-4ad2-87cb-5ecf112b4252",
+      "id": "b23d4f4c-f616-46a5-afa4-b10ff4bbec40",
       "comment": "",
       "command": "setWindowSize",
-      "target": "946x728",
+      "target": "994x748",
       "targets": [],
       "value": ""
     }, {
-      "id": "701d859b-c9f7-4eb6-a8b6-4323ab68f5a4",
+      "id": "0273f9bf-21fa-45d3-8cef-fdb5e2b777fc",
       "comment": "",
       "command": "click",
-      "target": "css=.hamburger-menu__button path",
+      "target": "css=.hamburger-menu__button > .site-header__icon-svg",
       "targets": [
-        ["css=.hamburger-menu__button path", "css:finder"]
+        ["css=.hamburger-menu__button > .site-header__icon-svg", "css:finder"]
       ],
       "value": ""
     }, {
-      "id": "fa6f4f2c-ed20-4dcc-b06d-1bbc4a4717d4",
+      "id": "a8768319-0882-426b-996e-fa591db34dfb",
       "comment": "",
       "command": "click",
       "target": "css=.hamburger-menu__sign-in-link",
       "targets": [
         ["css=.hamburger-menu__sign-in-link", "css:finder"],
         ["xpath=//a[contains(text(),'sign in')]", "xpath:link"],
-        ["xpath=//div[@id='react_1xId6Yc3306U91TfRmSDgw']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//div[@id='react_bqAwmNgVKUeGAqur4UuG1w']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/sign-in.html?link-usage=Header%3A%20sign%20in&ReturnUrl=https%3A%2F%2Fwww.chapters.indigo.ca%2Fen-ca%2F')]", "xpath:href"],
         ["xpath=//div[2]/div/div[2]/div/div/a", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "23a52d6e-2812-4fad-ab61-44a7d3b098b4",
+      "id": "22028715-823b-4e14-a611-e150df985732",
       "comment": "",
       "command": "click",
       "target": "id=sign-in-email",
@@ -735,7 +755,21 @@
       ],
       "value": ""
     }, {
-      "id": "e3dda9bd-a225-467b-8bbe-5bd4b161f542",
+      "id": "1860c322-5d80-4895-b2eb-b9775f9154cd",
+      "comment": "",
+      "command": "type",
+      "target": "id=sign-in-email",
+      "targets": [
+        ["id=sign-in-email", "id"],
+        ["name=email", "name"],
+        ["css=#sign-in-email", "css:finder"],
+        ["xpath=//input[@id='sign-in-email']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-create-account-section']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "sengassignment@mail.com"
+    }, {
+      "id": "55aa1707-9164-4a7d-bce8-98ac37a1659a",
       "comment": "",
       "command": "click",
       "target": "id=sign-in-password",
@@ -749,7 +783,7 @@
       ],
       "value": ""
     }, {
-      "id": "40068dea-6781-4576-bc40-d12bad642edd",
+      "id": "09d23db3-5c77-49e1-944d-f3b18f0c3415",
       "comment": "",
       "command": "type",
       "target": "id=sign-in-password",
@@ -763,7 +797,7 @@
       ],
       "value": "itsBlueNotIndigo"
     }, {
-      "id": "33afb1ca-f7b2-4355-bf72-992e3c77a89d",
+      "id": "f2458b00-e2c8-4f40-b81c-89b7d6f85ef4",
       "comment": "",
       "command": "click",
       "target": "css=.button",
@@ -775,29 +809,29 @@
       ],
       "value": ""
     }, {
-      "id": "513ac1e7-2609-478e-bb5c-35bf97a2cf4b",
+      "id": "de7b06ec-54be-4ba7-aeea-872296a53a4b",
       "comment": "",
       "command": "click",
-      "target": "css=.hamburger-menu__button path",
+      "target": "css=.hamburger-menu__button > .site-header__icon-svg",
       "targets": [
-        ["css=.hamburger-menu__button path", "css:finder"]
+        ["css=.hamburger-menu__button > .site-header__icon-svg", "css:finder"]
       ],
       "value": ""
     }, {
-      "id": "f550acd2-484d-49f2-83e7-2c58d8bd0fdb",
+      "id": "65658e06-e91d-450c-97d6-c63a24e2fff4",
       "comment": "",
       "command": "click",
       "target": "css=.hamburger-service__link-wrapper:nth-child(1) > .common-link",
       "targets": [
         ["css=.hamburger-service__link-wrapper:nth-child(1) > .common-link", "css:finder"],
         ["xpath=//a[contains(text(),'account centre')]", "xpath:link"],
-        ["xpath=//div[@id='react_1xId6Yc3306U91TfRmSDgw']/div/div/div[2]/div/div[2]/div[2]/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//div[@id='react_bqAwmNgVKUeGAqur4UuG1w']/div/div/div[2]/div/div[2]/div[2]/div/div/div/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/?link-usage=Header%3A%20account%20centre')]", "xpath:href"],
         ["xpath=//div[2]/div[2]/div/div/div/a", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "6595937a-d9f0-4d35-97be-b92c6c1aa5a7",
+      "id": "96ebf44a-df88-43cb-b45d-c82cde074a31",
       "comment": "",
       "command": "click",
       "target": "linkText=Edit",
@@ -805,26 +839,27 @@
         ["linkText=Edit", "linkText"],
         ["css=.opt-in-opt-out-summary-tile__cta", "css:finder"],
         ["xpath=//a[contains(text(),'Edit')]", "xpath:link"],
-        ["xpath=//div[@id='react_0HMG84T7A9RI7']/section/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//div[@id='react_0HMG84Q8516V6']/section/div/div[2]/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/opt-in.html?view=edit')]", "xpath:href"],
         ["xpath=//div/div[2]/a", "xpath:position"],
         ["xpath=//a[contains(.,'Edit')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "3a0b5693-41b2-459b-afa4-68154ea2d5ef",
+      "id": "a5268f6c-adf9-431a-b0a7-54432f39754a",
       "comment": "",
       "command": "click",
-      "target": "css=.HasOptedInForEmails-1__description",
+      "target": "id=HasOptedInForEmails-1",
       "targets": [
-        ["css=.HasOptedInForEmails-1__description", "css:finder"],
-        ["xpath=//div[@id='subscriptions-opt-in-out']/div/form/div[3]/div/div/span[2]/label", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div/span[2]/label", "xpath:position"],
-        ["xpath=//label[contains(.,'No, do not send me email')]", "xpath:innerText"]
+        ["id=HasOptedInForEmails-1", "id"],
+        ["css=#HasOptedInForEmails-1", "css:finder"],
+        ["xpath=//input[@id='HasOptedInForEmails-1']", "xpath:attributes"],
+        ["xpath=//div[@id='subscriptions-opt-in-out']/div/form/div[3]/div/div/span[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/span[2]/input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "213adece-9c73-4644-a06b-89661361c6e4",
+      "id": "4ac46a9b-9ab1-4908-9184-dfca3da38f1e",
       "comment": "",
       "command": "click",
       "target": "css=.button--large",
@@ -837,7 +872,7 @@
       ],
       "value": ""
     }, {
-      "id": "2b60018d-532e-4535-b348-af1a206ab576",
+      "id": "e0fd14ad-ffb8-4303-af71-fa73d6cb284d",
       "comment": "",
       "command": "verifyText",
       "target": "css=.success-message__text > span",
@@ -848,16 +883,7 @@
       ],
       "value": "All opt in settings have been saved."
     }, {
-      "id": "4b30145f-9fc7-4086-98a1-57900a624d31",
-      "comment": "",
-      "command": "click",
-      "target": "css=.hamburger > svg",
-      "targets": [
-        ["css=.hamburger > svg", "css:finder"]
-      ],
-      "value": ""
-    }, {
-      "id": "06a81bf9-073f-470d-8966-553a2c4ed5a8",
+      "id": "52ca23db-5d60-4fed-b960-99ff83cc29c6",
       "comment": "",
       "command": "click",
       "target": "css=.sidebar__link:nth-child(2) > span",
@@ -869,58 +895,33 @@
       ],
       "value": ""
     }, {
-      "id": "38d80c64-a765-42e0-8da3-199ada2675e1",
+      "id": "f379e7d9-4af2-4c4c-8608-05d2263b09ad",
       "comment": "",
       "command": "verifyText",
       "target": "css=.tile-table__row:nth-child(1) > .tile-table__value--tight",
       "targets": [
         ["css=.tile-table__row:nth-child(1) > .tile-table__value--tight", "css:finder"],
-        ["xpath=//div[@id='react_0HMG858QQDOK6']/section/div/div[2]/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//div[@id='react_0HMG853JT3SP6']/section/div/div[2]/table/tbody/tr/td", "xpath:idRelative"],
         ["xpath=//td", "xpath:position"],
         ["xpath=//td[contains(.,'No, do not send email')]", "xpath:innerText"]
       ],
       "value": "No, do not send email"
     }, {
-      "id": "b595435c-1dbb-4051-8ab3-4ae1b1e1b666",
+      "id": "04507f52-9cd0-47d5-bcd1-040babe99345",
       "comment": "",
       "command": "click",
-      "target": "css=.hamburger path",
+      "target": "linkText=sign out",
       "targets": [
-        ["css=.hamburger path", "css:finder"]
+        ["linkText=sign out", "linkText"],
+        ["css=.nav__logout", "css:finder"],
+        ["xpath=//a[contains(text(),'sign out')]", "xpath:link"],
+        ["xpath=//div[@id='react_0HMG853JT3SPA']/header/div[2]/a", "xpath:idRelative"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'sign out')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "f4800b2d-aec1-4beb-96a9-7ff8e0a06121",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.hamburger path",
-      "targets": [
-        ["css=.hamburger path", "css:finder"]
-      ],
-      "value": ""
-    }, {
-      "id": "979892f9-b853-473e-943e-26226b536f6e",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.hamburger path",
-      "targets": [
-        ["css=.hamburger path", "css:finder"]
-      ],
-      "value": ""
-    }, {
-      "id": "a4724535-2763-46c3-81d6-855183578b74",
-      "comment": "",
-      "command": "click",
-      "target": "css=.js-logout-redirect > span",
-      "targets": [
-        ["css=.js-logout-redirect > span", "css:finder"],
-        ["xpath=//div[@id='sidebar-container']/div/div/div/a[9]/span", "xpath:idRelative"],
-        ["xpath=//a[9]/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a80141db-7f4e-495a-ab41-ebfb9b1cd893",
+      "id": "b16e0b96-d746-4b6f-b643-43e3579d047e",
       "comment": "",
       "command": "click",
       "target": "css=.hamburger-menu__button > .site-header__icon-svg",
@@ -929,20 +930,20 @@
       ],
       "value": ""
     }, {
-      "id": "d4aa94c2-1f2b-4b0e-a5e0-0f4c55d9d892",
+      "id": "31532d37-ce1a-4daa-bbbf-32fddc63479c",
       "comment": "",
       "command": "verifyText",
       "target": "css=.hamburger-menu__sign-in-link",
       "targets": [
         ["css=.hamburger-menu__sign-in-link", "css:finder"],
         ["xpath=//a[contains(text(),'sign in')]", "xpath:link"],
-        ["xpath=//div[@id='react_1xId6Yc3306U91TfRmSDgw']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//div[@id='react_bqAwmNgVKUeGAqur4UuG1w']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/sign-in.html?link-usage=Header%3A%20sign%20in&ReturnUrl=https%3A%2F%2Fwww.chapters.indigo.ca%2Fen-ca%2F')]", "xpath:href"],
         ["xpath=//div[2]/div/div[2]/div/div/a", "xpath:position"]
       ],
       "value": "SIGN IN"
     }, {
-      "id": "c87f5a73-c4bc-44da-8a2f-45cad25f657a",
+      "id": "b88ada2e-a4a4-4bfc-a613-cbb6386d72f0",
       "comment": "",
       "command": "close",
       "target": "",
@@ -953,21 +954,21 @@
     "id": "412fa9f4-5f87-4a07-b0af-3a5ca5ee235a",
     "name": "EmailPreferences_2_opt_in",
     "commands": [{
-      "id": "e51cbbaf-492e-4fb0-8262-2263e263522e",
+      "id": "4263a8da-be1f-4c74-8222-83bff8b3eafb",
       "comment": "",
       "command": "open",
       "target": "/en-ca/",
       "targets": [],
       "value": ""
     }, {
-      "id": "2aa6b681-30fc-497d-91fc-079bc7a2ad72",
+      "id": "c2cd8571-5814-4903-9b0e-796a1f272dfb",
       "comment": "",
       "command": "setWindowSize",
-      "target": "946x728",
+      "target": "1015x764",
       "targets": [],
       "value": ""
     }, {
-      "id": "5455b124-afa1-4c1a-880c-baa7e4f0fef0",
+      "id": "cd7d5603-4e26-40c0-a696-d55ceaaf6df5",
       "comment": "",
       "command": "click",
       "target": "css=.hamburger-menu__button > .site-header__icon-svg",
@@ -976,20 +977,20 @@
       ],
       "value": ""
     }, {
-      "id": "6b99913b-08f9-4fab-99cf-77345eb9f7a3",
+      "id": "d42c39ab-503b-4a3c-b7d2-38903aa76010",
       "comment": "",
       "command": "click",
       "target": "css=.hamburger-menu__sign-in-link",
       "targets": [
         ["css=.hamburger-menu__sign-in-link", "css:finder"],
         ["xpath=//a[contains(text(),'sign in')]", "xpath:link"],
-        ["xpath=//div[@id='react_1xId6Yc3306U91TfRmSDgw']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//div[@id='react_bqAwmNgVKUeGAqur4UuG1w']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/sign-in.html?link-usage=Header%3A%20sign%20in&ReturnUrl=https%3A%2F%2Fwww.chapters.indigo.ca%2Fen-ca%2F')]", "xpath:href"],
         ["xpath=//div[2]/div/div[2]/div/div/a", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "163bcf73-d84e-4f98-8429-2160a981e630",
+      "id": "a3c2a7ca-6fa5-4893-963f-ce6bc004b8ec",
       "comment": "",
       "command": "click",
       "target": "id=sign-in-email",
@@ -1003,7 +1004,7 @@
       ],
       "value": ""
     }, {
-      "id": "379345f6-6a4f-4cee-825a-e29e1bf36175",
+      "id": "c00588ff-c655-4722-890e-8a2989456998",
       "comment": "",
       "command": "click",
       "target": "id=sign-in-password",
@@ -1017,7 +1018,7 @@
       ],
       "value": ""
     }, {
-      "id": "21e1054d-a129-4dff-8831-58a56cdaf24d",
+      "id": "d0b346a5-c8e4-4769-9e3a-6c774073f88b",
       "comment": "",
       "command": "type",
       "target": "id=sign-in-password",
@@ -1031,7 +1032,7 @@
       ],
       "value": "itsBlueNotIndigo"
     }, {
-      "id": "2d17b334-7e96-40fa-828f-2392a5da868b",
+      "id": "8c6b73cc-edbc-435b-ba3c-e97bb05f8f6d",
       "comment": "",
       "command": "click",
       "target": "css=.button",
@@ -1043,29 +1044,29 @@
       ],
       "value": ""
     }, {
-      "id": "6dfec469-ce86-46e2-996c-6ad8a449374d",
+      "id": "08debf75-665f-4807-b05e-6f5642c1cfe0",
       "comment": "",
       "command": "click",
-      "target": "css=.hamburger-menu__button path",
+      "target": "css=.hamburger-menu__button > .site-header__icon-svg",
       "targets": [
-        ["css=.hamburger-menu__button path", "css:finder"]
+        ["css=.hamburger-menu__button > .site-header__icon-svg", "css:finder"]
       ],
       "value": ""
     }, {
-      "id": "696b1f76-a9f1-4582-afbe-3aaf215ebce5",
+      "id": "ff9b04d3-22c9-4b72-99eb-9a49689aa8ab",
       "comment": "",
       "command": "click",
       "target": "css=.hamburger-service__link-wrapper:nth-child(1) > .common-link",
       "targets": [
         ["css=.hamburger-service__link-wrapper:nth-child(1) > .common-link", "css:finder"],
         ["xpath=//a[contains(text(),'account centre')]", "xpath:link"],
-        ["xpath=//div[@id='react_1xId6Yc3306U91TfRmSDgw']/div/div/div[2]/div/div[2]/div[2]/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//div[@id='react_bqAwmNgVKUeGAqur4UuG1w']/div/div/div[2]/div/div[2]/div[2]/div/div/div/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/?link-usage=Header%3A%20account%20centre')]", "xpath:href"],
         ["xpath=//div[2]/div[2]/div/div/div/a", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "dda70b91-2d18-406e-a250-3e92ed03bbe2",
+      "id": "0412f118-5810-4492-bd59-77211e1d579f",
       "comment": "",
       "command": "click",
       "target": "linkText=Edit",
@@ -1073,25 +1074,28 @@
         ["linkText=Edit", "linkText"],
         ["css=.opt-in-opt-out-summary-tile__cta", "css:finder"],
         ["xpath=//a[contains(text(),'Edit')]", "xpath:link"],
-        ["xpath=//div[@id='react_0HMG858QQDOLQ']/section/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//div[@id='react_0HMG84Q851719']/section/div/div[2]/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/opt-in.html?view=edit')]", "xpath:href"],
         ["xpath=//div/div[2]/a", "xpath:position"],
         ["xpath=//a[contains(.,'Edit')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "38842115-4231-4c2f-9393-d85232b0dfd3",
+      "id": "5b01b19d-6d18-4785-b3dd-5fc94dc71cf7",
       "comment": "",
       "command": "click",
-      "target": "css=.radio-field__description > span",
+      "target": "id=HasOptedInForEmails-0",
       "targets": [
-        ["css=.radio-field__description > span", "css:finder"],
-        ["xpath=//div[@id='subscriptions-opt-in-out']/div/form/div[3]/div/div/span/label/span", "xpath:idRelative"],
-        ["xpath=//label/span", "xpath:position"]
+        ["id=HasOptedInForEmails-0", "id"],
+        ["name=HasOptedInForEmails", "name"],
+        ["css=#HasOptedInForEmails-0", "css:finder"],
+        ["xpath=//input[@id='HasOptedInForEmails-0']", "xpath:attributes"],
+        ["xpath=//div[@id='subscriptions-opt-in-out']/div/form/div[3]/div/div/span/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/span/input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "3c50e4f2-ea78-402e-8a2f-4d791ffbb375",
+      "id": "332c21ec-1842-47f9-bd3d-3b5cabfd4eb3",
       "comment": "",
       "command": "click",
       "target": "css=.button--large",
@@ -1104,33 +1108,7 @@
       ],
       "value": ""
     }, {
-      "id": "27da1755-19c2-4444-be8c-8b70cb1b3c1a",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.button--large",
-      "targets": [
-        ["css=.button--large", "css:finder"],
-        ["xpath=//button[@type='button']", "xpath:attributes"],
-        ["xpath=//div[@id='subscriptions-opt-in-out']/div/form/div[5]/button", "xpath:idRelative"],
-        ["xpath=//div[5]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Save')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "53e068ff-903d-4321-ad74-0fc211b0bfca",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.button--large",
-      "targets": [
-        ["css=.button--large", "css:finder"],
-        ["xpath=//button[@type='button']", "xpath:attributes"],
-        ["xpath=//div[@id='subscriptions-opt-in-out']/div/form/div[6]/button", "xpath:idRelative"],
-        ["xpath=//div[6]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Save')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "22f3ec48-30a0-44cb-857b-b30f5150771e",
+      "id": "ddb97798-8891-4cb7-885a-0149a133f23e",
       "comment": "",
       "command": "verifyText",
       "target": "css=.success-message__text > span",
@@ -1141,34 +1119,7 @@
       ],
       "value": "All opt in settings have been saved."
     }, {
-      "id": "321fc219-15ad-44f4-b4e8-e56da15c6ccb",
-      "comment": "",
-      "command": "click",
-      "target": "css=.hamburger > svg",
-      "targets": [
-        ["css=.hamburger > svg", "css:finder"]
-      ],
-      "value": ""
-    }, {
-      "id": "7862089c-f82b-4568-bdbf-8614b6c23482",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.hamburger > svg",
-      "targets": [
-        ["css=.hamburger > svg", "css:finder"]
-      ],
-      "value": ""
-    }, {
-      "id": "89be4653-a122-4436-8286-1303c4e2b38d",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.hamburger > svg",
-      "targets": [
-        ["css=.hamburger > svg", "css:finder"]
-      ],
-      "value": ""
-    }, {
-      "id": "daf97d7f-5ee9-443f-bccd-eb40afa9f40e",
+      "id": "1dc07ca6-915e-40bd-8400-1c6eecba09cc",
       "comment": "",
       "command": "click",
       "target": "css=.sidebar__link:nth-child(2) > span",
@@ -1180,40 +1131,33 @@
       ],
       "value": ""
     }, {
-      "id": "82a9150d-a9f4-4d99-b8e9-7ff3d3f73234",
+      "id": "d43ccf21-54ab-4b6c-8b34-adbb716e55b2",
       "comment": "",
       "command": "verifyText",
       "target": "css=.tile-table__row:nth-child(1) > .tile-table__value--tight",
       "targets": [
         ["css=.tile-table__row:nth-child(1) > .tile-table__value--tight", "css:finder"],
-        ["xpath=//div[@id='react_0HMG858QQDOND']/section/div/div[2]/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//div[@id='react_0HMG853JT3SSQ']/section/div/div[2]/table/tbody/tr/td", "xpath:idRelative"],
         ["xpath=//td", "xpath:position"],
         ["xpath=//td[contains(.,'Yes, send email tosengassignment@mail.com')]", "xpath:innerText"]
       ],
       "value": "Yes, send email tosengassignment@mail.com"
     }, {
-      "id": "6101069e-3591-4f88-a0f7-b96603f1c4ea",
+      "id": "d540b5cf-bfd8-4604-8756-ad7c474c769b",
       "comment": "",
       "command": "click",
-      "target": "css=.hamburger > svg",
+      "target": "linkText=sign out",
       "targets": [
-        ["css=.hamburger > svg", "css:finder"]
+        ["linkText=sign out", "linkText"],
+        ["css=.nav__logout", "css:finder"],
+        ["xpath=//a[contains(text(),'sign out')]", "xpath:link"],
+        ["xpath=//div[@id='react_0HMG853JT3SSU']/header/div[2]/a", "xpath:idRelative"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'sign out')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "b9a66107-53c3-4a91-a2f4-1b352f82558a",
-      "comment": "",
-      "command": "click",
-      "target": "css=.js-logout-redirect > span",
-      "targets": [
-        ["css=.js-logout-redirect > span", "css:finder"],
-        ["xpath=//div[@id='sidebar-container']/div/div/div/a[9]/span", "xpath:idRelative"],
-        ["xpath=//a[9]/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "992e79cf-cebf-4404-a463-9e040d126b58",
+      "id": "5906afdc-e9db-4ddf-8815-04d0d03780f4",
       "comment": "",
       "command": "click",
       "target": "css=.hamburger-menu__button > .site-header__icon-svg",
@@ -1222,20 +1166,20 @@
       ],
       "value": ""
     }, {
-      "id": "3d708051-9059-4310-9cdd-6a24a16a14f4",
+      "id": "c6cc6d5c-5ef6-4a19-86f9-6882830d1cae",
       "comment": "",
       "command": "verifyText",
       "target": "css=.hamburger-menu__sign-in-link",
       "targets": [
         ["css=.hamburger-menu__sign-in-link", "css:finder"],
         ["xpath=//a[contains(text(),'sign in')]", "xpath:link"],
-        ["xpath=//div[@id='react_1xId6Yc3306U91TfRmSDgw']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//div[@id='react_bqAwmNgVKUeGAqur4UuG1w']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/sign-in.html?link-usage=Header%3A%20sign%20in&ReturnUrl=https%3A%2F%2Fwww.chapters.indigo.ca%2Fen-ca%2F')]", "xpath:href"],
         ["xpath=//div[2]/div/div[2]/div/div/a", "xpath:position"]
       ],
       "value": "SIGN IN"
     }, {
-      "id": "c04ea9a1-02dd-48c0-95cd-4257592ff66f",
+      "id": "7f3ccb41-ce39-4f82-a452-3b8896fde933",
       "comment": "",
       "command": "close",
       "target": "",
