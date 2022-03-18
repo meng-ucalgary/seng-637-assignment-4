@@ -284,6 +284,403 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "a9d465d4-be8d-4ad9-a6c3-a2e338474ded",
+    "name": "zAddbook_EmptyCart",
+    "commands": [{
+      "id": "247d09ce-5b1a-499f-bfa1-9e9b36d1166e",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae265b01-210c-41d1-92db-dfc2cbc7b519",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "612825d4-4641-4f51-be57-851d149fa6c8",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.browsepopup-closebtn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac54c993-d9de-4216-9118-e534ba94cf64",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.service-link:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "517ff7f4-d8f3-463c-b580-ca676cdb5093",
+      "comment": "",
+      "command": "//type",
+      "target": "id=browseCart-signInPopup-emailTextbox",
+      "targets": [],
+      "value": "sengassignment@mail.com"
+    }, {
+      "id": "9c1ebdd1-264c-4114-836b-497341a2146f",
+      "comment": "",
+      "command": "//click",
+      "target": "id=browseCart-signInPopup-passwordTextbox",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12d9cd8d-04f5-40d7-abb4-64c92afcbe84",
+      "comment": "",
+      "command": "//type",
+      "target": "id=browseCart-signInPopup-passwordTextbox",
+      "targets": [],
+      "value": "itsBlueNotIndigo"
+    }, {
+      "id": "83c7e79b-6f1f-4f4e-bcf4-3e771838600e",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.js-clickSignIn-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ccd6c7f1-4a44-478e-8c53-f9aaed444cb9",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.chapters.indigo.ca/en-ca/books/the-christie-affair-a-novel/9781250282132-item.html?ref=shop%3aheathers-picks%3abooks-heathers-picks%3aheathers-recent-picks%3a1%3a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db40f41d-e406-41a7-ae79-ea28f1c9c4bd",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@type='button'])[13]",
+      "targets": [
+        ["css=.async-button--full-width > .common-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//section[@id='item-page__item-purchase-container']/div[4]/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c0c6356-a85b-4c73-9084-a177fe20da9d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.common-button--link",
+      "targets": [
+        ["css=.common-button--link", "css:finder"],
+        ["xpath=//div[@id='cart-preview-container']/section/div[2]/div[3]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'VIEW CART')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c8aa2e9-cbb8-4ddd-bb52-b95f15aef378",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=The Christie Affair: A Novel",
+      "targets": [
+        ["linkText=The Christie Affair: A Novel", "linkText"],
+        ["css=.product-list__item-container:nth-child(1) .product-list__product-title-link--grid", "css:finder"],
+        ["xpath=//a[contains(text(),'The Christie Affair: A Novel')]", "xpath:link"],
+        ["xpath=//section[@id='CartPageContainer']/div/div/section/div/div/div/div[2]/h3/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.chapters.indigo.ca/en-ca/books/the-christie-affair-a-novel/1250282136-item.html')])[2]", "xpath:href"],
+        ["xpath=//h3/a", "xpath:position"],
+        ["xpath=//a[contains(.,'The Christie Affair: A Novel')]", "xpath:innerText"]
+      ],
+      "value": "The Christie Affair: A Novel"
+    }, {
+      "id": "b9653f72-9156-48bd-9952-ab72b2f33bd1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-list__item-container:nth-child(1) .product-list__remove-item-label",
+      "targets": [
+        ["css=.product-list__item-container:nth-child(1) .product-list__remove-item-label", "css:finder"],
+        ["xpath=//section[@id='CartPageContainer']/div/div/section/div/div/div/div[7]/button[2]/span", "xpath:idRelative"],
+        ["xpath=//button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Remove')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "63ce5365-5ece-42b2-b850-2212d6e29986",
+      "comment": "",
+      "command": "click",
+      "target": "css=.common-shopping-cart > .site-header__icon-svg",
+      "targets": [
+        ["css=.common-shopping-cart > .site-header__icon-svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "141d89e1-48d8-4818-b542-67f936d9a339",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2116)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb337e6f-8455-47c6-bff3-1cc6030d4c83",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2100)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b0bb6f9-95d5-4689-8b6b-2e5d17cdc18e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.account-dropdown__text",
+      "targets": [
+        ["css=.account-dropdown__text", "css:finder"],
+        ["xpath=//div[@id='react_rsyawbUkkmkdwx2xiBtPQ']/div/div/nav/div/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Your Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d1c3129-b285-4954-93ef-1f20d2903b8e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.account-dropdown__text",
+      "targets": [
+        ["css=.account-dropdown__text", "css:finder"],
+        ["xpath=//div[@id='react_rsyawbUkkmkdwx2xiBtPQ']/div/div/nav/div/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Your Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9022ee72-58f2-4f70-9764-e2369b9213aa",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.cart-page-default__title",
+      "targets": [
+        ["css=.cart-page-default__title", "css:finder"],
+        ["xpath=//div[@id='cartpageInstanceId40']/div/section/section/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Your Shopping Cart is Empty')]", "xpath:innerText"]
+      ],
+      "value": "Your Shopping Cart is Empty"
+    }, {
+      "id": "37c7d085-3d50-4153-ae98-410dfb68dfd4",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.account-dropdown__text",
+      "targets": [
+        ["css=.account-dropdown__text", "css:finder"],
+        ["xpath=//div[@id='react_rsyawbUkkmkdwx2xiBtPQ']/div/div/nav/div/div[2]/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Your Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b9b0f57-522c-4b63-b9d0-b310a7df032e",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.account-dropdown__sign-out",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5726d869-12b5-4ad4-bf74-94f4cc8d8c2b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "77fbf512-67a7-41c7-a85c-aab93b8c846c",
+    "name": "zAddBooks_EmptyCart",
+    "commands": [{
+      "id": "9c1387dc-2964-479e-95cc-e5728ed2aa77",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.chapters.indigo.ca/en-ca/books/the-christie-affair-a-novel/9781250282132-item.html?ref=shop%3aheathers-picks%3abooks-heathers-picks%3aheathers-recent-picks%3a1%3a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b068fb9-43c7-4911-bde0-0aef0ce74079",
+      "comment": "",
+      "command": "click",
+      "target": "css=.async-button--full-width > .common-button",
+      "targets": [
+        ["css=.async-button--full-width > .common-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//section[@id='item-page__item-purchase-container']/div[4]/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bda5a96-89fe-4150-93a5-16f1229c52e5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.async-button--full-width > .common-button",
+      "targets": [
+        ["css=.async-button--full-width > .common-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//section[@id='item-page__item-purchase-container']/div[4]/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94ed44a9-da77-4f83-b552-c5b0e6cd27d5",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.async-button--full-width > .common-button",
+      "targets": [
+        ["css=.async-button--full-width > .common-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//section[@id='item-page__item-purchase-container']/div[4]/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8214c359-8336-4adc-ba22-d1d9484ef54d",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.chapters.indigo.ca/en-ca/books/aelteste-kirchengeschichte-von-altbaiern-oesterreich/9781179387512-item.html?ref=recently_viewed%3A%20books%3Aitem%20page",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d490725b-254e-4f5c-a320-d0a6c9863bf8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.async-button--full-width > .common-button",
+      "targets": [
+        ["css=.async-button--full-width > .common-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//section[@id='item-page__item-purchase-container']/div[3]/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4e704d9-31a2-4d85-9c05-b9ffe9941c27",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.async-button--full-width > .common-button",
+      "targets": [
+        ["css=.async-button--full-width > .common-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//section[@id='item-page__item-purchase-container']/div[3]/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e51095a-b65c-45ad-a695-921cce3b5b8c",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.async-button--full-width > .common-button",
+      "targets": [
+        ["css=.async-button--full-width > .common-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//section[@id='item-page__item-purchase-container']/div[3]/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd107779-d5a6-4334-8191-d2f7e8781b3f",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.chapters.indigo.ca/en-ca/toys/yume-harry-potter-magical-capsules/843309135406-item.html?ref=recently_viewed%3A%20books%3Aitem%20page",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ff683fa-ea6b-4535-80e1-645739748b11",
+      "comment": "",
+      "command": "click",
+      "target": "css=.async-button--full-width > .common-button",
+      "targets": [
+        ["css=.async-button--full-width > .common-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[22]", "xpath:attributes"],
+        ["xpath=//section[@id='item-page__item-purchase-container']/div[3]/div/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15110261-9557-4a29-a2d9-9118af490aad",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#carousel-slide-json1__1 .product-image-carousel__image",
+      "targets": [
+        ["css=#carousel-slide-json1__1 .product-image-carousel__image", "css:finder"],
+        ["xpath=//img[@alt='When We Lost Our Heads: A Novel']", "xpath:img"],
+        ["xpath=//li[@id='carousel-slide-json1__1']/div/div/section/a/img", "xpath:idRelative"],
+        ["xpath=//section/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c48ef97-7398-4e6f-938a-a36c78fe818f",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.chapters.indigo.ca/en-ca/checkout/shoppingbag.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "740be770-563d-4787-9986-ae945941f5c9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.common-icon-count",
+      "targets": [
+        ["css=.common-icon-count", "css:finder"],
+        ["xpath=//div[@id='react_rsyawbUkkmkdwx2xiBtPQ']/div/div/div/nav/div[2]/div[2]/nav/div[3]/a/div/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div/div", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "e869f398-2d0d-4386-b952-bb90d20016fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-list__item-container:nth-child(1) .product-list__remove-item-label",
+      "targets": [
+        ["css=.product-list__item-container:nth-child(1) .product-list__remove-item-label", "css:finder"],
+        ["xpath=//section[@id='CartPageContainer']/div/div/section/div/div/div/div[7]/button[2]/span", "xpath:idRelative"],
+        ["xpath=//button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Remove')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "34de53c2-992e-4910-b5ba-b9d1c870e5d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-list__item-container:nth-child(1) .product-list__remove-item-label",
+      "targets": [
+        ["css=.product-list__item-container:nth-child(1) .product-list__remove-item-label", "css:finder"],
+        ["xpath=//section[@id='CartPageContainer']/div/div/section/div/div/div/div[7]/button[2]/span", "xpath:idRelative"],
+        ["xpath=//button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Remove')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a041f376-4ab3-4d9b-904d-153259ba263d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-list__remove-item-label",
+      "targets": [
+        ["css=.product-list__remove-item-label", "css:finder"],
+        ["xpath=//section[@id='CartPageContainer']/div/div/section/div/div/div/div[7]/button[2]/span", "xpath:idRelative"],
+        ["xpath=//button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Remove')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "999ad55b-2c4d-482b-b517-1d27f23a7ca6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.cart-page-default__title",
+      "targets": [
+        ["css=.cart-page-default__title", "css:finder"],
+        ["xpath=//div[@id='cartpageInstanceId40']/div/section/section/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Your Shopping Cart is Empty')]", "xpath:innerText"]
+      ],
+      "value": "Your Shopping Cart is Empty"
+    }, {
+      "id": "c6b9ca27-c527-4560-82f2-b03fc7e1c5a5",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "907a1e44-34b6-4899-9482-38abd8dd8fa9",
