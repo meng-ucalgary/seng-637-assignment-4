@@ -459,7 +459,167 @@ public class RangeTest {
 //                Range.combineIgnoringNaN(r1, r2));
 //    }
     // ------------------------------------------------------------------------
+    
+    
+    
+    
+    
+    //NEW TEST CASES Combine
+    @Test
+    public void combineWithSmallerRange() {
+        Range r2 = new Range(-5, 6);
+        assertEquals("Testing combining with already included range", new Range(-10, 10),
+                Range.combine(this.exampleRange, r2));
+    }
 
+    @Test
+    public void combineWithDisjointRange() {
+        Range r2 = new Range(20, 50);
+        assertEquals("Testing combining with disjoint range", new Range(-10, 50),
+                Range.combine(this.exampleRange, r2));
+    }
+
+    @Test
+    public void combineWithNull() {
+        Range r2 = null;
+        assertEquals("Testing combining with null", this.exampleRange, Range.combine(this.exampleRange, r2));
+    }
+
+    @Test
+    public void combineWithLowerBoundMinimum() {
+        Range r2 = new Range(-Double.MAX_VALUE, -20);
+        assertEquals("Testing combining with range that has lower bound as minimum possible value",
+                new Range(-Double.MAX_VALUE, 10),
+                Range.combine(this.exampleRange, r2));
+    }
+
+   
+    @Test
+    public void combineWithLB() {
+        Range r2 = new Range(-10, 20);
+        assertEquals("Testing combining with range that has lower bound as LB",
+                new Range(-10, 20),
+                Range.combineIgnoringNaN(this.exampleRange, r2));
+    }
+
+    @Test
+    public void combineWithALB() {
+        Range r2 = new Range(-9.99999, 20);
+        assertEquals("Testing combining with range that has lower bound as ALB",
+                new Range(-10, 20),
+                Range.combine(this.exampleRange, r2));
+    }
+
+    @Test
+    public void combineWithBLB() {
+        Range r2 = new Range(-10.00001, 20);
+        assertEquals("Testing combining with range that has lower bound as BLB",
+                new Range(-10.00001, 20),
+                Range.combine(this.exampleRange, r2));
+    }
+
+    @Test
+    public void combineNWithUpperBoundMaximum() {
+        Range r2 = new Range(20, Double.MAX_VALUE);
+        assertEquals("Testing combining with range that has upper bound as maximum possible value",
+                new Range(-10, Double.MAX_VALUE),
+                Range.combine(this.exampleRange, r2));
+    }
+
+    @Test
+    public void combineWithUB() {
+        Range r2 = new Range(-20, 10);
+        assertEquals("Testing combining with range that has upper bound as UB",
+                new Range(-20, 10),
+                Range.combine(this.exampleRange, r2));
+    }
+
+    @Test
+    public void combineWithAUB() {
+        Range r2 = new Range(-20, 10.00001);
+        assertEquals("Testing combining with range that has upper bound as AUB",
+                new Range(-20, 10.00001),
+                Range.combine(this.exampleRange, r2));
+    }
+
+    @Test
+    public void combineWithBUB() {
+        Range r2 = new Range(-20, 9.99999);
+        assertEquals("Testing combining with range that has upper bound as BUB",
+                new Range(-20, 10),
+                Range.combine(this.exampleRange, r2));
+    }
+
+
+    @Test
+    public void combineWithZeroRange() {
+        Range r2 = new Range(0, 0);
+        assertEquals("Testing combining with range that spans 0 to 0 has effective range of 0",
+                new Range(-10, 10),
+                Range.combine(this.exampleRange, r2));
+    }
+
+    @Test
+    public void combineWithItself() {
+        assertEquals("Testing combining the range with itself", this.exampleRange,
+                Range.combine(this.exampleRange, this.exampleRange));
+    }
+
+    @Test
+    public void combineWithFirstRangeNull() {
+        Range r2 = null;
+        assertEquals("Testing combining with range with first range as null",
+                new Range(-10, 10),
+                Range.combine(r2, this.exampleRange));
+    }
+
+   
+    @Test
+    public void combineWithBothRangeNull() {
+        assertEquals("Testing combining with both range null", null,
+                Range.combineIgnoringNaN(null, null));
+    }
+
+
+   // NEW TEST CASES EXPAND ---------------------------------------------------
+    @Test
+    public void expandWithPositiveLBandPositiveUB() {
+        assertEquals( new Range(-11, 11),
+                Range.expand(this.exampleRange, 0.05,0.05));
+    }
+    
+    @Test
+    public void expandWithPositiveLBandNegativeUB() {
+        assertEquals( new Range(-11, 9),
+                Range.expand(this.exampleRange, 0.05,-0.05));
+    }
+    
+    @Test
+    public void expandWithZeroLBandZeroUB() {
+        assertEquals( new Range(-10, 10),
+                Range.expand(this.exampleRange, 0,0));
+    }
+    @Test
+    public void expandWithNegativeLBandPositiveUB() {
+        assertEquals( new Range(-9, 11),
+                Range.expand(this.exampleRange, -0.05,0.05));
+    }
+
+    @Test
+    public void expandWithNegativeLBandNegativeUB() {
+        assertEquals( new Range(-9, 9),
+                Range.expand(this.exampleRange, -0.05, -0.05));
+    }
+    @Test
+    public void expandWithInputLargeNegativeLBandPositiveUB() {
+        assertEquals( new Range(20,20),
+                Range.expand(this.exampleRange, -2, 0));
+    }
+  
+    // ------------------------------------------------------------------------
+    
+    
+    
     @After
     public void tearDown() throws Exception {
     }
