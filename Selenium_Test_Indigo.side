@@ -1141,6 +1141,363 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "0b92a880-b17c-43d5-a2ce-b84cf21c7a11",
+    "name": "SelectStoreSearchCity",
+    "commands": [{
+      "id": "e32c2b83-371d-4c1a-bb73-94627e00c428",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d846607c-11f6-4ed6-8740-62aed4b5d13e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "968x669",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9d05608-8677-4e2e-bcd0-056aa26144f2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.global-store__popup path:nth-child(1)",
+      "targets": [
+        ["css=.global-store__popup path:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1a44b84-630c-42d5-880c-4e58ddafec65",
+      "comment": "",
+      "command": "click",
+      "target": "css=.global-store__find-store-button",
+      "targets": [
+        ["css=.global-store__find-store-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='react_PVmduGM84UepmDIAHOwaVQ']/div/div/div/nav/div/div[2]/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Find Another Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2db4d6d-e423-46f6-a2cd-bfc0cb637aae",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5803db16-76d0-451d-a087-1587ea58e574",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@type='button'])[86]",
+      "targets": [
+        ["css=.store-79 > .common-button--ghost", "css:finder"],
+        ["xpath=(//button[@type='button'])[86]", "xpath:attributes"],
+        ["xpath=//div[@id='SharedStoreLoaderContainer-react-component']/div/div/div/div/div/div[2]/div/div[2]/ul/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Set as My Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96c0cd3d-58cc-4987-b218-54e65b4bf71d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1901e2ca-4d43-4a8c-b722-94fa6e2860df",
+      "comment": "",
+      "command": "click",
+      "target": "css=.global-store__popup path:nth-child(1)",
+      "targets": [
+        ["css=.global-store__popup path:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f7efe87-ec03-472f-b8a0-0c52726cde13",
+      "comment": "",
+      "command": "click",
+      "target": "css=.global-store__find-store-button",
+      "targets": [
+        ["css=.global-store__find-store-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='react_PVmduGM84UepmDIAHOwaVQ']/div/div/div/nav/div/div[2]/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Find Another Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b28d1c0f-3caa-4198-aae5-8528c7b54dc8",
+      "comment": "",
+      "command": "type",
+      "target": "id=find-in-store-search__typeahead",
+      "targets": [
+        ["id=find-in-store-search__typeahead", "id"],
+        ["css=#find-in-store-search__typeahead", "css:finder"],
+        ["xpath=//input[@id='find-in-store-search__typeahead']", "xpath:attributes"],
+        ["xpath=//div[@id='SharedStoreLoaderContainer-react-component']/div/div/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "edmonton"
+    }, {
+      "id": "b91f19dc-3e89-4ad7-ac50-136c615a4b86",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=find-in-store-search__typeahead",
+      "targets": [
+        ["id=find-in-store-search__typeahead", "id"],
+        ["css=#find-in-store-search__typeahead", "css:finder"],
+        ["xpath=//input[@id='find-in-store-search__typeahead']", "xpath:attributes"],
+        ["xpath=//div[@id='SharedStoreLoaderContainer-react-component']/div/div/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "2fa97b73-63cf-411b-96c2-6845f931a3ec",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd02b560-4898-4350-a0cb-24d42c143adc",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@type='button'])[86]",
+      "targets": [
+        ["css=.store-704 > .common-button--ghost", "css:finder"],
+        ["xpath=(//button[@type='button'])[86]", "xpath:attributes"],
+        ["xpath=//div[@id='SharedStoreLoaderContainer-react-component']/div/div/div/div/div/div[2]/div/div[2]/ul/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Set as My Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df6a3c10-f313-4356-b5bc-f3ccf26ff2a8",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.global-store__store-name:nth-child(1)",
+      "targets": [
+        ["css=.global-store__store-name:nth-child(1)", "css:finder"],
+        ["xpath=//button[@id='global-store__link']/div/div", "xpath:idRelative"],
+        ["xpath=//button/div/div", "xpath:position"]
+      ],
+      "value": "Coles — Edmonton City Centre"
+    }]
+  }, {
+    "id": "982a4fd7-d1ef-4dc4-b7fb-ba0f5bb07098",
+    "name": "SelectStoreSearchPostalCode",
+    "commands": [{
+      "id": "4875592b-9717-4607-bc0c-4b679bce7756",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d38deb0-ea8a-44d2-9b1f-30ab120f35b6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "968x669",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "897a8897-05d7-433a-908b-ee864720e474",
+      "comment": "",
+      "command": "click",
+      "target": "css=.global-store__popup path:nth-child(1)",
+      "targets": [
+        ["css=.global-store__popup path:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "35a72f4a-6103-460d-985b-05671b329f85",
+      "comment": "",
+      "command": "click",
+      "target": "css=.global-store__find-store-button",
+      "targets": [
+        ["css=.global-store__find-store-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='react_PVmduGM84UepmDIAHOwaVQ']/div/div/div/nav/div/div[2]/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Find Another Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1888ecd1-60d4-4b38-a6ba-3170ba39f014",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69adcff9-c0d7-40b4-82ca-d7b7fc3c6e8a",
+      "comment": "",
+      "command": "type",
+      "target": "id=find-in-store-search__typeahead",
+      "targets": [
+        ["id=find-in-store-search__typeahead", "id"],
+        ["css=#find-in-store-search__typeahead", "css:finder"],
+        ["xpath=//input[@id='find-in-store-search__typeahead']", "xpath:attributes"],
+        ["xpath=//div[@id='SharedStoreLoaderContainer-react-component']/div/div/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "edmonton"
+    }, {
+      "id": "1926eade-68fc-4100-810c-885ffe289b86",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=find-in-store-search__typeahead",
+      "targets": [
+        ["id=find-in-store-search__typeahead", "id"],
+        ["css=#find-in-store-search__typeahead", "css:finder"],
+        ["xpath=//input[@id='find-in-store-search__typeahead']", "xpath:attributes"],
+        ["xpath=//div[@id='SharedStoreLoaderContainer-react-component']/div/div/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "88e5a980-ac92-43ee-9fbe-9a2d9429a48c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.store-88 > .common-button--ghost",
+      "targets": [
+        ["css=.store-88 > .common-button--ghost", "css:finder"],
+        ["xpath=(//button[@type='button'])[86]", "xpath:attributes"],
+        ["xpath=//div[@id='SharedStoreLoaderContainer-react-component']/div/div/div/div/div/div[2]/div/div[2]/ul/li[2]/button", "xpath:idRelative"],
+        ["xpath=//li[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Set as My Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0b42579-bf9e-47e7-bfe6-b853efcb439a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.global-store__popup path:nth-child(1)",
+      "targets": [
+        ["css=.global-store__popup path:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "fcc4051c-3a7c-42c9-83cf-448c653b06c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.global-store__find-store-button",
+      "targets": [
+        ["css=.global-store__find-store-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='react_PVmduGM84UepmDIAHOwaVQ']/div/div/div/nav/div/div[2]/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Find Another Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e790096f-ed4a-4427-a9e5-54cfe1f43b24",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "274ede37-8f56-44f0-8524-06af3bb22526",
+      "comment": "",
+      "command": "click",
+      "target": "id=find-in-store-search__typeahead",
+      "targets": [
+        ["id=find-in-store-search__typeahead", "id"],
+        ["css=#find-in-store-search__typeahead", "css:finder"],
+        ["xpath=//input[@id='find-in-store-search__typeahead']", "xpath:attributes"],
+        ["xpath=//div[@id='SharedStoreLoaderContainer-react-component']/div/div/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b05a3c6-14c1-4887-a166-b8f2c2a637f5",
+      "comment": "",
+      "command": "type",
+      "target": "id=find-in-store-search__typeahead",
+      "targets": [
+        ["id=find-in-store-search__typeahead", "id"],
+        ["css=#find-in-store-search__typeahead", "css:finder"],
+        ["xpath=//input[@id='find-in-store-search__typeahead']", "xpath:attributes"],
+        ["xpath=//div[@id='SharedStoreLoaderContainer-react-component']/div/div/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "T2H 0K3"
+    }, {
+      "id": "16031f8e-303a-41c0-a7ee-3a219db0f4a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.find-in-store-search__search-button",
+      "targets": [
+        ["css=.find-in-store-search__search-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[85]", "xpath:attributes"],
+        ["xpath=//div[@id='SharedStoreLoaderContainer-react-component']/div/div/div/div/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Search for Stores')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa38c0be-4377-41b1-97bd-62405cf47f94",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.find-in-store-search__search-button",
+      "targets": [
+        ["css=.find-in-store-search__search-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[85]", "xpath:attributes"],
+        ["xpath=//div[@id='SharedStoreLoaderContainer-react-component']/div/div/div/div/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Search for Stores')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37da87d0-4e48-4997-92d8-512f069537af",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.find-in-store-search__search-button",
+      "targets": [
+        ["css=.find-in-store-search__search-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[85]", "xpath:attributes"],
+        ["xpath=//div[@id='SharedStoreLoaderContainer-react-component']/div/div/div/div/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Search for Stores')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9bf1db07-5af3-4837-a914-1a5e03f5e476",
+      "comment": "",
+      "command": "click",
+      "target": "css=.store-964 > .common-button--ghost",
+      "targets": [
+        ["css=.store-964 > .common-button--ghost", "css:finder"],
+        ["xpath=(//button[@type='button'])[86]", "xpath:attributes"],
+        ["xpath=//div[@id='SharedStoreLoaderContainer-react-component']/div/div/div/div/div/div[2]/div/div[2]/ul/li/button", "xpath:idRelative"],
+        ["xpath=//li/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Set as My Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f9ee5a5-36e2-42cb-92f9-7b3bce5ea23d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ca33298-2cd8-429f-ad11-08387f0d9264",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.global-store__store-name:nth-child(1)",
+      "targets": [
+        ["css=.global-store__store-name:nth-child(1)", "css:finder"],
+        ["xpath=//button[@id='global-store__link']/div/div", "xpath:idRelative"],
+        ["xpath=//button/div/div", "xpath:position"]
+      ],
+      "value": "Chapters — Chinook"
+    }]
   }],
   "suites": [{
     "id": "907a1e44-34b6-4899-9482-38abd8dd8fa9",
