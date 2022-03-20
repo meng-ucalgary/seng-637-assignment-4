@@ -1804,6 +1804,172 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "d8719bd7-7cac-439e-963f-72ede1e54b8e",
+    "name": "filter_watches_from_jewelry_ON",
+    "commands": [{
+      "id": "40b76eac-515f-4526-823b-677ca44f0c55",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fff7ca19-91dd-452b-8dee-65ea1b1de954",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1359x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4142dc7-e164-45cc-ae29-9615c5daf3e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menuStyle > .common-link",
+      "targets": [
+        ["css=.menuStyle > .common-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Fashion')]", "xpath:link"],
+        ["xpath=//div[@id='react_kl0cSn1580e7dCgVFe631Q']/div/div/div[2]/div/div[2]/div[2]/nav/ul/li[9]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/en-ca/fashion/?link-usage=Header%3A%20Fashion&mc=Fashion&lu=Main')]", "xpath:href"],
+        ["xpath=//li[9]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11032c23-9014-4ec5-9185-88cd49e8af69",
+      "comment": "",
+      "command": "click",
+      "target": "css=.merched-menu__item:nth-child(6) span",
+      "targets": [
+        ["css=.merched-menu__item:nth-child(6) span", "css:finder"],
+        ["xpath=//div[@id='browseMenuId906']/div/div/div/ul/li[6]/a/span", "xpath:idRelative"],
+        ["xpath=//div/ul/li[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Jewelry')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4250ed42-85b2-488d-bebd-3070a915342f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.merched-menu__item:nth-child(4) span",
+      "targets": [
+        ["css=.merched-menu__item:nth-child(4) span", "css:finder"],
+        ["xpath=//div[@id='browseMenuId2797']/div/div/div/ul/li[4]/a/span", "xpath:idRelative"],
+        ["xpath=//div/ul/li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Watches')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5824ec0d-7f0e-40df-9e3b-6bb38f5b55ef",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=li:nth-child(3) .search-page__breadcrumb-text",
+      "targets": [
+        ["css=li:nth-child(3) .search-page__breadcrumb-text", "css:finder"],
+        ["xpath=//div[@id='filters-container']/div/div/div/ol/li[3]/a/div", "xpath:idRelative"],
+        ["xpath=//li[3]/a/div", "xpath:position"]
+      ],
+      "value": "watches"
+    }, {
+      "id": "dab1ea5b-2cfb-461c-9139-65e3f989334a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a0b8cc3c-0ab9-47c7-8a9b-4fc93e891dd3",
+    "name": "filter_watches_from_jewelry_turn_OFF",
+    "commands": [{
+      "id": "ea5a04be-01c7-4e08-981c-aa4b241d7259",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c653d7ea-0b29-45f8-8687-07e81ba14d22",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1359x698",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77c5869d-e21b-4b7a-945f-d56cf371c49c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.menuStyle > .common-link",
+      "targets": [
+        ["css=.menuStyle > .common-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Fashion')]", "xpath:link"],
+        ["xpath=//div[@id='react_kl0cSn1580e7dCgVFe631Q']/div/div/div[2]/div/div[2]/div[2]/nav/ul/li[9]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/en-ca/fashion/?link-usage=Header%3A%20Fashion&mc=Fashion&lu=Main')]", "xpath:href"],
+        ["xpath=//li[9]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97294bd0-117a-4a59-bb14-81ba44fc1bdf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.merched-menu__item:nth-child(6) span",
+      "targets": [
+        ["css=.merched-menu__item:nth-child(6) span", "css:finder"],
+        ["xpath=//div[@id='browseMenuId906']/div/div/div/ul/li[6]/a/span", "xpath:idRelative"],
+        ["xpath=//div/ul/li[6]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Jewelry')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6dbe7d34-c950-4ec5-bb4b-baa1e7b334fe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.merched-menu__item:nth-child(4) span",
+      "targets": [
+        ["css=.merched-menu__item:nth-child(4) span", "css:finder"],
+        ["xpath=//div[@id='browseMenuId2797']/div/div/div/ul/li[4]/a/span", "xpath:idRelative"],
+        ["xpath=//div/ul/li[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Watches')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a496094-24f1-45af-a6e1-36815dcdf8c4",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=li:nth-child(3) .search-page__breadcrumb-text",
+      "targets": [
+        ["css=li:nth-child(3) .search-page__breadcrumb-text", "css:finder"],
+        ["xpath=//div[@id='filters-container']/div/div/div/ol/li[3]/a/div", "xpath:idRelative"],
+        ["xpath=//li[3]/a/div", "xpath:position"]
+      ],
+      "value": "watches"
+    }, {
+      "id": "83466530-fbe6-4452-a3d2-4b2ca3ae8662",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(3) path",
+      "targets": [
+        ["css=li:nth-child(3) path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "af3d21c7-ed73-403c-9084-88c1d9360d87",
+      "comment": "",
+      "command": "verifyNotText",
+      "target": "css=.search-page__breadcrumb",
+      "targets": [
+        ["css=.search-page__breadcrumb", "css:finder"],
+        ["xpath=//div[@id='filters-container']/div/div", "xpath:idRelative"],
+        ["xpath=//section/div[2]/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": "watches"
+    }, {
+      "id": "72ddb42e-8928-498c-b7d7-663895428025",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "907a1e44-34b6-4899-9482-38abd8dd8fa9",
