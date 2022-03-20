@@ -1498,6 +1498,312 @@
       ],
       "value": "Chapters — Chinook"
     }]
+  }, {
+    "id": "deccede2-2b53-45f5-8157-67fa40eb1651",
+    "name": "ChangeAccountDetails",
+    "commands": [{
+      "id": "9f4ab52b-af75-4001-96ad-cb6d54d0a917",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aae5d94f-6d36-4927-a736-5e2e5c777b3b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "968x669",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66387a60-1af0-46a9-8325-b8a15af3c5a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hamburger-menu__button > .site-header__icon-svg",
+      "targets": [
+        ["css=.hamburger-menu__button > .site-header__icon-svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "714b7138-59d6-4248-b217-f5d8b5cd64b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hamburger-menu__sign-in-link",
+      "targets": [
+        ["css=.hamburger-menu__sign-in-link", "css:finder"],
+        ["xpath=//a[contains(text(),'sign in')]", "xpath:link"],
+        ["xpath=//div[@id='react_PVmduGM84UepmDIAHOwaVQ']/div/div/div[2]/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/sign-in.html?link-usage=Header%3A%20sign%20in&ReturnUrl=https%3A%2F%2Fwww.chapters.indigo.ca%2Fen-ca%2F')]", "xpath:href"],
+        ["xpath=//div[2]/div/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa4a62a6-16cb-4ddb-b1f8-04babe32f763",
+      "comment": "",
+      "command": "click",
+      "target": "id=sign-in-email",
+      "targets": [
+        ["id=sign-in-email", "id"],
+        ["name=email", "name"],
+        ["css=#sign-in-email", "css:finder"],
+        ["xpath=//input[@id='sign-in-email']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-create-account-section']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9286452c-9a7f-4c0e-b37b-9244c97e2161",
+      "comment": "",
+      "command": "type",
+      "target": "id=sign-in-email",
+      "targets": [
+        ["id=sign-in-email", "id"],
+        ["name=email", "name"],
+        ["css=#sign-in-email", "css:finder"],
+        ["xpath=//input[@id='sign-in-email']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-create-account-section']/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "sengassignment@mail.com"
+    }, {
+      "id": "8013700f-8baa-4dc5-9c77-c52d8d3a9e6a",
+      "comment": "",
+      "command": "click",
+      "target": "id=sign-in-password",
+      "targets": [
+        ["id=sign-in-password", "id"],
+        ["name=password", "name"],
+        ["css=#sign-in-password", "css:finder"],
+        ["xpath=//input[@id='sign-in-password']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-create-account-section']/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48da0345-d51e-4b0c-a515-8b6d18f640a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=sign-in-password",
+      "targets": [
+        ["id=sign-in-password", "id"],
+        ["name=password", "name"],
+        ["css=#sign-in-password", "css:finder"],
+        ["xpath=//input[@id='sign-in-password']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-create-account-section']/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "itsBlueNotIndigo"
+    }, {
+      "id": "fd7a45d8-3b84-45f7-870e-67a60ab60af1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='sign-in-create-account-section']/div/div/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "159e8cda-cbda-4edd-89c6-0f354edec963",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,200)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a249992-ec23-4bbf-b0bb-db5d29be4876",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hamburger-menu__button > .site-header__icon-svg",
+      "targets": [
+        ["css=.hamburger-menu__button > .site-header__icon-svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2bec542-1efa-40be-8ee9-03cb11cb3422",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hamburger-service__link-wrapper:nth-child(1) > .common-link",
+      "targets": [
+        ["css=.hamburger-service__link-wrapper:nth-child(1) > .common-link", "css:finder"],
+        ["xpath=//a[contains(text(),'account centre')]", "xpath:link"],
+        ["xpath=//div[@id='react_PVmduGM84UepmDIAHOwaVQ']/div/div/div[2]/div/div[2]/div[2]/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/?link-usage=Header%3A%20account%20centre')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e91fa39d-a94d-43ed-b2a7-0821208ab0cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.account-details-tile__edit",
+      "targets": [
+        ["css=.account-details-tile__edit", "css:finder"],
+        ["xpath=(//a[contains(text(),'Edit')])[2]", "xpath:link"],
+        ["xpath=//div[@id='react_0HMGA1S2MNFOD']/section/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.chapters.indigo.ca/account-centre/en-ca/account-details.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/section/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92f8d200-3640-4a8a-8699-fdb4e4c56df3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.about-me-read__cta",
+      "targets": [
+        ["css=.about-me-read__cta", "css:finder"],
+        ["xpath=(//button[@type=''])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='customerInfo']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6da59ec-deab-4608-9567-dc573c5eb2f5",
+      "comment": "",
+      "command": "click",
+      "target": "id=DaytimePhoneNumber",
+      "targets": [
+        ["id=DaytimePhoneNumber", "id"],
+        ["name=DaytimePhoneNumber", "name"],
+        ["css=#DaytimePhoneNumber", "css:finder"],
+        ["xpath=//input[@id='DaytimePhoneNumber']", "xpath:attributes"],
+        ["xpath=//div[@id='customerInfo']/div/div[2]/div/form/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae361630-fb80-41d7-8160-75550cf2388f",
+      "comment": "",
+      "command": "type",
+      "target": "id=DaytimePhoneNumber",
+      "targets": [
+        ["id=DaytimePhoneNumber", "id"],
+        ["name=DaytimePhoneNumber", "name"],
+        ["css=#DaytimePhoneNumber", "css:finder"],
+        ["xpath=//input[@id='DaytimePhoneNumber']", "xpath:attributes"],
+        ["xpath=//div[@id='customerInfo']/div/div[2]/div/form/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input", "xpath:position"]
+      ],
+      "value": "1111111111"
+    }, {
+      "id": "771274d4-33f8-4a8a-8d7b-f789a5ef4693",
+      "comment": "",
+      "command": "click",
+      "target": "css=.about-me-edit__cta--save",
+      "targets": [
+        ["css=.about-me-edit__cta--save", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='customerInfo']/div/div[2]/div/form/div[5]/span/button", "xpath:idRelative"],
+        ["xpath=//span/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Update')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae2559c0-0d6c-4757-bf68-12c91c873af4",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.about-me-read__row:nth-child(3) span",
+      "targets": [
+        ["css=.about-me-read__row:nth-child(3) span", "css:finder"],
+        ["xpath=//div[@id='customerInfo']/div/div[2]/div/div/div[3]/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'222.222.2222')]", "xpath:innerText"]
+      ],
+      "value": "111.111.1111"
+    }, {
+      "id": "840bb888-b053-4c7e-94fa-552de9fafd5a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.about-me-read__cta",
+      "targets": [
+        ["css=.about-me-read__cta", "css:finder"],
+        ["xpath=(//button[@type=''])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='customerInfo']/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Edit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e5fe1dc-3b27-4999-b2fa-cc41e47dc243",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,460)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5d04b97-ef46-4336-8261-0915c4936f51",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab51516b-2592-4876-8b9c-0053737b8121",
+      "comment": "",
+      "command": "type",
+      "target": "id=DaytimePhoneNumber",
+      "targets": [
+        ["id=DaytimePhoneNumber", "id"],
+        ["name=DaytimePhoneNumber", "name"],
+        ["css=#DaytimePhoneNumber", "css:finder"],
+        ["xpath=//input[@id='DaytimePhoneNumber']", "xpath:attributes"],
+        ["xpath=//div[@id='customerInfo']/div/div[2]/div/form/div[4]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/input", "xpath:position"]
+      ],
+      "value": "2222222222"
+    }, {
+      "id": "3b0713dd-396f-4708-9133-49023e3050ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.about-me-edit__cta--save",
+      "targets": [
+        ["css=.about-me-edit__cta--save", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='customerInfo']/div/div[2]/div/form/div[5]/span/button", "xpath:idRelative"],
+        ["xpath=//span/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Update')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "16687af0-d8a7-4635-b744-85cd8a953827",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.about-me-read__row:nth-child(3) span",
+      "targets": [
+        ["css=.about-me-read__row:nth-child(3) span", "css:finder"],
+        ["xpath=//div[@id='customerInfo']/div/div[2]/div/div/div[3]/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'222.222.2222')]", "xpath:innerText"]
+      ],
+      "value": "222.222.2222"
+    }, {
+      "id": "69bb8eeb-f669-43c0-99c0-ac67f98c44c3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hamburger > svg",
+      "targets": [
+        ["css=.hamburger > svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d814cfc2-4ff1-4219-afa5-4b089bd3763e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.js-logout-redirect > span",
+      "targets": [
+        ["css=.js-logout-redirect > span", "css:finder"],
+        ["xpath=//div[@id='sidebar-container']/div/div/div/a[9]/span", "xpath:idRelative"],
+        ["xpath=//a[9]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign Out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "907a1e44-34b6-4899-9482-38abd8dd8fa9",
