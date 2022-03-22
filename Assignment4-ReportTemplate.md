@@ -71,6 +71,13 @@ After adding more test cases, we again ran mutation tests on `Range` and `DataUt
 
 ## A discussion on the effect of equivalent mutants on mutation score accuracy
 
+By definition, equivalent mutants are the mutants that cannot be killed under any test cases as no test case can distinguish equivalent mutants from the original program.
+
+Since these mutants cannot be killed yet still counts as part of the mutation coverage, it will always contribute in the lowering the test cases mutation score accuracy. 
+
+One of the equivalent mutant examples that we have come across are the post increment and decrement mutants that were injected into all of the methods where we have tried many ways to eliminate these mutants, yet we can never kill it.
+
+
 ## A discussion of what could have been done to improve the mutation score of the test suites
 
 ## Need for Mutation Testing
