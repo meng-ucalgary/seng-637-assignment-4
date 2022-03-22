@@ -43,11 +43,11 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
   | Method                                   | Survived | Killed | Total | Coverage % |
   | ---------------------------------------- | -------- | ------ | ----- | ---------- |
-  | `Range.isNaNRange()`                     |          |        |       |            |
-  | `Range.shift(Range, double, boolean)`    |          |        |       |            |
-  | `Range.intersects(double, double)`       |          |        |       |            |
-  | `Range.expandToInclude(Range, double)`   |          |        |       |            |
-  | `Range.combineIgnoringNaN(Range, Range)` |          |        |       |            |
+  | `Range.isNaNRange()`                     | 10       | 33     | 43    | 76.74      |
+  | `Range.shift(Range, double, boolean)`    | 9        | 53     | 62    | 85.48      |
+  | `Range.intersects(double, double)`       | 23       | 83     | 106   | 78.30      |
+  | `Range.expandToInclude(Range, double)`   | 10       | 57     | 67    | 85.07      |
+  | `Range.combineIgnoringNaN(Range, Range)` | 18       | 68     | 86    | 79.07      |
 
 - **Mutation score of DataUtilities - before**
 
