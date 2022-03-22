@@ -184,6 +184,13 @@ Each of the eight functionalities chosen was tested with different test data usi
 
 2. The assignment description document [`Assignment4.md`](Assignment4.md) is very detailed and comprehensive, and it was easy to follow.
 
+3. To objective for improving mutation scores to at least 10% for each class is very difficult to obtain because we are focusing on the 5 methods of each class  from the previous assignments. Our test cases only yields a mutation coverage of 58% because they are designed to only cover the 5 methods from the class. If we were to delete all of the other methods besides the 5 methods that we wrote test cases for from our previous assignments, our tests yields 91% mutation coverage. 
+![DataUtilities_5_Methods_Before](images/DataUtilities_5_Methods_Before.png)
+
+We have also written 5 test cases for the data utilities class and with those 5 test cases, we have increase the mutations killed from 400 to 405 out of 441, which means we increased it by 1%.
+![DataUtilities_5_Methods_After](images/DataUtilities_5_Methods_After.png)
+
+
 ## Contributors
 
 We are group 5, and below are the team members
