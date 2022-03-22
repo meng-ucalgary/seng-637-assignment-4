@@ -96,6 +96,8 @@ Mutation testing is required to test the effectiveness of the test suite. It pro
 
 ## Explain your SELENUIM test case design process
 
+With our Selenium test case design, we first define the test scenario as a group in the perspective of the user who is visiting indigo.ca. 
+
 With this in mind, we have envision our user to conduct the following actions on the website:
 - Login 
 - Search for a store
@@ -111,6 +113,10 @@ After defining the list of actions that a user will conduct in our test scenario
 For example with login, we would define test cases to ensure the function works appropriately when right credentials were entered as well as when the wrong credentials were entered.
 
 ## Explain the use of assertions and checkpoints
+
+Assertions and checkpoints are used to verify at specific points of the test cases that the functionality is working as intended.
+
+For example, for the test cases with the Indigo's cart, we asserted the number of items in the cart shown on the site with the number of items that we actually added. Likewise, we assert the label "Empty Cart" when we have removed all of the items to ensure that the cart is working as expected.
 
 ## Testing functionalities with different test data
 
