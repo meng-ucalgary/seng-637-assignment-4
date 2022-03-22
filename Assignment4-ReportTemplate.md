@@ -41,6 +41,14 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
   ![Range_Mutants_Statistics_Before](images/Range_Mutants_Statistics_Before.png)
 
+  | Method                                   | Survived | Killed | Total | Coverage % |
+  | ---------------------------------------- | -------- | ------ | ----- | ---------- |
+  | `Range.isNaNRange()`                     |          |        |       |            |
+  | `Range.shift(Range, double, boolean)`    |          |        |       |            |
+  | `Range.intersects(double, double)`       |          |        |       |            |
+  | `Range.expandToInclude(Range, double)`   |          |        |       |            |
+  | `Range.combineIgnoringNaN(Range, Range)` |          |        |       |            |
+
 - **Mutation score of DataUtilities - before**
 
   ![DataUtilities_Mutants_Score_Before](images/DataUtilities_Mutants_Score_Before.png)
@@ -48,6 +56,14 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 - **Mutation statistics of DataUtilities - before**
 
   ![DataUtilities_Mutants_Statistics_Before](images/DataUtilities_Mutants_Statistics_Before.png)
+
+  | Method                                                     | Survived | Killed | Total | Coverage % |
+  | ---------------------------------------------------------- | -------- | ------ | ----- | ---------- |
+  | `DataUtilities.calculateRowTotal(Values2D, int)`           |          |        |       |            |
+  | `DataUtilities.calculateRowTotal(Values2D, int, int[])`    |          |        |       |            |
+  | `DataUtilities.calculateColumnTotal(Values2D, int)`        |          |        |       |            |
+  | `DataUtilities.calculateColumnTotal(Values2D, int, int[])` |          |        |       |            |
+  | `DataUtilities.getCumulativePercentages(KeyedValues)`      |          |        |       |            |
 
 After adding more test cases, we again ran mutation tests on `Range` and `DataUtilities`.
 
@@ -59,6 +75,14 @@ After adding more test cases, we again ran mutation tests on `Range` and `DataUt
 
   ![Range_Mutants_Statistics_After](images/Range_Mutants_Statistics_After.png)
 
+  | Method                                   | Survived | Killed | Total | Coverage % |
+  | ---------------------------------------- | -------- | ------ | ----- | ---------- |
+  | `Range.isNaNRange()`                     |          |        |       |            |
+  | `Range.shift(Range, double, boolean)`    |          |        |       |            |
+  | `Range.intersects(double, double)`       |          |        |       |            |
+  | `Range.expandToInclude(Range, double)`   |          |        |       |            |
+  | `Range.combineIgnoringNaN(Range, Range)` |          |        |       |            |
+
 - **Mutation score of DataUtilities - after**
 
   ![DataUtilities_Mutants_Score_After](images/DataUtilities_Mutants_Score_After.png)
@@ -67,23 +91,29 @@ After adding more test cases, we again ran mutation tests on `Range` and `DataUt
 
   ![DataUtilities_Mutants_Statistics_After](images/DataUtilities_Mutants_Statistics_After.png)
 
+  | Method                                                     | Survived | Killed | Total | Coverage % |
+  | ---------------------------------------------------------- | -------- | ------ | ----- | ---------- |
+  | `DataUtilities.calculateRowTotal(Values2D, int)`           |          |        |       |            |
+  | `DataUtilities.calculateRowTotal(Values2D, int, int[])`    |          |        |       |            |
+  | `DataUtilities.calculateColumnTotal(Values2D, int)`        |          |        |       |            |
+  | `DataUtilities.calculateColumnTotal(Values2D, int, int[])` |          |        |       |            |
+  | `DataUtilities.getCumulativePercentages(KeyedValues)`      |          |        |       |            |
+
 ## Analysis drawn on the effectiveness of each of the test classes
 
 ## A discussion on the effect of equivalent mutants on mutation score accuracy
 
 By definition, equivalent mutants are the mutants that cannot be killed under any test cases as no test case can distinguish equivalent mutants from the original program.
 
-Since these mutants cannot be killed yet still counts as part of the mutation coverage, it will always contribute in the lowering the test cases mutation score accuracy. 
+Since these mutants cannot be killed yet still counts as part of the mutation coverage, it will always contribute in the lowering the test cases mutation score accuracy.
 
 One of the equivalent mutant examples that we have come across are the post increment and decrement mutants that were injected into all of the methods where we have tried many ways to eliminate these mutants, yet we can never kill it.
 
-
 ## A discussion of what could have been done to improve the mutation score of the test suites
 
-For this assignment, the objective is to create test cases that help improve the mutation score of the 5 methods that we focused on for the Range and DataUtilities class. However, the scores includes mutations that are of other methods within the class. 
+For this assignment, the objective is to create test cases that help improve the mutation score of the 5 methods that we focused on for the Range and DataUtilities class. However, the scores includes mutations that are of other methods within the class.
 
 As such, one way to improve the accuracy scores is to remove the methods from the class source code that are not being tested by our test cases. A detail example of this can be found in point 3 of the section “Difficulties, challenges, and lessons learned” in this report.
-
 
 ## Need for Mutation Testing
 
@@ -108,10 +138,11 @@ Mutation testing is required to test the effectiveness of the test suite. It pro
 
 ## Explain your SELENUIM test case design process
 
-With our Selenium test case design, we first define the test scenario as a group in the perspective of the user who is visiting indigo.ca. 
+With our Selenium test case design, we first define the test scenario as a group in the perspective of the user who is visiting indigo.ca.
 
 With this in mind, we have envision our user to conduct the following actions on the website:
-- Login 
+
+- Login
 - Search for a store
 - Changing email communication preferences
 - Add and remove items from cart
@@ -210,10 +241,9 @@ Each of the eight functionalities chosen was tested with different test data usi
 
 2. Some websites add an another authentication factor like **CAPTCHA** when they detect automated interactions with their websites. So, selenium test cases that includes login pause in the middle until the tester manually deals with those CAPTCHAs.
 
-3. To objective for improving mutation scores to at least 10% for each class is very difficult to obtain because we are focusing on the 5 methods of each class  from the previous assignments. Our test cases only yields a mutation coverage of 58% because they are designed to only cover the 5 methods from the class. If we were to delete all of the other methods besides the 5 methods that we wrote test cases for from our previous assignments, our tests yields 91% mutation coverage. 
+3. To objective for improving mutation scores to at least 10% for each class is very difficult to obtain because we are focusing on the 5 methods of each class from the previous assignments. Our test cases only yields a mutation coverage of 58% because they are designed to only cover the 5 methods from the class. If we were to delete all of the other methods besides the 5 methods that we wrote test cases for from our previous assignments, our tests yields 91% mutation coverage.
 
 <img src="images/DataUtilities_5_Methods_Before.png" width="600">
-
 
 We have also written 5 test cases for the data utilities class and with those 5 test cases, we have increase the mutations killed from 400 to 405 out of 441, which means we increased it by 1%.
 
@@ -224,10 +254,6 @@ We have also written 5 test cases for the data utilities class and with those 5 
 1. This assignment gave us a chance to further improve our test suite using mutation testing.
 
 2. The assignment description document [`Assignment4.md`](Assignment4.md) is very detailed and comprehensive, and it was easy to follow.
-
-
-
-
 
 ## Contributors
 
