@@ -96,6 +96,20 @@ Mutation testing is required to test the effectiveness of the test suite. It pro
 
 ## Explain your SELENUIM test case design process
 
+With this in mind, we have envision our user to conduct the following actions on the website:
+- Login 
+- Search for a store
+- Changing email communication preferences
+- Add and remove items from cart
+- Add and remove items from wishlist
+- Changing account details
+- Sorting the items within categories
+- Filtering the items within categories
+
+After defining the list of actions that a user will conduct in our test scenario, we then progress to creating test cases for these actions to verify the functionality works according to expectations.
+
+For example with login, we would define test cases to ensure the function works appropriately when right credentials were entered as well as when the wrong credentials were entered.
+
 ## Explain the use of assertions and checkpoints
 
 ## Testing functionalities with different test data
