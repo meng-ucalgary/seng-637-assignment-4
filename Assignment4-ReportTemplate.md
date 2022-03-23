@@ -45,7 +45,7 @@ This is an equivalent mutation and cannot be killed as it is post increment on a
 
 ### Mutation #3:
 Within the intersect method of the Range class, one of the mutations done is:
-“Incremented (a--) double local variable number 3 → SURVIVED”
+“Decremented (a--) double local variable number 3 → SURVIVED”
 Upon analysis of the PIT report, this is applied to the line:
 “return (b0 < this.upper && b1 >= b0);”
 This is an equivalent mutation and cannot be killed as it is post derement on a return statement, which means that the decrement will not be used again.
