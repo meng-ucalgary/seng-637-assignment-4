@@ -165,26 +165,26 @@ For example, for the test cases with the Indigo's cart, we asserted the number o
 
 Each of the eight functionalities chosen was tested with different test data using Selenium IDe. The table below summarizes functionalities and items that were tested.
 
-| Functionality            | Test                                    |
-| ------------------------ | --------------------------------------- |
-| Login                    | Test login with invalid password        |
-|                          | Test login with valid password          |
-| Email preferences        | Test opt-out of all email communication |
-|                          | Test opt-in of all email communication  |
-| Finding different stores | _TBA_                                   |
-|                          | _TBA_                                   |
-| Changing account details | _TBA_                                   |
-|                          | _TBA_                                   |
-| Finding different stores | _TBA_                                   |
-|                          | _TBA_                                   |
-| Cart                     | Test adding items to the cart           |
-|                          | Test removing items from the cart       |
-| Wishlist                 | Test adding items to the wishlist       |
-|                          | Test removing items from the wishlist   |
-| Filtering search results | _TBA_                                   |
-|                          | _TBA_                                   |
-| _TBA_                    | _TBA_                                   |
-|                          | _TBA_                                   |
+| Functionality            | Test                                                     |
+| ------------------------ | -------------------------------------------------------- |
+| Login                    | Test login with invalid password                         |
+|                          | Test login with valid password                           |
+| Email preferences        | Test opt-out of all email communication                  |
+|                          | Test opt-in of all email communication                   |
+| Finding different stores | _TBA_                                                    |
+|                          | _TBA_                                                    |
+| Changing account details | Test changing phone number with valid number             |
+|                          | Test changing phone number with invalid number (letters) |
+| Finding different stores | Search by city name                                      |
+|                          | Search by postal code                                    |
+| Cart                     | Test adding items to the cart                            |
+|                          | Test removing items from the cart                        |
+| Wishlist                 | Test adding items to the wishlist                        |
+|                          | Test removing items from the wishlist                    |
+| Filtering search results | _TBA_                                                    |
+|                          | _TBA_                                                    |
+| _TBA_                    | _TBA_                                                    |
+|                          | _TBA_                                                    |
 
 ## Selenium vs Sikulix
 
