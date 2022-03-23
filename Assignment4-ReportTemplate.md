@@ -70,6 +70,30 @@ public static Range expandToInclude(Range range, double value) {
   }
 }
 ```
+### Mutation #4:
+
+Within the expandToInclude method of the Range class, one of the mutations is:  
+"removed conditional - replaced comparison check with false → KILLED"  
+Upon analysis of the PIT report, this is applied to the line:  
+ ``` if (value < range.getLowerBound()) {...} ```  
+expandToIncludeWithInputBLB() is one of the many test cases that kills this mutation. This method uses a range of (-10,10) and value of -10.00001. Using these numbers, when the conditional in the if statement is replaced with false, the else statement will be executed instead. This returns the orignal range and does not expand it as intended. As the returned range does not match the expected range, the test fails and this mutation is killed.
+
+```
+public static Range expandToInclude(Range range, double value) {
+  if (range == null) {
+    return new Range(value, value);
+  }
+  if (value < range.getLowerBound()) {
+   return new Range(value, range.getUpperBound());
+  }
+  else if (value > range.getUpperBound()) {
+     return new Range(range.getLowerBound(), value);
+  }
+  else {
+   return range;
+  }
+}
+```
 
 ## Mutation score and statistics
 
