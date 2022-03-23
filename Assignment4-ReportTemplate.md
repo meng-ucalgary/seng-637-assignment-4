@@ -34,7 +34,9 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 Within the intersect method of the Range class, one of the mutations is:
 “Incremented (a++) double local variable number 3 → SURVIVED”
 Upon analysis of the PIT report, this is applied to the line:
-“return (b0 < this.upper && b1 >= b0);”
+```
+return (b0 < this.upper && b1 >= b0);
+```
 This is an equivalent mutation and cannot be killed as it is post increment on a return statement, which means that the increment will not be used again.
 
 ### Mutation #2:
@@ -42,7 +44,9 @@ This is an equivalent mutation and cannot be killed as it is post increment on a
 Within the intersect method of the Range class, one of the mutations is:
 “Decremented (a--) double local variable number 3 → SURVIVED”
 Upon analysis of the PIT report, this is applied to the line:
-“return (b0 < this.upper && b1 >= b0);”
+```
+return (b0 < this.upper && b1 >= b0);
+```
 This is an equivalent mutation and cannot be killed as it is post derement on a return statement, which means that the decrement will not be used again.
 
 ### Mutation #3:
@@ -94,6 +98,20 @@ public static Range expandToInclude(Range range, double value) {
   }
 }
 ```
+
+## Mutation #5
+
+Within the intersect method of the Range class, one of the mutations is: “changed conditional boundary”
+This mutation is applied to the following code within the intersect method:
+
+```
+return (b0 < this.upper && b1 >= b0);
+```
+
+For this mutation, this .upper value is changed with a smaller number such that if there are no test cases with b0 smaller than their changed boundary of this.upper, the mutation will survice.
+
+Fortunately, the test case intersectsWithInput0And0 that was developed in previous assignment successfully killed this mutation.
+
 
 ## Mutation score and statistics
 
