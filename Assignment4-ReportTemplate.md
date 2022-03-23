@@ -119,6 +119,20 @@ For this mutation, this .upper value is changed with a smaller number such that 
 Fortunately, the test case intersectsWithInput0And0 that was developed in previous assignment successfully killed this mutation.
 
 
+### Mutation #6:
+
+In the shift method of the Range class, the mutation "removed call to ParamChecks.nullNotPermitted", is applied to the code:
+
+```
+ParamChecks.nullNotPermitted(base, "base");
+```
+and should throw illegalArgumentException if the base range is null. 
+
+This mutation survived because there was no test case previously written, that uses a null Range object.
+
+
+
+
 ## Mutation score and statistics
 
 After commenting out failing test cases in Assignment 3, we ran mutation tests on `Range` and `DataUtilities`.
