@@ -79,7 +79,7 @@ After adding more test cases, we again ran mutation tests on `Range` and `DataUt
   | ---------------------------------------- | -------- | ------ | ----- | ---------- |
   | `Range.isNaNRange()`                     |          |        |       |            |
   | `Range.shift(Range, double, boolean)`    |          |        |       |            |
-  | `Range.intersects(double, double)`       |          |        |       |            |
+  | `Range.intersects(double, double)`       |   21     |   85   |  106  |   80.2     |
   | `Range.expandToInclude(Range, double)`   |          |        |       |            |
   | `Range.combineIgnoringNaN(Range, Range)` |          |        |       |            |
 
