@@ -142,6 +142,13 @@ Since these mutants cannot be killed yet still counts as part of the mutation co
 
 One of the equivalent mutant examples that we have come across are the post increment and decrement mutants that were injected into all of the methods where we have tried many ways to eliminate these mutants, yet we can never kill it.
 
+
+Although equivalent mutations are hard to detect and they impede on the reliance of these results, there have been theoretically ways that can detect these mutations. Upon researching on this topic, there has been several methods proposed in different research in detecting equivalent mutations such as:
+-	Detecting whether the mutation actually change the coverage (reference: https://onlinelibrary.wiley.com/doi/10.1002/stvr.1473)
+-	trace inclusion check or constraint resolving (reference: https://www.conformiq.com/2019/07/mutation-testing/)
+
+
+
 ## A discussion of what could have been done to improve the mutation score of the test suites
 
 For this assignment, the objective is to create test cases that help improve the mutation score of the 5 methods that we focused on for the Range and DataUtilities class. However, the scores includes mutations that are of other methods within the class.
