@@ -30,27 +30,54 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 ## Analysis of 10 mutants of the Range class
 
 ### Mutation #1:
+
 Within the intersect method of the Range class, one of the mutations done is:
 “removed conditional - replaced comparison check with true’”
 If we look closely at the intersect method source code, one of the line states:
 “return (b0 < this.upper && b1 >= b0);”
-Which one of the condition it checks is b1>=b0. The mutation mutates the b1>=b0 such that it is always true. To kill this mutation, a test case is written where b0 is > b1 labeled (“intersectsWithReverse”), which successfully killed the mutation. 
+Which one of the condition it checks is b1>=b0. The mutation mutates the b1>=b0 such that it is always true. To kill this mutation, a test case is written where b0 is > b1 labeled (“intersectsWithReverse”), which successfully killed the mutation.
 
 ### Mutation #2:
-Within the intersect method of the Range class, one of the mutations done is:
+
+Within the intersect method of the Range class, one of the mutations is:
 “Incremented (a++) double local variable number 3 → SURVIVED”
 Upon analysis of the PIT report, this is applied to the line:
 “return (b0 < this.upper && b1 >= b0);”
 This is an equivalent mutation and cannot be killed as it is post increment on a return statement, which means that the increment will not be used again.
 
 ### Mutation #3:
-Within the intersect method of the Range class, one of the mutations done is:
+
+Within the intersect method of the Range class, one of the mutations is:
 “Decremented (a--) double local variable number 3 → SURVIVED”
 Upon analysis of the PIT report, this is applied to the line:
 “return (b0 < this.upper && b1 >= b0);”
 This is an equivalent mutation and cannot be killed as it is post derement on a return statement, which means that the decrement will not be used again.
 
+### Mutation #4:
 
+Within the expandToInclude method of the Range class, one of the mutations is:
+"changed conditional boundary → SURVIVED"
+Upon analysis of the PIT report, this is applied to the line:  
+`if (value < range.getLowerBound()) { ... }`   
+From the Pitest documentation, the 'Conditionals Boundary Mutator' mutates < to <=. Examining the original function below we can see this results in an equivalent mutation.
+For example, with range (-10,10) and value of -10 the final else statement would be executed and the original range returned. The mutatuion of < to <= results in the line   ```return new Range(value, range.getUpperBound());``` being executed instead. However the new range would be (-10,10), the same result as returning the original range. Therefor this is an equivalent mutation and can not be killed.
+
+```
+public static Range expandToInclude(Range range, double value) {
+  if (range == null) {
+    return new Range(value, value);
+  }
+  if (value < range.getLowerBound()) {
+   return new Range(value, range.getUpperBound());
+  }
+  else if (value > range.getUpperBound()) {
+     return new Range(range.getLowerBound(), value);
+  }
+  else {
+   return range;
+  }
+}
+```
 
 ## Mutation score and statistics
 
@@ -102,7 +129,7 @@ After adding more test cases, we again ran mutation tests on `Range` and `DataUt
   | ---------------------------------------- | -------- | ------ | ----- | ---------- |
   | `Range.isNaNRange()`                     |          |        |       |            |
   | `Range.shift(Range, double, boolean)`    |          |        |       |            |
-  | `Range.intersects(double, double)`       |   21     |   85   |  106  |   80.2     |
+  | `Range.intersects(double, double)`       | 21       | 85     | 106   | 80.2       |
   | `Range.expandToInclude(Range, double)`   |          |        |       |            |
   | `Range.combineIgnoringNaN(Range, Range)` |          |        |       |            |
 
@@ -123,16 +150,16 @@ After adding more test cases, we again ran mutation tests on `Range` and `DataUt
   | `DataUtilities.getCumulativePercentages(KeyedValues)`      | 6        | 119    | 125   | 95.20      |
 
 ## Analysis drawn on the effectiveness of each of the test classes
+
 ### Test Case: intersectsWithReverse
+
 Within the intersect method of the Range class, one of the mutations survived is:
 “removed conditional - replaced comparison check with true’”
 If we look closely at the intersect method source code, one of the line states:
 “return (b0 < this.upper && b1 >= b0);”
-One of the condition it checks is b1>=b0. The mutation mutates the b1>=b0 such that it is always true. 
+One of the condition it checks is b1>=b0. The mutation mutates the b1>=b0 such that it is always true.
 Given that, if a test case is created such that b1>=b0 equals false, or b0>b1, then it should effectively kill the mutation.
 In the intersectsWithReverse test case, we call the intersect method for the range of -10 to 10 with b0 = -6 and b1 = -9. In this case, b0>b1, and as a result, it effectively killed the mutation.
-
-
 
 ## A discussion on the effect of equivalent mutants on mutation score accuracy
 
@@ -142,18 +169,16 @@ Since these mutants cannot be killed yet still counts as part of the mutation co
 
 One of the equivalent mutant examples that we have come across are the post increment and decrement mutants that were injected into all of the methods where we have tried many ways to eliminate these mutants, yet we can never kill it.
 
-
 Although equivalent mutations are hard to detect and they impede on the reliance of these results, there have been theoretically ways that can detect these mutations. Upon researching on this topic, there has been several methods proposed in different research in detecting equivalent mutations such as:
--	Detecting whether the mutation actually change the coverage (reference: https://onlinelibrary.wiley.com/doi/10.1002/stvr.1473)
--	trace inclusion check or constraint resolving (reference: https://www.conformiq.com/2019/07/mutation-testing/)
 
-
+- Detecting whether the mutation actually change the coverage (reference: https://onlinelibrary.wiley.com/doi/10.1002/stvr.1473)
+- trace inclusion check or constraint resolving (reference: https://www.conformiq.com/2019/07/mutation-testing/)
 
 ## A discussion of what could have been done to improve the mutation score of the test suites
 
 For this assignment, the objective is to create test cases that help improve the mutation score of the 5 methods that we focused on for the Range and DataUtilities class. However, the scores includes mutations that are of other methods within the class.
 
-As such, one way to improve the accuracy scores is to added additional test cases for the methods from the class source code that are not originally tested by our test cases. 
+As such, one way to improve the accuracy scores is to added additional test cases for the methods from the class source code that are not originally tested by our test cases.
 
 ## Need for Mutation Testing
 
