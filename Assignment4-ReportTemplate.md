@@ -31,13 +31,13 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 
 ### Mutation #1:
 
-Within the intersect method of the Range class, one of the mutations done is:
+Within the intersect method of the Range class, one of the mutations is:
 “Incremented (a++) double local variable number 3 → SURVIVED”
 Upon analysis of the PIT report, this is applied to the line:
 “return (b0 < this.upper && b1 >= b0);”
 This is an equivalent mutation and cannot be killed as it is post increment on a return statement, which means that the increment will not be used again.
 
-### Mutation #3:
+### Mutation #2:
 
 Within the intersect method of the Range class, one of the mutations is:
 “Decremented (a--) double local variable number 3 → SURVIVED”
@@ -45,7 +45,7 @@ Upon analysis of the PIT report, this is applied to the line:
 “return (b0 < this.upper && b1 >= b0);”
 This is an equivalent mutation and cannot be killed as it is post derement on a return statement, which means that the decrement will not be used again.
 
-### Mutation #4:
+### Mutation #3:
 
 Within the expandToInclude method of the Range class, one of the mutations is:
 "changed conditional boundary → SURVIVED"
