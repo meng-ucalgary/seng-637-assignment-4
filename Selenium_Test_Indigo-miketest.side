@@ -100,7 +100,7 @@
       "id": "ac1be5dc-e934-4701-a681-cf13d5e6703e",
       "comment": "",
       "command": "pause",
-      "target": "30000",
+      "target": "5000",
       "targets": [],
       "value": ""
     }, {
@@ -287,14 +287,14 @@
       "id": "362bfc18-35a6-48c5-b01c-6fca14036312",
       "comment": "",
       "command": "pause",
-      "target": "3000",
+      "target": "5000",
       "targets": [],
       "value": ""
     }, {
       "id": "f18cef0d-2400-4269-bfc8-c4eb83788cc3",
       "comment": "",
       "command": "click",
-      "target": "xpath=//span[contains(.,'Remove')]",
+      "target": "css=.product-list__remove-item-label",
       "targets": [
         ["css=.product-list__remove-item-label", "css:finder"],
         ["xpath=//section[@id='CartPageContainer']/div/div/section/div/div/div/div[7]/button[2]/span", "xpath:idRelative"],
