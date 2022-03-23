@@ -123,6 +123,16 @@ After adding more test cases, we again ran mutation tests on `Range` and `DataUt
   | `DataUtilities.getCumulativePercentages(KeyedValues)`      | 6        | 119    | 125   | 95.20      |
 
 ## Analysis drawn on the effectiveness of each of the test classes
+### Test Case: intersectsWithReverse
+Within the intersect method of the Range class, one of the mutations survived is:
+“removed conditional - replaced comparison check with true’”
+If we look closely at the intersect method source code, one of the line states:
+“return (b0 < this.upper && b1 >= b0);”
+One of the condition it checks is b1>=b0. The mutation mutates the b1>=b0 such that it is always true. 
+Given that, if a test case is created such that b1>=b0 equals false, or b0>b1, then it should effectively kill the mutation.
+In the intersectsWithReverse test case, we call the intersect method for the range of -10 to 10 with b0 = -6 and b1 = -9. In this case, b0>b1, and as a result, it effectively killed the mutation.
+
+
 
 ## A discussion on the effect of equivalent mutants on mutation score accuracy
 
