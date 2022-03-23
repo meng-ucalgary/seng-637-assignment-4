@@ -31,19 +31,12 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 
 ### Mutation #1:
 Within the intersect method of the Range class, one of the mutations done is:
-“removed conditional - replaced comparison check with true’”
-If we look closely at the intersect method source code, one of the line states:
-“return (b0 < this.upper && b1 >= b0);”
-Which one of the condition it checks is b1>=b0. The mutation mutates the b1>=b0 such that it is always true. To kill this mutation, a test case is written where b0 is > b1 labeled (“intersectsWithReverse”), which successfully killed the mutation. 
-
-### Mutation #2:
-Within the intersect method of the Range class, one of the mutations done is:
 “Incremented (a++) double local variable number 3 → SURVIVED”
 Upon analysis of the PIT report, this is applied to the line:
 “return (b0 < this.upper && b1 >= b0);”
 This is an equivalent mutation and cannot be killed as it is post increment on a return statement, which means that the increment will not be used again.
 
-### Mutation #3:
+### Mutation #2:
 Within the intersect method of the Range class, one of the mutations done is:
 “Decremented (a--) double local variable number 3 → SURVIVED”
 Upon analysis of the PIT report, this is applied to the line:
