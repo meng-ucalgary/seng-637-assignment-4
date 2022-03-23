@@ -2,7 +2,6 @@ package org.jfree.data;
 
 import static org.junit.Assert.*;
 import org.junit.*;
-
 public class RangeTest {
     private Range exampleRange;
     private Range originRange;
@@ -442,7 +441,25 @@ public class RangeTest {
         Range r2 = new Range(Double.NaN, Double.NaN);
         assertEquals("Testing combining with both range NaN", null, Range.combineIgnoringNaN(r1, r2));
     }
+    
+    // ------ NEW
+    @Test
+    public void combineIgnoringNaNWithFirstRangeNaN() {
+        Range r1 = new Range(Double.NaN, 10);
+        Range r2 = new Range(Double.NaN, 10);
+        assertEquals(10, Range.combineIgnoringNaN(r1, r2).getUpperBound(), 0.0);
+        assertEquals(Double.NaN, Range.combineIgnoringNaN(r1, r2).getLowerBound(), 0.0);   
+    }
+    @Test
+    public void combineIgnoringNaNWithSecondRangeNaN() {
+        Range r2 = new Range(-10, Double.NaN);
+        Range r1 = new Range(-10, Double.NaN);
+        assertEquals(-10, Range.combineIgnoringNaN(r1, r2).getLowerBound(), 0.0);
+        assertEquals(Double.NaN, Range.combineIgnoringNaN(r1, r2).getUpperBound(), 0.0);
+    }
 
+
+    
 //    @Test
 //    public void combineIgnoringNaNWithMaxBoundNaN() {
 //        Range r1 = new Range(-10, Double.NaN);
