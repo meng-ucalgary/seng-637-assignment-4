@@ -29,6 +29,13 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 
 ## Analysis of 10 mutants of the Range class
 
+Within the intersect method of the Range class, one of the mutations done is:
+“removed conditional - replaced comparison check with true’”
+If we look closely at the intersect method source code, one of the line states:
+“return (b0 < this.upper && b1 >= b0);”
+Which one of the condition it checks is b1>=b0. The mutation mutates the b1>=b0 such that it is always true. To kill this mutation, a test case is written where b0 is > b1 labeled (“intersectsWithReverse”), which successfully killed the mutation. 
+
+
 ## Mutation score and statistics
 
 After commenting out failing test cases in Assignment 3, we ran mutation tests on `Range` and `DataUtilities`.
