@@ -129,7 +129,7 @@ One of the equivalent mutant examples that we have come across are the post incr
 
 For this assignment, the objective is to create test cases that help improve the mutation score of the 5 methods that we focused on for the Range and DataUtilities class. However, the scores includes mutations that are of other methods within the class.
 
-As such, one way to improve the accuracy scores is to remove the methods from the class source code that are not being tested by our test cases. A detail example of this can be found in point 3 of the section “Difficulties, challenges, and lessons learned” in this report.
+As such, one way to improve the accuracy scores is to added additional test cases for the methods from the class source code that are not originally tested by our test cases. 
 
 ## Need for Mutation Testing
 
