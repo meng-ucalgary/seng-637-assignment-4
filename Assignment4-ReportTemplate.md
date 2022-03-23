@@ -59,11 +59,11 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
   | Method                                                     | Survived | Killed | Total | Coverage % |
   | ---------------------------------------------------------- | -------- | ------ | ----- | ---------- |
-  | `DataUtilities.calculateRowTotal(Values2D, int)`           |          |        |       |            |
-  | `DataUtilities.calculateRowTotal(Values2D, int, int[])`    |          |        |       |            |
-  | `DataUtilities.calculateColumnTotal(Values2D, int)`        |          |        |       |            |
-  | `DataUtilities.calculateColumnTotal(Values2D, int, int[])` |          |        |       |            |
-  | `DataUtilities.getCumulativePercentages(KeyedValues)`      |          |        |       |            |
+  | `DataUtilities.calculateRowTotal(Values2D, int)`           | 6        | 61     | 67    | 91.04      |
+  | `DataUtilities.calculateRowTotal(Values2D, int, int[])`    | 11       | 80     | 91    | 87.91      |
+  | `DataUtilities.calculateColumnTotal(Values2D, int)`        | 6        | 61     | 67    | 91.04      |
+  | `DataUtilities.calculateColumnTotal(Values2D, int, int[])` | 11       | 80     | 91    | 87.91      |
+  | `DataUtilities.getCumulativePercentages(KeyedValues)`      | 7        | 118    | 125   | 94.40      |
 
 After adding more test cases, we again ran mutation tests on `Range` and `DataUtilities`.
 
@@ -93,11 +93,11 @@ After adding more test cases, we again ran mutation tests on `Range` and `DataUt
 
   | Method                                                     | Survived | Killed | Total | Coverage % |
   | ---------------------------------------------------------- | -------- | ------ | ----- | ---------- |
-  | `DataUtilities.calculateRowTotal(Values2D, int)`           |          |        |       |            |
-  | `DataUtilities.calculateRowTotal(Values2D, int, int[])`    |          |        |       |            |
-  | `DataUtilities.calculateColumnTotal(Values2D, int)`        |          |        |       |            |
-  | `DataUtilities.calculateColumnTotal(Values2D, int, int[])` |          |        |       |            |
-  | `DataUtilities.getCumulativePercentages(KeyedValues)`      |          |        |       |            |
+  | `DataUtilities.calculateRowTotal(Values2D, int)`           | 5        | 62     | 67    | 92.54      |
+  | `DataUtilities.calculateRowTotal(Values2D, int, int[])`    | 10       | 81     | 91    | 89.01      |
+  | `DataUtilities.calculateColumnTotal(Values2D, int)`        | 5        | 62     | 67    | 92.54      |
+  | `DataUtilities.calculateColumnTotal(Values2D, int, int[])` | 10       | 81     | 91    | 89.01      |
+  | `DataUtilities.getCumulativePercentages(KeyedValues)`      | 6        | 119    | 125   | 95.20      |
 
 ## Analysis drawn on the effectiveness of each of the test classes
 
