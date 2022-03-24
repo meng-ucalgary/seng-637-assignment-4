@@ -635,7 +635,10 @@ public class RangeTest {
         assertEquals( new Range(20,20),
                 Range.expand(this.exampleRange, -2, 0));
     }
-  
+    @Test(expected = IllegalArgumentException.class)
+    public void expandWithNullRange() {
+        Range.expand(null,  -2, 0);
+    }
     // ------------------------------------------------------------------------
     
     
