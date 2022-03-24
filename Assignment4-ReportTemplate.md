@@ -213,17 +213,7 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
 ## Analysis drawn on the effectiveness of each of the test classes
 
-After analyzing the Pitest reports, in both the `Range` class and `DataUtilities` class, it was determined that almost all of the surviving mutations were equivalent mutations. Therefor there was ittle thavery lt could be done to improve upon these scores. The only method that had a significant number of non-equivalent mutations was `Range.combineIgnoringNaN(Range, Range)` where an additional 8 mutants could be killed, increasing the coverage for this method by 9.65%.
-
-### Test Case: intersectsWithReverse
-
-Within the intersect method of the Range class, one of the mutations survived is:
-“removed conditional - replaced comparison check with true’”
-If we look closely at the intersect method source code, one of the line states:
-“return (b0 < this.upper && b1 >= b0);”
-One of the condition it checks is b1>=b0. The mutation mutates the b1>=b0 such that it is always true.
-Given that, if a test case is created such that b1>=b0 equals false, or b0>b1, then it should effectively kill the mutation.
-In the intersectsWithReverse test case, we call the intersect method for the range of -10 to 10 with b0 = -6 and b1 = -9. In this case, b0>b1, and as a result, it effectively killed the mutation.
+After analyzing the Pitest reports, in both the `Range` class and `DataUtilities` class, it was found that most all of the surviving mutants were because of equivalent mutations. Therefore, very little could have been done to improve upon the mutation scores. The only method that had a significant number of non-equivalent mutations was `Range.combineIgnoringNaN(Range, Range)` where an additional 8 mutants could be killed, increasing the coverage for this method by 9.65%.
 
 ## A discussion on the effect of equivalent mutants on mutation score accuracy
 
