@@ -252,7 +252,7 @@ Although equivalent mutations are hard to detect and they impede on the reliance
 
 For this assignment, the objective is to create test cases that help improve the mutation score of the 5 methods that we focused on for the Range and DataUtilities class. However, the scores includes mutations that are of other methods within the class.
 
-As such, one way to improve the accuracy scores is to added additional test cases for the methods from the class source code that are not originally tested by our test cases. As discussed above, our original test suite killed almost every mutation so there was little room for improvement. After adding test cases to kill the few killable mutants, we decided to add tests for two more methods in the Range class to increase the overall coverage. These were for `Range.combine` and `Range.expand()`. Covering more methods in the class significantly increased the overall coverage.
+As such, one way to improve the accuracy scores is to added additional test cases for the methods from the class source code that are not originally tested by our test cases. As discussed above, our original test suite killed almost every mutation so there was little room for improvement. After adding test cases to kill reamining mutants, we decided to add tests for two more methods in the Range class to increase the overall coverage. These were for `Range.combine` and `Range.expand()`. Covering more methods in the class significantly increased the overall coverage.
 
 ## Need for Mutation Testing
 
