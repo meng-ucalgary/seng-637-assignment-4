@@ -29,115 +29,105 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 
 ## Analysis of 10 mutants of the Range class
 
-### Mutation #1:
+1. #### Mutation #1 (on line #161, mutation #40)
 
-Within the intersect method of the Range class, one of the mutations is:
-“Incremented (a++) double local variable number 3 → SURVIVED”
-Upon analysis of the PIT report, this is applied to the line:
+   Mutation applied by Pitest was `Incremented (a++) double local variable number 3 → SURVIVED` on the method `expandToIncludeintersects(double, double)`. This mutation was applied to the below line of code
 
-```
-return (b0 < this.upper && b1 >= b0);
-```
+   ```
+   return (b0 < this.upper && b1 >= b0);
+   ```
 
-This is an equivalent mutation and cannot be killed as it is post increment on a return statement, which means that the increment will not be used again.
+   This mutation tries to update the value of b1 by 1 using post-increment operator. Since b1 is used only once in the statement, this mutation has no effect on the outcome of the test case. Hence it behaves like an equivalent mutation, which cannot be killed.
 
-### Mutation #2:
+2. #### Mutation #2 (on line #161, mutation #44)
 
-Within the intersect method of the Range class, one of the mutations is:
-“Decremented (a--) double local variable number 3 → SURVIVED”
-Upon analysis of the PIT report, this is applied to the line:
+   Mutation applied by Pitest was `Decremented (a--) double local variable number 3 → SURVIVED` on the method `expandToIncludeintersects(double, double)`. This mutation was applied to the below line of code
 
-```
-return (b0 < this.upper && b1 >= b0);
-```
+   ```
+   return (b0 < this.upper && b1 >= b0);
+   ```
 
-This is an equivalent mutation and cannot be killed as it is post derement on a return statement, which means that the decrement will not be used again.
+   This mutation tries to update the value of b1 by 1 using post-decrement operator. Since b1 is used only once in the statement, this mutation has no effect on the outcome of the test case. Hence it behaves like an equivalent mutation, which cannot be killed.
 
-### Mutation #3:
+3. #### Mutation #3 (on line #305, mutation #1)
 
-Within the expandToInclude method of the Range class, one of the mutations is:
-"changed conditional boundary → SURVIVED"
-Upon analysis of the PIT report, this is applied to the line:  
-`if (value < range.getLowerBound()) { ... }`  
-From the Pitest documentation, the 'Conditionals Boundary Mutator' mutates < to <=. Examining the original function below we can see this results in an equivalent mutation.
-For example, with range (-10,10) and value of -10 the final else statement would be executed and the original range returned. The mutatuion of < to <= results in the line
+   Mutation applied by Pitest was `changed conditional boundary → SURVIVED` on the method `expandToInclude(Range, double)`. This mutation was applied to the below line of code
 
-```
-return new Range(value, range.getUpperBound());
-```
+   ```
+   if (value < range.getLowerBound()) {
+   ```
 
-being executed instead. However the new range would be (-10,10), the same result as returning the original range. Therefor this is an equivalent mutation and can not be killed.
+   According to the official Pitest documentation, this mutation changes the condition `value < range.getLowerBound()` to `value <= range.getLowerBound()`. Examining the original function below we can see this results in an equivalent mutation. For example, with range (-10, 10) and value of -10 the final else statement would be executed and the original range is returned. The mutation of `<` to `<=` results in the line `return new Range(value, range.getUpperBound());` being executed instead. However the new range would still be (-10, 10), which is same result as returning the original range. Therefore this is an equivalent mutation and can not be killed.
 
-```
-public static Range expandToInclude(Range range, double value) {
-  if (range == null) {
-    return new Range(value, value);
-  }
-  if (value < range.getLowerBound()) {
-   return new Range(value, range.getUpperBound());
-  }
-  else if (value > range.getUpperBound()) {
-     return new Range(range.getLowerBound(), value);
-  }
-  else {
-   return range;
-  }
-}
-```
+4. #### Mutation #4 (on line #305, mutation #4)
 
-### Mutation #4:
+   Mutation applied by Pitest was `removed conditional - replaced comparison check with false → KILLED` on the method `expandToInclude(Range, double)`. This mutation was applied to the below line of code
 
-Within the expandToInclude method of the Range class, one of the mutations is:  
-"removed conditional - replaced comparison check with false → KILLED"  
-Upon analysis of the PIT report, this is applied to the line:
+   ```
+   if (value < range.getLowerBound()) {
+   ```
 
-```
-if (value < range.getLowerBound()) {...}
-```
+   This mutation replaces the conditional with `false`. `expandToIncludeWithInputBLB` is one of the many test cases that kills this mutation. This method uses a range of (-10, 10) and value of -10.00001. Using these numbers, when the conditional in the if statement is replaced with `false`, the else statement will be executed instead. This returns the orignal range and does not expand it as intended. As the returned range does not match the expected range, the test fails and this mutation is killed.
 
-expandToIncludeWithInputBLB() is one of the many test cases that kills this mutation. This method uses a range of (-10,10) and value of -10.00001. Using these numbers, when the conditional in the if statement is replaced with false, the else statement will be executed instead. This returns the orignal range and does not expand it as intended. As the returned range does not match the expected range, the test fails and this mutation is killed.
+5. #### Mutation #5 (on line #161, mutation #3)
 
-```
-public static Range expandToInclude(Range range, double value) {
-  if (range == null) {
-    return new Range(value, value);
-  }
-  if (value < range.getLowerBound()) {
-   return new Range(value, range.getUpperBound());
-  }
-  else if (value > range.getUpperBound()) {
-     return new Range(range.getLowerBound(), value);
-  }
-  else {
-   return range;
-  }
-}
-```
+   Mutation applied by Pitest was `changed conditional boundary → KILLED` on the method `intersects(double, double)`. This mutation was applied to the below line of code
 
-## Mutation #5
+   ```
+   return (b0 < this.upper && b1 >= b0);
+   ```
 
-Within the intersect method of the Range class, one of the mutations is: “changed conditional boundary”
-This mutation is applied to the following code within the intersect method:
+   According to the official Pitest documentation, this mutation changes the condition `b0 < this.upper` to `b0 <= this.upper`. One of our test case `intersectsWithInputUBAndAUB` tests this boundary, by supplying `b0` equal to `this.upper`. With original code, the test case passes as the method returns `false`. However, the mutation causes the method to return `true` and the test case fails. Hence this mutation was killed.
 
-```
-return (b0 < this.upper && b1 >= b0);
-```
+6. #### Mutation #6 (on line #365, mutation #1)
 
-For this mutation, this .upper value is changed with a smaller number such that if there are no test cases with b0 smaller than their changed boundary of this.upper, the mutation will survice.
+   Mutation applied by Pitest was `removed call to org/jfree/chart/util/ParamChecks::nullNotPermitted → SURVIVED` on the method `shift(Range, double, boolean)`. This mutation was applied to the below line of code
 
-Fortunately, the test case intersectsWithInput0And0 that was developed in previous assignment successfully killed this mutation.
+   ```
+   ParamChecks.nullNotPermitted(base, "base");
+   ```
 
-### Mutation #6:
+   This mutation removes the call to the above line. The method call throws `IllegalArgumentException` if the parameter base is null. Since there was no test case that tests base as null for this method, the removal of the call to `ParamChecks.nullNotPermitted()` did not make any difference to any of the test cases. Hence the mutation was survived.
 
-In the shift method of the Range class, the mutation "removed call to ParamChecks.nullNotPermitted", is applied to the code:
+7. #### Mutation #7 (on line #448, mutation #1)
 
-```
-ParamChecks.nullNotPermitted(base, "base");
-```
+   Mutation applied by Pitest was `replaced boolean return with false for org/jfree/data/Range::isNaNRange → KILLED` on the method `isNaNRange()`. This mutation was applied to the below line of code
 
-and should throw illegalArgumentException if the base range is null.
+   ```
+   return Double.isNaN(this.lower) && Double.isNaN(this.upper);
+   ```
 
-This mutation survived because there was no test case previously written, that uses a null Range object.
+   This mutation replaces the whole boolean statement with `false`. This change propagates to the output of the method, as all the test cases will fail even if both the lower and upper bounds are not equal to `Double.NaN`. This will make several of our test cases fail. Couple of the test cases that kills this mutation are `isNaNRangeWithBothBoundNOM` and `isNaNRangeWithUpperBoundNaN`. Hence this mutation was killed.
+
+8. #### Mutation #8 (on line #448, mutation #15)
+
+   Mutation applied by Pitest was `Negated double field lower → SURVIVED` on the method `isNaNRange()`. This mutation was applied to the below line of code
+
+   ```
+   return Double.isNaN(this.lower) && Double.isNaN(this.upper);
+   ```
+
+   This mutation negates the `this.lower` before feeding to `Double.isNaN`. Since `Double.isNaN` return true only for NaN, this mutation will not have any impact on the output of the method. For example, if `this.lower` is equal to 30, then `Double.isNaN` will return `false` both 30 and -30. So this mutation will not be killed any test cases.
+
+9. #### Mutation #9 (on line #241, mutation #1)
+
+   Mutation applied by Pitest was `negated conditional → KILLED` on the method `combineIgnoringNaN(Range, Range)`. This mutation was applied to the below line of code
+
+   ```
+   if (range1 == null) {
+   ```
+
+   This mutation negates the conditional. When this condition is negated, all the non null range1 will pass this condition. This would propagate to the output. For example, in the test `combineIgnoringNaNWithDisjointRange`, range1 and range2 are neither null nor NaN. So, the mutated method will result in range2 being returned. This will make the test case fail, as a combined range should have been returned. Hence this mutation was killed.
+
+10. #### Mutation #10 (on line #248, mutation #3)
+
+    Mutation applied by Pitest was `removed conditional - replaced equality check with false → KILLED` on the method `combineIgnoringNaN(Range, Range)`. This mutation was applied to the below line of code
+
+    ```
+    if (range1.isNaNRange()) {
+    ```
+
+    This mutation replaces the conditional with `false`. The execution is reached here when input range1 is not null and range2 is null. If the range1 is a NaN range, then null should have been returned by the method. However, because of the mutation, range1 is returned. Our test case `combineIgnoringNaNWithFirstRangeNaNSecondRangeNull` will fail because of this mutation. Hence this mutation was killed.
 
 ## Mutation score and statistics
 
@@ -145,11 +135,11 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
 - **Mutation score of Range - before**
 
-  ![Range_Mutants_Score_Before](images/Range_Mutants_Score_Before.png)
+  ![Range_Mutants_Score_Before](images/Range_Mutant_Score_Before.png)
 
 - **Mutation statistics of Range - before**
 
-  ![Range_Mutants_Statistics_Before](images/Range_Mutants_Statistics_Before.png)
+  ![Range_Mutants_Statistics_Before](images/Range_Mutant_Statistics_Before.png)
 
   Due to the the Range class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually
 
@@ -162,13 +152,34 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
   | `Range.combineIgnoringNaN(Range, Range)` | 18       | 68     | 86    | 79.07      |
   | Total                                    | 70       | 294    | 364   | 80.77      |
 
+- **Mutation score of Range - after**
+
+  ![Range_Mutants_Score_After](images/Range_Mutant_Score_After.png)
+
+- **Mutation statistics of Range - after**
+
+  ![Range_Mutants_Statistics_After](images/Range_Mutant_Statistics_After.png)
+
+  | Method                                   | Survived | Killed | Total | Coverage % |
+  | ---------------------------------------- | -------- | ------ | ----- | ---------- |
+  | `Range.isNaNRange()`                     | 10       | 33     | 43    | 76.74      |
+  | `Range.shift(Range, double, boolean)`    | 8        | 54     | 62    | 87.10      |
+  | `Range.intersects(double, double)`       | 17       | 89     | 106   | 83.96      |
+  | `Range.expandToInclude(Range, double)`   | 10       | 57     | 67    | 85.07      |
+  | `Range.combineIgnoringNaN(Range, Range)` | 10       | 76     | 86    | 88.72      |
+  | Total for original methods               | 55       | 309    | 364   | 84.89      |
+  | -                                        | -        | -      | -     | -          |
+  | `Range.combine(Range, Range)`            | 4        | 29     | 33    | 87.87      |
+  | `Range.expand(Range, Range)`             | 16       | 118    | 134   | 88.60      |
+  | Total including new methods              | 75       | 456    | 531   | 85.87      |
+
 - **Mutation score of DataUtilities - before**
 
-  ![DataUtilities_Mutants_Score_Before](images/DataUtilities_Mutants_Score_Before.png)
+  ![DataUtilities_Mutants_Score_Before](images/DataUtilities_Mutant_Score_Before.png)
 
 - **Mutation statistics of DataUtilities - before**
 
-  ![DataUtilities_Mutants_Statistics_Before](images/DataUtilities_Mutants_Statistics_Before.png)
+  ![DataUtilities_Mutants_Statistics_Before](images/DataUtilities_Mutant_Statistics_Before.png)
 
   Due to the the DataUtilities class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually
 
@@ -181,36 +192,15 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
   | `DataUtilities.getCumulativePercentages(KeyedValues)`      | 7        | 118    | 125   | 94.40      |
   | Total                                                      | 41       | 400    | 441   | 90.70      |
 
-After adding more test cases, we again ran mutation tests on `Range` and `DataUtilities`.
-
-- **Mutation score of Range - after**
-
-  ![Range_Mutants_Score_After](images/Range_Mutants_Score_After.png)
-
-- **Mutation statistics of Range - after**
-
-  ![Range_Mutants_Statistics_After](images/Range_Mutants_Statistics_After.png)
-
-  | Method                                   | Survived | Killed | Total | Coverage % |
-  | ---------------------------------------- | -------- | ------ | ----- | ---------- |
-  | `Range.isNaNRange()`                     | 10       | 33     | 43    | 76.74      |
-  | `Range.shift(Range, double, boolean)`    | 8        | 54     | 62    | 87.10      |
-  | `Range.intersects(double, double)`       | 21       | 85     | 106   | 80.2       |
-  | `Range.expandToInclude(Range, double)`   | 10       | 57     | 67    | 85.07      |
-  | `Range.combineIgnoringNaN(Range, Range)` | 10       | 76     | 86    | 88.72      |
-  | Total for original methods               | 59       | 305    | 364   | 83.79      |
-  | -                                        | -        | -      | -     | -          |
-  | `Range.combine(Range, Range)`            | 4        | 29     | 33    | 87.87      |
-  | `Range.expand(Range, Range)`             | 16       | 118    | 134   | 88.60      |
-  | Total including new methods              | 79       | 452    | 531   | 85.12      |
+  After adding more test cases, we again ran mutation tests on `Range` and `DataUtilities`.
 
 - **Mutation score of DataUtilities - after**
 
-  ![DataUtilities_Mutants_Score_After](images/DataUtilities_Mutants_Score_After.png)
+  ![DataUtilities_Mutants_Score_After](images/DataUtilities_Mutant_Score_After.png)
 
 - **Mutation statistics of DataUtilities - after**
 
-  ![DataUtilities_Mutants_Statistics_After](images/DataUtilities_Mutants_Statistics_After.png)
+  ![DataUtilities_Mutants_Statistics_After](images/DataUtilities_Mutant_Statistics_After.png)
 
   | Method                                                     | Survived | Killed | Total | Coverage % |
   | ---------------------------------------------------------- | -------- | ------ | ----- | ---------- |
@@ -223,7 +213,7 @@ After adding more test cases, we again ran mutation tests on `Range` and `DataUt
 
 ## Analysis drawn on the effectiveness of each of the test classes
 
-After analyzing the Pitest reports, in both the Range class and DataUtilities class, it was determined that almost all of the surviving mutations were equivalent mutations. Therefor there was ittle thavery lt could be done to improve upon these scores. The only method that had a significant number of non-equivalent mutations was `Range.combineIgnoringNaN(Range, Range)` where an additional 8 mutants could be killed, increasing the coverage for this method by 9.65%.
+After analyzing the Pitest reports, in both the `Range` class and `DataUtilities` class, it was determined that almost all of the surviving mutations were equivalent mutations. Therefor there was ittle thavery lt could be done to improve upon these scores. The only method that had a significant number of non-equivalent mutations was `Range.combineIgnoringNaN(Range, Range)` where an additional 8 mutants could be killed, increasing the coverage for this method by 9.65%.
 
 ### Test Case: intersectsWithReverse
 
@@ -377,8 +367,9 @@ Each of the eight functionalities chosen was tested with different test data usi
    ```
 
    Later it was found that the problem is arising with newer version of the Eclipse. After downgrading Eclipse from **2021-12** to **2021-03**, Pitest was installed successfully.
+
 2. This was another error encountered when trying to run Pitest in Eclipse. The error was solved by ensuring Eclipse was using the Java8 JRE.
-<img src="images/eclipse_error.png" width="600">
+   <img src="images/eclipse_error.png" width="600">
 
 3. Some websites add an another authentication factor like **CAPTCHA** when they detect automated interactions with their websites. So, selenium test cases that includes login pause in the middle until the tester manually deals with those CAPTCHAs.
 
