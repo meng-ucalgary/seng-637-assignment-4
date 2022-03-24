@@ -135,11 +135,11 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
 - **Mutation score of Range - before**
 
-  ![Range_Mutants_Score_Before](images/Range_Mutants_Score_Before.png)
+  ![Range_Mutants_Score_Before](images/Range_Mutant_Score_Before.png)
 
 - **Mutation statistics of Range - before**
 
-  ![Range_Mutants_Statistics_Before](images/Range_Mutants_Statistics_Before.png)
+  ![Range_Mutants_Statistics_Before](images/Range_Mutant_Statistics_Before.png)
 
   Due to the the Range class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually
 
@@ -152,13 +152,34 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
   | `Range.combineIgnoringNaN(Range, Range)` | 18       | 68     | 86    | 79.07      |
   | Total                                    | 70       | 294    | 364   | 80.77      |
 
+- **Mutation score of Range - after**
+
+  ![Range_Mutants_Score_After](images/Range_Mutant_Score_After.png)
+
+- **Mutation statistics of Range - after**
+
+  ![Range_Mutants_Statistics_After](images/Range_Mutant_Statistics_After.png)
+
+  | Method                                   | Survived | Killed | Total | Coverage % |
+  | ---------------------------------------- | -------- | ------ | ----- | ---------- |
+  | `Range.isNaNRange()`                     | 10       | 33     | 43    | 76.74      |
+  | `Range.shift(Range, double, boolean)`    | 8        | 54     | 62    | 87.10      |
+  | `Range.intersects(double, double)`       | 17       | 89     | 106   | 83.96      |
+  | `Range.expandToInclude(Range, double)`   | 10       | 57     | 67    | 85.07      |
+  | `Range.combineIgnoringNaN(Range, Range)` | 10       | 76     | 86    | 88.72      |
+  | Total for original methods               | 55       | 309    | 364   | 84.89      |
+  | -                                        | -        | -      | -     | -          |
+  | `Range.combine(Range, Range)`            | 4        | 29     | 33    | 87.87      |
+  | `Range.expand(Range, Range)`             | 16       | 118    | 134   | 88.60      |
+  | Total including new methods              | 75       | 456    | 531   | 85.87      |
+
 - **Mutation score of DataUtilities - before**
 
-  ![DataUtilities_Mutants_Score_Before](images/DataUtilities_Mutants_Score_Before.png)
+  ![DataUtilities_Mutants_Score_Before](images/DataUtilities_Mutant_Score_Before.png)
 
 - **Mutation statistics of DataUtilities - before**
 
-  ![DataUtilities_Mutants_Statistics_Before](images/DataUtilities_Mutants_Statistics_Before.png)
+  ![DataUtilities_Mutants_Statistics_Before](images/DataUtilities_Mutant_Statistics_Before.png)
 
   Due to the the DataUtilities class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually
 
@@ -171,36 +192,15 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
   | `DataUtilities.getCumulativePercentages(KeyedValues)`      | 7        | 118    | 125   | 94.40      |
   | Total                                                      | 41       | 400    | 441   | 90.70      |
 
-After adding more test cases, we again ran mutation tests on `Range` and `DataUtilities`.
-
-- **Mutation score of Range - after**
-
-  ![Range_Mutants_Score_After](images/Range_Mutants_Score_After.png)
-
-- **Mutation statistics of Range - after**
-
-  ![Range_Mutants_Statistics_After](images/Range_Mutants_Statistics_After.png)
-
-  | Method                                   | Survived | Killed | Total | Coverage % |
-  | ---------------------------------------- | -------- | ------ | ----- | ---------- |
-  | `Range.isNaNRange()`                     | 10       | 33     | 43    | 76.74      |
-  | `Range.shift(Range, double, boolean)`    | 8        | 54     | 62    | 87.10      |
-  | `Range.intersects(double, double)`       | 21       | 85     | 106   | 80.2       |
-  | `Range.expandToInclude(Range, double)`   | 10       | 57     | 67    | 85.07      |
-  | `Range.combineIgnoringNaN(Range, Range)` | 10       | 76     | 86    | 88.72      |
-  | Total for original methods               | 59       | 305    | 364   | 83.79      |
-  | -                                        | -        | -      | -     | -          |
-  | `Range.combine(Range, Range)`            | 4        | 29     | 33    | 87.87      |
-  | `Range.expand(Range, Range)`             | 16       | 118    | 134   | 88.60      |
-  | Total including new methods              | 79       | 452    | 531   | 85.12      |
+  After adding more test cases, we again ran mutation tests on `Range` and `DataUtilities`.
 
 - **Mutation score of DataUtilities - after**
 
-  ![DataUtilities_Mutants_Score_After](images/DataUtilities_Mutants_Score_After.png)
+  ![DataUtilities_Mutants_Score_After](images/DataUtilities_Mutant_Score_After.png)
 
 - **Mutation statistics of DataUtilities - after**
 
-  ![DataUtilities_Mutants_Statistics_After](images/DataUtilities_Mutants_Statistics_After.png)
+  ![DataUtilities_Mutants_Statistics_After](images/DataUtilities_Mutant_Statistics_After.png)
 
   | Method                                                     | Survived | Killed | Total | Coverage % |
   | ---------------------------------------------------------- | -------- | ------ | ----- | ---------- |
