@@ -141,7 +141,7 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
   ![Range_Mutants_Statistics_Before](images/Range_Mutant_Statistics_Before.png)
 
-  Due to the the Range class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually
+  Due to the the Range class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually. Note: This includes equivalent mutations in order to be consistent with the Pitest scores.
 
   | Method                                   | Survived | Killed | Total | Coverage % |
   | ---------------------------------------- | -------- | ------ | ----- | ---------- |
@@ -160,6 +160,7 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
   ![Range_Mutants_Statistics_After](images/Range_Mutant_Statistics_After.png)
 
+  Below is the coverage of each method calculated manually for the Range class after adding test cases. As we could not improve scores significantly test cases for two additional methods were also created.
   | Method                                   | Survived | Killed | Total | Coverage % |
   | ---------------------------------------- | -------- | ------ | ----- | ---------- |
   | `Range.isNaNRange()`                     | 10       | 33     | 43    | 76.74      |
@@ -181,7 +182,7 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
   ![DataUtilities_Mutants_Statistics_Before](images/DataUtilities_Mutant_Statistics_Before.png)
 
-  Due to the the DataUtilities class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually
+  Due to the the DataUtilities class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually. Note: This includes equivalent mutations in order to be consistent with the Pitest scores.
 
   | Method                                                     | Survived | Killed | Total | Coverage % |
   | ---------------------------------------------------------- | -------- | ------ | ----- | ---------- |
