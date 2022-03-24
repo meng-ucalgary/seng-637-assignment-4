@@ -57,7 +57,7 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
    if (value < range.getLowerBound()) {
    ```
 
-   According to the official Pitest documentation, this mutation changes the condition `value < range.getLowerBound()` to `value <= range.getLowerBound()`. Examining the original function below we can see this results in an equivalent mutation. For example, with range (-10, 10) and value of -10 the final else statement would be executed and the original range is returned. The mutation of `<` to `<=` results in the line `return new Range(value, range.getUpperBound());` being executed instead. However the new range would still be (-10, 10), which is same result as returning the original range. Therefore this is an equivalent mutation and can not be killed.
+   According to the official Pitest documentation, this mutation changes the condition `value < range.getLowerBound()` to `value <= range.getLowerBound()`. Examining the original function we can see this results in an equivalent mutation. For example, with range (-10, 10) and value of -10 the final else statement would be executed and the original range is returned. The mutation of `<` to `<=` results in the line `return new Range(value, range.getUpperBound());` being executed instead. However the new range would still be (-10, 10), which is same result as returning the original range. Therefore this is an equivalent mutation and can not be killed.
 
 4. #### Mutation #4 (on line #305, mutation #4)
 
