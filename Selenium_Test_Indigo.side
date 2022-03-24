@@ -2346,6 +2346,103 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "e43243cd-3fc2-46f0-86b4-02323ab00e99",
+    "name": "sort_an_all_books_search_by_availability",
+    "commands": [{
+      "id": "6d695a61-5b62-484a-b6eb-c3df12a6f009",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55140f7d-37d7-4624-b59f-5e7f47ff00eb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1358x697",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da305b7b-24cc-442d-b528-e40c18ce3f7c",
+      "comment": "",
+      "command": "click",
+      "target": "id=header__quick-search",
+      "targets": [
+        ["id=header__quick-search", "id"],
+        ["name=SearchBoxKeywords", "name"],
+        ["css=#header__quick-search", "css:finder"],
+        ["xpath=//input[@id='header__quick-search']", "xpath:attributes"],
+        ["xpath=//div[@id='quick-search__input-container']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7378cdc3-e3b1-466b-a1c9-46e27b72c9e8",
+      "comment": "",
+      "command": "type",
+      "target": "id=header__quick-search",
+      "targets": [
+        ["id=header__quick-search", "id"],
+        ["name=SearchBoxKeywords", "name"],
+        ["css=#header__quick-search", "css:finder"],
+        ["xpath=//input[@id='header__quick-search']", "xpath:attributes"],
+        ["xpath=//div[@id='quick-search__input-container']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "all books"
+    }, {
+      "id": "35a540a2-14dc-49ee-ac25-04754faf07c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.quick-search__submit-svg",
+      "targets": [
+        ["css=.quick-search__submit-svg", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c93b6c0-015d-4940-8729-3eec02e427a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Select-arrow-zone",
+      "targets": [
+        ["css=.Select-arrow-zone", "css:finder"],
+        ["xpath=//div[@id='product-list__results-container']/div[4]/div[3]/div/div/span[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "506c2351-b985-4356-91bd-8084ce72ab16",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.search-page__load-more-button-container",
+      "targets": [
+        ["css=.search-page__load-more-button-container", "css:finder"],
+        ["xpath=//div[@id='product-list__results-container']/div[5]", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a126b1ed-8f5b-4b8d-a88f-b4db85006030",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=react-select-54--value-item",
+      "targets": [
+        ["id=react-select-54--value-item", "id"],
+        ["css=#react-select-54--value-item", "css:finder"],
+        ["xpath=//span[@id='react-select-54--value-item']", "xpath:attributes"],
+        ["xpath=//span[@id='react-select-54--value']/div/span", "xpath:idRelative"],
+        ["xpath=//span/div/span", "xpath:position"]
+      ],
+      "value": "Availability"
+    }, {
+      "id": "76602c60-5511-4f05-ae09-a422f823a1da",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "907a1e44-34b6-4899-9482-38abd8dd8fa9",
