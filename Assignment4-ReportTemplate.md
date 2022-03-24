@@ -350,7 +350,7 @@ Each of the eight functionalities chosen was tested with different test data usi
 | Michael Man Yin Lee      | Cart                     |
 | Michael Man Yin Lee      | Wishlist                 |
 | Okeoghenemarho Obuareghe | Filtering search results |
-| Okeoghenemarho Obuareghe | _TBA_                    |
+| Okeoghenemarho Obuareghe | Careers                  |
 
 ## Difficulties, challenges, and lessons learned
 
