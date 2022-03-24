@@ -8,9 +8,9 @@
 - [Video demo](#video-demo)
 - [Analysis of 10 mutants of the Range class](#analysis-of-10-mutants-of-the-range-class)
 - [Mutation score and statistics](#mutation-score-and-statistics)
-- [Analysis drawn on the effectiveness of each of the test classes](#analysis-drawn-on-the-effectiveness-of-each-of-the-test-classes)
-- [A discussion on the effect of equivalent mutants on mutation score accuracy](#a-discussion-on-the-effect-of-equivalent-mutants-on-mutation-score-accuracy)
-- [A discussion of what could have been done to improve the mutation score of the test suites](#a-discussion-of-what-could-have-been-done-to-improve-the-mutation-score-of-the-test-suites)
+- [Analysis on effectiveness of each of the test classes](#analysis-on-effectiveness-of-each-of-the-test-classes)
+- [Effect of equivalent mutants on mutation score accuracy](#effect-of-equivalent-mutants-on-mutation-score-accuracy)
+- [What could have been done to improve the mutation score of the test suites](#what-could-have-been-done-to-improve-the-mutation-score-of-the-test-suites)
 - [Need for mutation testing](#need-for-mutation-testing)
 - [Explain your SELENUIM test case design process](#explain-your-selenium-test-case-design-process)
 - [Explain the use of assertions and checkpoints](#explain-the-use-of-assertions-and-checkpoints)
@@ -131,7 +131,7 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 
 ## Mutation score and statistics
 
-After commenting out failing test cases in Assignment 3, we ran mutation tests on `Range` and `DataUtilities`.
+After commenting out failing test cases in Assignment 3, we ran mutation tests on `Range` and `DataUtilities`. **Note**: All the 4 tables below includes equivalent mutations in coverage calculations in order to be consistent with the Pitest scores.
 
 - **Mutation score of Range - before**
 
@@ -141,7 +141,7 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
   ![Range_Mutants_Statistics_Before](images/Range_Mutant_Statistics_Before.png)
 
-  Due to the the Range class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually. Note: This includes equivalent mutations in order to be consistent with the Pitest scores.
+  Due to the the Range class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually.
 
   | Method                                   | Survived | Killed | Total | Coverage % |
   | ---------------------------------------- | -------- | ------ | ----- | ---------- |
@@ -161,6 +161,7 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
   ![Range_Mutants_Statistics_After](images/Range_Mutant_Statistics_After.png)
 
   Below is the coverage of each method calculated manually for the Range class after adding test cases. As we could not improve scores significantly test cases for two additional methods were also created.
+
   | Method                                   | Survived | Killed | Total | Coverage % |
   | ---------------------------------------- | -------- | ------ | ----- | ---------- |
   | `Range.isNaNRange()`                     | 10       | 33     | 43    | 76.74      |
@@ -182,7 +183,7 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
   ![DataUtilities_Mutants_Statistics_Before](images/DataUtilities_Mutant_Statistics_Before.png)
 
-  Due to the the DataUtilities class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually. Note: This includes equivalent mutations in order to be consistent with the Pitest scores.
+  Due to the the DataUtilities class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually.
 
   | Method                                                     | Survived | Killed | Total | Coverage % |
   | ---------------------------------------------------------- | -------- | ------ | ----- | ---------- |
@@ -212,24 +213,26 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
   | `DataUtilities.getCumulativePercentages(KeyedValues)`      | 6        | 119    | 125   | 95.20      |
   | Total                                                      | 36       | 405    | 441   | 91.83      |
 
-## Analysis drawn on the effectiveness of each of the test classes
+## Analysis on effectiveness of each of the test classes
 
-After analyzing the Pitest reports, in both the `Range` class and `DataUtilities` class, it was found that most all of the surviving mutants were because of equivalent mutations. Therefore, very little could have been done to improve upon the mutation scores. The only method that had a significant number of non-equivalent mutations was `Range.combineIgnoringNaN(Range, Range)` where an additional 8 mutants could be killed, increasing the coverage for this method by 9.65%.
+As per our analysis, the test suite developed by us in previous assignments was good enough to check most of the boundary conditions and it had high coverage for each of the method tested.
 
-## A discussion on the effect of equivalent mutants on mutation score accuracy
+When we analyzed the Pitest reports for both the `Range` class and `DataUtilities` class, we found that most of the surviving mutants were because of equivalent mutations. Therefore, very little could have been done to improve upon the mutation scores. The only method that had a significant number of non-equivalent mutations was `Range.combineIgnoringNaN(Range, Range)` where an additional 8 mutants could be killed, increasing the coverage for this method by 9.65%.
 
-By definition, equivalent mutants are the mutants that cannot be killed under any test cases as no test case can distinguish equivalent mutants from the original program.
+## Effect of equivalent mutants on mutation score accuracy
+
+By definition, equivalent mutants are the mutants are syntactically different but semantically equivalent to the original program. So, equivalent mutations are not simulating bugs in the SUT. So, they cannot be killed by test cases.
 
 Since these mutants cannot be killed yet still counts as part of the mutation coverage, it will always contribute in the lowering the test cases mutation score accuracy.
 
-One of the equivalent mutant examples that we have come across are the post increment and decrement mutants that were injected into all of the methods where we have tried many ways to eliminate these mutants, yet we can not kill most of them. This is due to the variable being incremented after its last use, therefore having no effect on the remaining code.These mutations can only be detected if the variable is used again.
+One of the equivalent mutant examples that we have come across are the post-increment and post-decrement mutants that were injected into all of the methods. We had tried many ways to eliminate these mutants, yet we can not kill most of them. This is because these equivalent mutations were injected in the return statement of the methods, where changing the value of the variable after its use will not have any effect on the return value.
 
 Although equivalent mutations are hard to detect and they impede on the reliance of these results, there have been theoretically ways that can detect these mutations. Upon researching on this topic, there has been several methods proposed in different research in detecting equivalent mutations such as:
 
 - Detecting whether the mutation actually change the coverage (reference: https://onlinelibrary.wiley.com/doi/10.1002/stvr.1473)
 - trace inclusion check or constraint resolving (reference: https://www.conformiq.com/2019/07/mutation-testing/)
 
-## A discussion of what could have been done to improve the mutation score of the test suites
+## What could have been done to improve the mutation score of the test suites
 
 For this assignment, the objective is to create test cases that help improve the mutation score of the 5 methods that we focused on for the Range and DataUtilities class. However, the scores includes mutations that are of other methods within the class.
 
