@@ -12,8 +12,8 @@
 - [Effect of equivalent mutants on mutation score accuracy](#effect-of-equivalent-mutants-on-mutation-score-accuracy)
 - [What could have been done to improve the mutation score of the test suites](#what-could-have-been-done-to-improve-the-mutation-score-of-the-test-suites)
 - [Need for mutation testing](#need-for-mutation-testing)
-- [Explain your SELENUIM test case design process](#explain-your-selenium-test-case-design-process)
-- [Explain the use of assertions and checkpoints](#explain-the-use-of-assertions-and-checkpoints)
+- [Selenium IDE test case design process](#selenium-ide-test-case-design-process)
+- [Use of assertions and checkpoints](#use-of-assertions-and-checkpoints)
 - [Testing functionalities with different test data](#testing-functionalities-with-different-test-data)
 - [Selenium vs Sikulix](#selenium-vs-sikulix)
 - [Division of team work](#division-of-team-work)
@@ -244,11 +244,9 @@ Although equivalent mutations are hard to detect and they impede on the reliance
 
 For this assignment, the objective is to create test cases that help improve the mutation score of the 5 methods that we focused on for the `Range` and `DataUtilities` class. However, the scores includes mutations that are of other methods within the class.
 
-As such, one way to improve the accuracy scores is to add additional test cases for the methods that were not originally covered by our test cases. As discussed above, our original test suite killed almost every non-equivalent mutation so there was little room for improvement. After adding test cases to kill reamining mutants, we decided to add tests for two more methods in the `Range` class to increase the overall mutation coverage score. These were for `Range.combine(Range, Range)` and `Range.expand(Range, double, double)`. Covering more methods in the class significantly increased the overall coverage.
+As such, one way to improve the accuracy scores is to add additional test cases for the methods that were not originally covered by our test cases. As discussed above, our original test suite killed almost every non-equivalent mutation so there was little room for improvement. After adding test cases to kill reamining mutants, we decided to add tests for two more methods in the `Range` class and in the `DataUtilities` class to increase the overall mutation coverage score. These were for `Range.combine(Range, Range)`, `Range.expand(Range, double, double)`, `DataUtilities.createNumberArray(double[])`, and `DataUtilities.createNumberArray2D(double[][])`. Covering more methods in the class significantly increased the overall coverage.
 
 ## Need for Mutation Testing
-
-**Need**
 
 Mutation testing is required to test the effectiveness of the test suite. It process by which we can determine if the test suite is detecting injected bugs.
 
@@ -267,11 +265,11 @@ Mutation testing is required to test the effectiveness of the test suite. It pro
   - Mutation testing is not applicable for black-box testing as involves a lot of source code changes
   - Automation is necessary for mutation testing as it is very time-consuming
 
-## Explain your SELENUIM test case design process
+## Selenium IDE test case design process
 
-With our Selenium test case design, we first define the test scenario as a group in the perspective of the user who is visiting indigo.ca.
+First, we decided which website should be tested using the Selenium IDE. We explored CanadianTire and Indigo, and found that CanadianTire requires entering one-time code during login to the website. So, to prevent manual inputs we decided not to test this and rather go with Indigo.
 
-With this in mind, we have envision our user to conduct the following actions on the website:
+After choosing Indigo as our SUT, we decided what all functionalities should be part of the test cases. We decided to test those functionalities that might be used most often by the user (excluding purchases). With this in mind, we had envisioned our user to conduct the following actions on the website -
 
 - Login
 - Search for a store
@@ -282,19 +280,21 @@ With this in mind, we have envision our user to conduct the following actions on
 - Sorting the items within categories
 - Filtering the items within categories
 
-After defining the list of actions that a user will conduct in our test scenario, we then progress to creating test cases for these actions to verify the functionality works according to expectations.
+After defining the list of actions that a user will conduct in our test scenario, we then progress to creating test cases for these actions to verify the functionality works according to the expectations.
 
-For example with login, we would define test cases to ensure the function works appropriately when right credentials were entered as well as when the wrong credentials were entered.
+For example, with login, we would define test cases to ensure the function works appropriately when right credentials were entered as well as when the wrong credentials were entered.
 
-## Explain the use of assertions and checkpoints
+## Use of assertions and checkpoints
 
 Assertions and checkpoints are used to verify at specific points of the test cases that the functionality is working as intended.
 
 For example, for the test cases with the Indigo's cart, we asserted the number of items in the cart shown on the site with the number of items that we actually added. Likewise, we assert the label "Empty Cart" when we have removed all of the items to ensure that the cart is working as expected.
 
+In the Selenium IDE, these functionalities are implemented using `assert` and `verify` commands (and their derivatives). According the [official Selenium IDE documentation](https://www.selenium.dev/selenium-ide/docs/en/api/commands), the test case stops if the `assert` fails, but continues even if `verify` fails.
+
 ## Testing functionalities with different test data
 
-Each of the eight functionalities chosen was tested with different test data using Selenium IDe. The table below summarizes functionalities and items that were tested.
+Each of the eight functionalities chosen was tested with different test data using Selenium IDE. The table below summarizes functionalities and items that were tested.
 
 | Functionality            | Test                                                     |
 | ------------------------ | -------------------------------------------------------- |
@@ -323,23 +323,50 @@ Each of the eight functionalities chosen was tested with different test data usi
 
 1. Sikulix uses image recognition powered by OpenCV to identify GUI components. This is handy when there is no easy access to a GUI's internals or the source code.
 
+2. Sikulix can interact with desktop applications as well.
+
 **Disadvantages of Sikulix**
 
 1. Less popular than Selenium, and thus difficult to find support.
 
 2. Requires 64-bit Java 8 or above to work
 
+3. Poor documentation.
+
+4. Test cases will be resolution dependent.
+
+5. Image recognition is not very accurate.
+
 **Advantages of Selenium**
 
 1. More popular than Sikulix, and thus easy to find support.
 
-2. Selenium IDE can be added as an extension/addon on most of the modern browsers. It doesn't has any special requirements.
+2. Better documentation.
+
+3. Selenium IDE can be added as an extension/addon on most of the modern browsers. It doesn't has any special requirements.
+
+4. Test cases will be resolution independent.
+
+5. Functionalities can be extended with the help of plugins.
 
 **Disadvantages of Selenium**
 
-1. Image recognition to identify GUI components is not possible.
+1. Image recognition to identify GUI components is not possible without plugins.
+
+2. Selenium cannot test desktop applications without using a plugin.
 
 ## Division of team work
+
+**Division of mutation analysis and additional test cases**
+
+Drew, Michael, and Bhavyai wrote additional test cases for both the classes `Range` and `DataUtilities` that improved the mutation score. Then all four members did analysis of mutants in the Pitest report.
+
+| Mutation analysis | Tester                   |
+| ----------------- | ------------------------ |
+| #1, #2            | Michael Man Yin Lee      |
+| #3, #4            | Drew Burritt             |
+| #5, #6            | Okeoghenemarho Obuareghe |
+| #7, #8, #9, #10   | Bhavyai Gupta            |
 
 **Division of Selenium IDE test cases**
 
@@ -371,17 +398,18 @@ Each of the eight functionalities chosen was tested with different test data usi
    Later it was found that the problem is arising with newer version of the Eclipse. After downgrading Eclipse from **2021-12** to **2021-03**, Pitest was installed successfully.
 
 2. This was another error encountered when trying to run Pitest in Eclipse. The error was solved by ensuring Eclipse was using the Java8 JRE.
-   <img src="images/eclipse_error.png" width="600">
+
+   ![Pitest non JRE 8 error](images/eclipse_error.png)
 
 3. Some websites add an another authentication factor like **CAPTCHA** when they detect automated interactions with their websites. So, selenium test cases that includes login pause in the middle until the tester manually deals with those CAPTCHAs.
 
 4. To objective for improving mutation scores to at least 10% for each class is very difficult to obtain because we are focusing on the 5 methods of each class from the previous assignments. Our test cases only yields a mutation coverage of 58% because they are designed to only cover the 5 methods from the class. If we were to delete all of the other methods besides the 5 methods that we wrote test cases for from our previous assignments, our tests yields 91% mutation coverage.
 
-<img src="images/DataUtilities_5_Methods_Before.png" width="600">
+   ![DataUtilies only 5 methods before](images/DataUtilities_5_Methods_Before.png)
 
 We have also written 5 test cases for the data utilities class and with those 5 test cases, we have increase the mutations killed from 400 to 405 out of 441, which means we increased it by 1%.
 
-<img src="images/DataUtilities_5_Methods_After.png" width="600">
+![DataUtilies only 5 methods after](images/DataUtilities_5_Methods_After.png)
 
 ## Comments and feedback
 
