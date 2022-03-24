@@ -31,43 +31,33 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 
 1. #### Mutation #1 (on line #161, mutation #40)
 
-   Within the intersect method of the Range class, one of the mutations is:
-   "Incremented (a++) double local variable number 3 → SURVIVED"
-
-   Upon analysis of the PIT report, this is applied to the line:
+   Mutation applied by Pitest was `Incremented (a++) double local variable number 3 → SURVIVED` on the method `expandToIncludeintersects(double, double)`. This mutation was applied to the below line of code
 
    ```
    return (b0 < this.upper && b1 >= b0);
    ```
 
-   This is an equivalent mutation and cannot be killed as it is post increment on a return statement, which means that the increment will not be used again.
+   This mutation tries to update the value of b1 by 1 using post-increment operator. Since b1 is used only once in the statement, this mutation has no effect on the outcome of the test case. Hence it behaves like an equivalent mutation, which cannot be killed.
 
 2. #### Mutation #2 (on line #161, mutation #44)
 
-   Within the intersect method of the Range class, one of the mutations is:
-   "Decremented (a--) double local variable number 3 → SURVIVED"
-   Upon analysis of the PIT report, this is applied to the line:
+   Mutation applied by Pitest was `Decremented (a--) double local variable number 3 → SURVIVED` on the method `expandToIncludeintersects(double, double)`. This mutation was applied to the below line of code
 
    ```
    return (b0 < this.upper && b1 >= b0);
    ```
 
-   This is an equivalent mutation and cannot be killed as it is post derement on a return statement, which means that the decrement will not be used again.
+   This mutation tries to update the value of b1 by 1 using post-decrement operator. Since b1 is used only once in the statement, this mutation has no effect on the outcome of the test case. Hence it behaves like an equivalent mutation, which cannot be killed.
 
 3. #### Mutation #3 (on line #305, mutation #1)
 
-   Within the expandToInclude method of the Range class, one of the mutations is:
-   "changed conditional boundary → SURVIVED"
-   Upon analysis of the PIT report, this is applied to the line:  
-   `if (value < range.getLowerBound()) { ... }`  
-   From the Pitest documentation, the 'Conditionals Boundary Mutator' mutates < to <=. Examining the original function below we can see this results in an equivalent mutation.
-   For example, with range (-10,10) and value of -10 the final else statement would be executed and the original range returned. The mutatuion of < to <= results in the line
+   Mutation applied by Pitest was `changed conditional boundary → SURVIVED` on the method `expandToInclude(Range, double)`. This mutation was applied to the below line of code
 
    ```
-   return new Range(value, range.getUpperBound());
+   if (value < range.getLowerBound()) {
    ```
 
-   being executed instead. However the new range would be (-10,10), the same result as returning the original range. Therefor this is an equivalent mutation and can not be killed.
+   According to the official Pitest documentation, this mutation changes the condition `value < range.getLowerBound()` to `value <= range.getLowerBound()`. Examining the original function below we can see this results in an equivalent mutation. For example, with range (-10, 10) and value of -10 the final else statement would be executed and the original range is returned. The mutation of `<` to `<=` results in the line `return new Range(value, range.getUpperBound());` being executed instead. However the new range would still be (-10, 10), which is same result as returning the original range. Therefore this is an equivalent mutation and can not be killed.
 
 4. #### Mutation #4 (on line #305, mutation #4)
 
