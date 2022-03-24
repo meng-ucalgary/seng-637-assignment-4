@@ -2347,96 +2347,246 @@
       "value": ""
     }]
   }, {
-    "id": "e43243cd-3fc2-46f0-86b4-02323ab00e99",
-    "name": "sort_an_all_books_search_by_availability",
+    "id": "0397d682-7507-4fad-849d-de7edfdb1de0",
+    "name": "jobs_by_location",
     "commands": [{
-      "id": "6d695a61-5b62-484a-b6eb-c3df12a6f009",
+      "id": "09fd9e6e-fe08-4c2c-8be5-3b4940ac7a7b",
       "comment": "",
       "command": "open",
       "target": "/en-ca/",
       "targets": [],
       "value": ""
     }, {
-      "id": "55140f7d-37d7-4624-b59f-5e7f47ff00eb",
+      "id": "0fd8c84d-5fb5-4e52-8ca0-777dd800a55e",
       "comment": "",
       "command": "setWindowSize",
       "target": "1358x697",
       "targets": [],
       "value": ""
     }, {
-      "id": "da305b7b-24cc-442d-b528-e40c18ce3f7c",
+      "id": "da1831f6-11a8-4294-8084-46babd2fd2c7",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3601)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1602a779-403c-4e94-b323-fd1fe7f8816f",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3602)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "733db732-5d26-43c6-b96f-b7d862a35ce3",
       "comment": "",
       "command": "click",
-      "target": "id=header__quick-search",
+      "target": "css=.services > a:nth-child(3)",
       "targets": [
-        ["id=header__quick-search", "id"],
-        ["name=SearchBoxKeywords", "name"],
-        ["css=#header__quick-search", "css:finder"],
-        ["xpath=//input[@id='header__quick-search']", "xpath:attributes"],
-        ["xpath=//div[@id='quick-search__input-container']/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+        ["css=.services > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'careers')]", "xpath:link"],
+        ["xpath=//div[@id='instanceId11']/footer/div/div/div/div/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/en-ca/careers/careers-at-indigo/?link-usage=Footer%3A%20careers')]", "xpath:href"],
+        ["xpath=//footer/div/div/div/div/a[3]", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "7378cdc3-e3b1-466b-a1c9-46e27b72c9e8",
+      "id": "11d51ece-94cc-4fc9-98e8-3538d17fdb8b",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2001)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "557e293f-0a34-4d11-9d47-528addb1f0b6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cta--button__white",
+      "targets": [
+        ["css=.cta--button__white", "css:finder"],
+        ["xpath=//a[contains(text(),'apply now')]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/div/div/div/div/div/div/span/article/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://careers.indigo.ca/')]", "xpath:href"],
+        ["xpath=//article/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "42b398f4-c181-434d-a89b-67e5fe0279c6",
+      "comment": "",
+      "command": "click",
+      "target": "name=search-jobs",
+      "targets": [
+        ["name=search-jobs", "name"],
+        ["css=.search-jobs", "css:finder"],
+        ["xpath=//input[@name='search-jobs']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/div/div/div[2]/div[2]/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "058d807e-2ed5-4d2b-ab6e-cc068ba100d0",
       "comment": "",
       "command": "type",
-      "target": "id=header__quick-search",
+      "target": "name=search-jobs",
       "targets": [
-        ["id=header__quick-search", "id"],
-        ["name=SearchBoxKeywords", "name"],
-        ["css=#header__quick-search", "css:finder"],
-        ["xpath=//input[@id='header__quick-search']", "xpath:attributes"],
-        ["xpath=//div[@id='quick-search__input-container']/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+        ["name=search-jobs", "name"],
+        ["css=.search-jobs", "css:finder"],
+        ["xpath=//input[@name='search-jobs']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/div/div/div[2]/div[2]/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
       ],
-      "value": "all books"
+      "value": "calgary"
     }, {
-      "id": "35a540a2-14dc-49ee-ac25-04754faf07c9",
+      "id": "c936e0b0-c85f-4bc9-9d6c-4231957aa2f3",
       "comment": "",
       "command": "click",
-      "target": "css=.quick-search__submit-svg",
+      "target": "css=.search-text:nth-child(1)",
       "targets": [
-        ["css=.quick-search__submit-svg", "css:finder"]
+        ["css=.search-text:nth-child(1)", "css:finder"],
+        ["xpath=//button[@id='search-jobs']/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "5c93b6c0-015d-4940-8729-3eec02e427a8",
+      "id": "3b0247ed-951c-44fc-ab61-bd64023fc7df",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=li:nth-child(1) .hl",
+      "targets": [
+        ["css=li:nth-child(1) .hl", "css:finder"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/ul/li/div/div/div/div/ul/li[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Calgary')]", "xpath:innerText"]
+      ],
+      "value": "Calgary"
+    }, {
+      "id": "f7bfab8d-54e2-4a20-a050-f5afdeaa5461",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "41c3c764-857b-4bac-bea6-24d242969101",
+    "name": "jobs_by_default",
+    "commands": [{
+      "id": "80ae6154-43e4-4605-bfbe-66f025395d64",
+      "comment": "",
+      "command": "open",
+      "target": "/en-ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9181fa31-d093-4b99-ac35-fdc0339374fd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1358x697",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ab4f61d-6d85-48d3-80f8-53d85b92a612",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#bannerId2252_banner__image .banner__image-picture",
+      "targets": [
+        ["css=#bannerId2252_banner__image .banner__image-picture", "css:finder"],
+        ["xpath=//img[@alt='Spring Into Savings! Up to 50% off Clearance. While quantities last.']", "xpath:img"],
+        ["xpath=//div[@id='bannerId2252_banner__image']/a/picture/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73062b55-fc4d-4ebd-a5fc-2fa4d1a9f86a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#bannerId2252_banner__image .banner__image-picture",
+      "targets": [
+        ["css=#bannerId2252_banner__image .banner__image-picture", "css:finder"],
+        ["xpath=//img[@alt='Spring Into Savings! Up to 50% off Clearance. While quantities last.']", "xpath:img"],
+        ["xpath=//div[@id='bannerId2252_banner__image']/a/picture/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac37afa3-cb01-4d73-907b-af8269d51118",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3301)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53bf3213-202b-4efd-b8dc-82e5f48b41a9",
       "comment": "",
       "command": "click",
-      "target": "css=.Select-arrow-zone",
+      "target": "css=.services > a:nth-child(3)",
       "targets": [
-        ["css=.Select-arrow-zone", "css:finder"],
-        ["xpath=//div[@id='product-list__results-container']/div[4]/div[3]/div/div/span[2]", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div/span[2]", "xpath:position"]
+        ["css=.services > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'careers')]", "xpath:link"],
+        ["xpath=//div[@id='instanceId11']/footer/div/div/div/div/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.chapters.indigo.ca/en-ca/careers/careers-at-indigo/?link-usage=Footer%3A%20careers')]", "xpath:href"],
+        ["xpath=//footer/div/div/div/div/a[3]", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "506c2351-b985-4356-91bd-8084ce72ab16",
+      "id": "95b11a6c-aef9-438b-84b9-a788ab01dd09",
       "comment": "",
-      "command": "mouseUp",
-      "target": "css=.search-page__load-more-button-container",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2701)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b96c75f-a6bd-4f83-83db-06012d062683",
+      "comment": "",
+      "command": "click",
+      "target": "css=.careers--apply > .cta--button",
       "targets": [
-        ["css=.search-page__load-more-button-container", "css:finder"],
-        ["xpath=//div[@id='product-list__results-container']/div[5]", "xpath:idRelative"],
-        ["xpath=//section[2]/div/div/div/div[5]", "xpath:position"]
+        ["css=.careers--apply > .cta--button", "css:finder"],
+        ["xpath=(//a[contains(text(),'apply now')])[2]", "xpath:link"],
+        ["xpath=//main[@id='main']/div/div/div/div/div/div/div/span/article/section[5]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://careers.indigo.ca/')])[2]", "xpath:href"],
+        ["xpath=//section[5]/a", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win136",
+      "windowTimeout": 2000
+    }, {
+      "id": "4c5bc965-1b78-4980-aff4-91a5fc7dc428",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win136}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32fcc657-cc95-40cf-a0fb-8135236afa3d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=search-jobs",
+      "targets": [
+        ["name=search-jobs", "name"],
+        ["css=.search-jobs", "css:finder"],
+        ["xpath=//input[@name='search-jobs']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/div/div/div[2]/div[2]/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "a126b1ed-8f5b-4b8d-a88f-b4db85006030",
+      "id": "2bc89290-86ab-4480-95e4-4a6c6ab6a5ef",
       "comment": "",
-      "command": "verifyText",
-      "target": "id=react-select-54--value-item",
+      "command": "verifyElementPresent",
+      "target": "id=jobs-list",
       "targets": [
-        ["id=react-select-54--value-item", "id"],
-        ["css=#react-select-54--value-item", "css:finder"],
-        ["xpath=//span[@id='react-select-54--value-item']", "xpath:attributes"],
-        ["xpath=//span[@id='react-select-54--value']/div/span", "xpath:idRelative"],
-        ["xpath=//span/div/span", "xpath:position"]
+        ["id=jobs-list", "id"],
+        ["css=#jobs-list", "css:finder"],
+        ["xpath=//h3[@id='jobs-list']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/h3", "xpath:idRelative"],
+        ["xpath=//div[2]/div/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Results (79)')]", "xpath:innerText"]
       ],
-      "value": "Availability"
+      "value": ""
     }, {
-      "id": "76602c60-5511-4f05-ae09-a422f823a1da",
+      "id": "6409515c-c071-4e0a-9503-29caa056b042",
       "comment": "",
       "command": "close",
       "target": "",
