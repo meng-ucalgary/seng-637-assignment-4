@@ -211,7 +211,11 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
   | `DataUtilities.calculateColumnTotal(Values2D, int)`        | 5        | 62     | 67    | 92.54      |
   | `DataUtilities.calculateColumnTotal(Values2D, int, int[])` | 10       | 81     | 91    | 89.01      |
   | `DataUtilities.getCumulativePercentages(KeyedValues)`      | 6        | 119    | 125   | 95.20      |
-  | Total                                                      | 36       | 405    | 441   | 91.83      |
+  | Total for original methods                                 | 36       | 405    | 441   | 91.83      |
+  | -                                                          | -        | -      | -     | -          |
+  | `DataUtilities.createNumberArray(double[])`                | 3        | 35     | 38    | 92.10      |
+  | `DataUtilities.createNumberArray2D(double[][])`            | 1        | 43     | 44    | 97.72      |
+  | Total including new methods                                | 40       | 483    | 523   | 92.35      |
 
 ## Analysis on effectiveness of each of the test classes
 
@@ -234,9 +238,9 @@ Although equivalent mutations are hard to detect and they impede on the reliance
 
 ## What could have been done to improve the mutation score of the test suites
 
-For this assignment, the objective is to create test cases that help improve the mutation score of the 5 methods that we focused on for the Range and DataUtilities class. However, the scores includes mutations that are of other methods within the class.
+For this assignment, the objective is to create test cases that help improve the mutation score of the 5 methods that we focused on for the `Range` and `DataUtilities` class. However, the scores includes mutations that are of other methods within the class.
 
-As such, one way to improve the accuracy scores is to added additional test cases for the methods from the class source code that are not originally tested by our test cases. As discussed above, our original test suite killed almost every mutation so there was little room for improvement. After adding test cases to kill reamining mutants, we decided to add tests for two more methods in the Range class to increase the overall coverage. These were for `Range.combine` and `Range.expand()`. Covering more methods in the class significantly increased the overall coverage.
+As such, one way to improve the accuracy scores is to add additional test cases for the methods that were not originally covered by our test cases. As discussed above, our original test suite killed almost every non-equivalent mutation so there was little room for improvement. After adding test cases to kill reamining mutants, we decided to add tests for two more methods in the `Range` class to increase the overall mutation coverage score. These were for `Range.combine(Range, Range)` and `Range.expand(Range, double, double)`. Covering more methods in the class significantly increased the overall coverage.
 
 ## Need for Mutation Testing
 
