@@ -161,18 +161,18 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
   ![Range_Mutants_Statistics_After](images/Range_Mutant_Statistics_After.png)
 
   Below is the coverage of each method calculated manually for the Range class after adding test cases. As we could not improve scores significantly test cases for two additional methods were also created.
-  | Method                                   | Survived | Killed | Total | Coverage % |
+  | Method | Survived | Killed | Total | Coverage % |
   | ---------------------------------------- | -------- | ------ | ----- | ---------- |
-  | `Range.isNaNRange()`                     | 10       | 33     | 43    | 76.74      |
-  | `Range.shift(Range, double, boolean)`    | 8        | 54     | 62    | 87.10      |
-  | `Range.intersects(double, double)`       | 17       | 89     | 106   | 83.96      |
-  | `Range.expandToInclude(Range, double)`   | 10       | 57     | 67    | 85.07      |
-  | `Range.combineIgnoringNaN(Range, Range)` | 10       | 76     | 86    | 88.72      |
-  | Total for original methods               | 55       | 309    | 364   | 84.89      |
-  | -                                        | -        | -      | -     | -          |
-  | `Range.combine(Range, Range)`            | 4        | 29     | 33    | 87.87      |
-  | `Range.expand(Range, Range)`             | 16       | 118    | 134   | 88.60      |
-  | Total including new methods              | 75       | 456    | 531   | 85.87      |
+  | `Range.isNaNRange()` | 10 | 33 | 43 | 76.74 |
+  | `Range.shift(Range, double, boolean)` | 8 | 54 | 62 | 87.10 |
+  | `Range.intersects(double, double)` | 17 | 89 | 106 | 83.96 |
+  | `Range.expandToInclude(Range, double)` | 10 | 57 | 67 | 85.07 |
+  | `Range.combineIgnoringNaN(Range, Range)` | 10 | 76 | 86 | 88.72 |
+  | Total for original methods | 55 | 309 | 364 | 84.89 |
+  | - | - | - | - | - |
+  | `Range.combine(Range, Range)` | 4 | 29 | 33 | 87.87 |
+  | `Range.expand(Range, Range)` | 16 | 118 | 134 | 88.60 |
+  | Total including new methods | 75 | 456 | 531 | 85.87 |
 
 - **Mutation score of DataUtilities - before**
 
@@ -291,8 +291,8 @@ Each of the eight functionalities chosen was tested with different test data usi
 |                          | Test login with valid password                           |
 | Email preferences        | Test opt-out of all email communication                  |
 |                          | Test opt-in of all email communication                   |
-| Finding different stores | _TBA_                                                    |
-|                          | _TBA_                                                    |
+| Finding different stores | Test searching for stores in city                        |
+|                          | Test searching for stores by postal code                 |
 | Changing account details | Test changing phone number with valid number             |
 |                          | Test changing phone number with invalid number (letters) |
 | Finding different stores | Search by city name                                      |
