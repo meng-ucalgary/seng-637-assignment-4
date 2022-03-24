@@ -117,28 +117,23 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 
 5. #### Mutation #5 (on line #161, mutation #3)
 
-   Within the intersect method of the Range class, one of the mutations is: "changed conditional boundary"
-   This mutation is applied to the following code within the intersect method:
+   Mutation applied by Pitest was `changed conditional boundary → KILLED` on the method `intersects(double, double)`. This mutation was applied to the below line of code
 
    ```
    return (b0 < this.upper && b1 >= b0);
    ```
 
-   For this mutation, this .upper value is changed with a smaller number such that if there are no test cases with b0 smaller than their changed boundary of this.upper, the mutation will survice.
-
-   Fortunately, the test case intersectsWithInput0And0 that was developed in previous assignment successfully killed this mutation.
+   According to the official documentation, this mutation changes the condition `b0 < this.upper` to `b0 <= this.upper`. One of our test case `intersectsWithInputUBAndAUB` tests this boundary, by supplying `b0` equal to `this.upper`. With original code, the test case passes as the method returns `false`. However, the mutation causes the method to return `true` and the test case fails. Hence this mutation was killed.
 
 6. #### Mutation #6 (on line #365, mutation #1)
 
-   In the shift method of the Range class, the mutation "removed call to ParamChecks.nullNotPermitted", is applied to the code:
+   Mutation applied by Pitest was `removed call to org/jfree/chart/util/ParamChecks::nullNotPermitted → SURVIVED` on the method `shift(Range, double, boolean)`. This mutation was applied to the below line of code
 
    ```
    ParamChecks.nullNotPermitted(base, "base");
    ```
 
-   and should throw illegalArgumentException if the base range is null.
-
-   This mutation survived because there was no test case previously written, that uses a null Range object.
+   This mutation removes the call to the above line. The method call throws `IllegalArgumentException` if the parameter base is null. Since there was no test case that tests base as null for this method, the removal of the call to `ParamChecks.nullNotPermitted()` did not make any difference to any of the test cases. Hence the mutation was survived.
 
 7. #### Mutation #7 (on line #448, mutation #1)
 
@@ -264,7 +259,7 @@ After adding more test cases, we again ran mutation tests on `Range` and `DataUt
 
 ## Analysis drawn on the effectiveness of each of the test classes
 
-After analyzing the Pitest reports, in both the Range class and DataUtilities class, it was determined that almost all of the surviving mutations were equivalent mutations. Therefor there was ittle thavery lt could be done to improve upon these scores. The only method that had a significant number of non-equivalent mutations was `Range.combineIgnoringNaN(Range, Range)` where an additional 8 mutants could be killed, increasing the coverage for this method by 9.65%.
+After analyzing the Pitest reports, in both the `Range` class and `DataUtilities` class, it was determined that almost all of the surviving mutations were equivalent mutations. Therefor there was ittle thavery lt could be done to improve upon these scores. The only method that had a significant number of non-equivalent mutations was `Range.combineIgnoringNaN(Range, Range)` where an additional 8 mutants could be killed, increasing the coverage for this method by 9.65%.
 
 ### Test Case: intersectsWithReverse
 
