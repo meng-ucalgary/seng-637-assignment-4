@@ -88,30 +88,27 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 
 4. #### Mutation #4 (on line #305, mutation #4)
 
-   Within the expandToInclude method of the Range class, one of the mutations is:  
-   "removed conditional - replaced comparison check with false → KILLED"  
-   Upon analysis of the PIT report, this is applied to the line:
+   Mutation applied by Pitest was `removed conditional - replaced comparison check with false → KILLED` on the method `expandToInclude(Range, double)`. This mutation was applied to the below line of code
 
    ```
-   if (value < range.getLowerBound()) {...}
+   if (value < range.getLowerBound()) {
    ```
 
-   expandToIncludeWithInputBLB() is one of the many test cases that kills this mutation. This method uses a range of (-10,10) and value of -10.00001. Using these numbers, when the conditional in the if statement is replaced with false, the else statement will be executed instead. This returns the orignal range and does not expand it as intended. As the returned range does not match the expected range, the test fails and this mutation is killed.
+   This mutation replaces the conditional with `false`. `expandToIncludeWithInputBLB` is one of the many test cases that kills this mutation. This method uses a range of (-10, 10) and value of -10.00001. Using these numbers, when the conditional in the if statement is replaced with `false`, the else statement will be executed instead. This returns the orignal range and does not expand it as intended. As the returned range does not match the expected range, the test fails and this mutation is killed.
 
-   ```
+   ```java
    public static Range expandToInclude(Range range, double value) {
-     if (range == null) {
+   if (range == null) {
        return new Range(value, value);
-     }
-     if (value < range.getLowerBound()) {
-     return new Range(value, range.getUpperBound());
-     }
-     else if (value > range.getUpperBound()) {
+   }
+   if (value < range.getLowerBound()) {
+       return new Range(value, range.getUpperBound());
+   }
+   else if (value > range.getUpperBound()) {
        return new Range(range.getLowerBound(), value);
-     }
-     else {
-     return range;
-     }
+   }
+   else {
+       return range;
    }
    ```
 
@@ -123,7 +120,7 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
    return (b0 < this.upper && b1 >= b0);
    ```
 
-   According to the official documentation, this mutation changes the condition `b0 < this.upper` to `b0 <= this.upper`. One of our test case `intersectsWithInputUBAndAUB` tests this boundary, by supplying `b0` equal to `this.upper`. With original code, the test case passes as the method returns `false`. However, the mutation causes the method to return `true` and the test case fails. Hence this mutation was killed.
+   According to the official Pitest documentation, this mutation changes the condition `b0 < this.upper` to `b0 <= this.upper`. One of our test case `intersectsWithInputUBAndAUB` tests this boundary, by supplying `b0` equal to `this.upper`. With original code, the test case passes as the method returns `false`. However, the mutation causes the method to return `true` and the test case fails. Hence this mutation was killed.
 
 6. #### Mutation #6 (on line #365, mutation #1)
 
