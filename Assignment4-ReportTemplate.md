@@ -34,6 +34,7 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 Within the intersect method of the Range class, one of the mutations is:
 “Incremented (a++) double local variable number 3 → SURVIVED”
 Upon analysis of the PIT report, this is applied to the line:
+
 ```
 return (b0 < this.upper && b1 >= b0);
 ```
@@ -44,9 +45,11 @@ This is an equivalent mutation and cannot be killed as it is post increment on a
 Within the intersect method of the Range class, one of the mutations is:
 “Decremented (a--) double local variable number 3 → SURVIVED”
 Upon analysis of the PIT report, this is applied to the line:
+
 ```
 return (b0 < this.upper && b1 >= b0);
 ```
+
 This is an equivalent mutation and cannot be killed as it is post derement on a return statement, which means that the decrement will not be used again.
 
 ### Mutation #3:
@@ -54,13 +57,15 @@ This is an equivalent mutation and cannot be killed as it is post derement on a 
 Within the expandToInclude method of the Range class, one of the mutations is:
 "changed conditional boundary → SURVIVED"
 Upon analysis of the PIT report, this is applied to the line:  
-`if (value < range.getLowerBound()) { ... }`   
+`if (value < range.getLowerBound()) { ... }`  
 From the Pitest documentation, the 'Conditionals Boundary Mutator' mutates < to <=. Examining the original function below we can see this results in an equivalent mutation.
-For example, with range (-10,10) and value of -10 the final else statement would be executed and the original range returned. The mutatuion of < to <= results in the line   
+For example, with range (-10,10) and value of -10 the final else statement would be executed and the original range returned. The mutatuion of < to <= results in the line
+
 ```
 return new Range(value, range.getUpperBound());
 ```
- being executed instead. However the new range would be (-10,10), the same result as returning the original range. Therefor this is an equivalent mutation and can not be killed.
+
+being executed instead. However the new range would be (-10,10), the same result as returning the original range. Therefor this is an equivalent mutation and can not be killed.
 
 ```
 public static Range expandToInclude(Range range, double value) {
@@ -78,14 +83,17 @@ public static Range expandToInclude(Range range, double value) {
   }
 }
 ```
+
 ### Mutation #4:
 
 Within the expandToInclude method of the Range class, one of the mutations is:  
 "removed conditional - replaced comparison check with false → KILLED"  
-Upon analysis of the PIT report, this is applied to the line:  
+Upon analysis of the PIT report, this is applied to the line:
+
 ```
-if (value < range.getLowerBound()) {...} 
-```  
+if (value < range.getLowerBound()) {...}
+```
+
 expandToIncludeWithInputBLB() is one of the many test cases that kills this mutation. This method uses a range of (-10,10) and value of -10.00001. Using these numbers, when the conditional in the if statement is replaced with false, the else statement will be executed instead. This returns the orignal range and does not expand it as intended. As the returned range does not match the expected range, the test fails and this mutation is killed.
 
 ```
@@ -118,7 +126,6 @@ For this mutation, this .upper value is changed with a smaller number such that 
 
 Fortunately, the test case intersectsWithInput0And0 that was developed in previous assignment successfully killed this mutation.
 
-
 ### Mutation #6:
 
 In the shift method of the Range class, the mutation "removed call to ParamChecks.nullNotPermitted", is applied to the code:
@@ -126,12 +133,10 @@ In the shift method of the Range class, the mutation "removed call to ParamCheck
 ```
 ParamChecks.nullNotPermitted(base, "base");
 ```
-and should throw illegalArgumentException if the base range is null. 
+
+and should throw illegalArgumentException if the base range is null.
 
 This mutation survived because there was no test case previously written, that uses a null Range object.
-
-
-
 
 ## Mutation score and statistics
 
@@ -145,6 +150,8 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
   ![Range_Mutants_Statistics_Before](images/Range_Mutants_Statistics_Before.png)
 
+  Due to the the Range class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually
+
   | Method                                   | Survived | Killed | Total | Coverage % |
   | ---------------------------------------- | -------- | ------ | ----- | ---------- |
   | `Range.isNaNRange()`                     | 10       | 33     | 43    | 76.74      |
@@ -152,6 +159,7 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
   | `Range.intersects(double, double)`       | 23       | 83     | 106   | 78.30      |
   | `Range.expandToInclude(Range, double)`   | 10       | 57     | 67    | 85.07      |
   | `Range.combineIgnoringNaN(Range, Range)` | 18       | 68     | 86    | 79.07      |
+  | Total                                    | 70       | 294    | 364   | 80.77      |
 
 - **Mutation score of DataUtilities - before**
 
@@ -161,6 +169,8 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
 
   ![DataUtilities_Mutants_Statistics_Before](images/DataUtilities_Mutants_Statistics_Before.png)
 
+  Due to the the DataUtilities class containing other methods that are not tested, the overall score is not a very accurate measure of the coverage. Below is the coverage of each method calculated manually
+
   | Method                                                     | Survived | Killed | Total | Coverage % |
   | ---------------------------------------------------------- | -------- | ------ | ----- | ---------- |
   | `DataUtilities.calculateRowTotal(Values2D, int)`           | 6        | 61     | 67    | 91.04      |
@@ -168,6 +178,7 @@ After commenting out failing test cases in Assignment 3, we ran mutation tests o
   | `DataUtilities.calculateColumnTotal(Values2D, int)`        | 6        | 61     | 67    | 91.04      |
   | `DataUtilities.calculateColumnTotal(Values2D, int, int[])` | 11       | 80     | 91    | 87.91      |
   | `DataUtilities.getCumulativePercentages(KeyedValues)`      | 7        | 118    | 125   | 94.40      |
+  | Total                                                      | 41       | 400    | 441   | 90.70      |
 
 After adding more test cases, we again ran mutation tests on `Range` and `DataUtilities`.
 
@@ -181,11 +192,16 @@ After adding more test cases, we again ran mutation tests on `Range` and `DataUt
 
   | Method                                   | Survived | Killed | Total | Coverage % |
   | ---------------------------------------- | -------- | ------ | ----- | ---------- |
-  | `Range.isNaNRange()`                     |          |        |       |            |
-  | `Range.shift(Range, double, boolean)`    |          |        |       |            |
+  | `Range.isNaNRange()`                     | 10       | 33     | 43    | 76.74      |
+  | `Range.shift(Range, double, boolean)`    | 8        | 54     | 62    | 87.10      |
   | `Range.intersects(double, double)`       | 21       | 85     | 106   | 80.2       |
-  | `Range.expandToInclude(Range, double)`   |          |        |       |            |
-  | `Range.combineIgnoringNaN(Range, Range)` |          |        |       |            |
+  | `Range.expandToInclude(Range, double)`   | 10       | 57     | 67    | 85.07      |
+  | `Range.combineIgnoringNaN(Range, Range)` | 10       | 76     | 86    | 88.72      |
+  | Total for original methods               | 59       | 305    | 364   | 83.79      |
+  | -                                        | -        | -      | -     | -          |
+  | `Range.combine(Range, Range)`            | 4        | 29     | 33    | 87.87      |
+  | `Range.expand(Range, Range)`             | 16       | 118    | 134   | 88.60      |
+  | Total including new methods              | 79       | 452    | 531   | 85.12      |
 
 - **Mutation score of DataUtilities - after**
 
@@ -202,6 +218,7 @@ After adding more test cases, we again ran mutation tests on `Range` and `DataUt
   | `DataUtilities.calculateColumnTotal(Values2D, int)`        | 5        | 62     | 67    | 92.54      |
   | `DataUtilities.calculateColumnTotal(Values2D, int, int[])` | 10       | 81     | 91    | 89.01      |
   | `DataUtilities.getCumulativePercentages(KeyedValues)`      | 6        | 119    | 125   | 95.20      |
+  | Total                                                      |          |        |       |            |
 
 ## Analysis drawn on the effectiveness of each of the test classes
 
