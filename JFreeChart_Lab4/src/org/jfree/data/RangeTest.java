@@ -137,8 +137,11 @@ public class RangeTest {
         Range expected = new Range(-11.0, 0.0);
         assertTrue("A shift of -8.0 should return a range of (-11.0, 0.0)", rangeShift.equals(expected));
     }
-    // ------------------------------------------------------------------------
-
+    // new test cases ---------------------------------------------------------
+    @Test(expected = IllegalArgumentException.class)
+    public void shiftTestWithNullRange() {
+        Range.shift(null, -3, true);
+    }
     // test cases for intersects(double, double) ------------------------------
     @Test
     public void intersectsWithInputBLBAndLB() {
@@ -594,7 +597,7 @@ public class RangeTest {
     @Test
     public void combineWithBothRangeNull() {
         assertEquals("Testing combining with both range null", null,
-                Range.combineIgnoringNaN(null, null));
+                Range.combine(null, null));
     }
 
 
