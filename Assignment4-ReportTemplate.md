@@ -310,10 +310,10 @@ Each of the eight functionalities chosen was tested with different test data usi
 |                          | Test removing items from the cart                        |
 | Wishlist                 | Test adding items to the wishlist                        |
 |                          | Test removing items from the wishlist                    |
-| Filtering search results | _TBA_                                                    |
-|                          | _TBA_                                                    |
-| _TBA_                    | _TBA_                                                    |
-|                          | _TBA_                                                    |
+| Filtering search results | Test turn ON Filter for watches from Jewelry list        |
+|                          | Test turn OFF Filter for watches from Jewelry list       |
+| Careers                  | Test default jobs display page                           |
+|                          | Test job search by location                              |
 
 ## Selenium vs Sikulix
 
