@@ -38,6 +38,7 @@ Upon analysis of the PIT report, this is applied to the line:
 ```
 return (b0 < this.upper && b1 >= b0);
 ```
+
 This is an equivalent mutation and cannot be killed as it is post increment on a return statement, which means that the increment will not be used again.
 
 ### Mutation #2:
@@ -218,9 +219,11 @@ After adding more test cases, we again ran mutation tests on `Range` and `DataUt
   | `DataUtilities.calculateColumnTotal(Values2D, int)`        | 5        | 62     | 67    | 92.54      |
   | `DataUtilities.calculateColumnTotal(Values2D, int, int[])` | 10       | 81     | 91    | 89.01      |
   | `DataUtilities.getCumulativePercentages(KeyedValues)`      | 6        | 119    | 125   | 95.20      |
-  | Total                                                      |          |        |       |            |
+  | Total                                                      | 36       | 405    | 441   | 91.83      |
 
 ## Analysis drawn on the effectiveness of each of the test classes
+
+After analyzing the Pitest reports, in both the Range class and DataUtilities class, it was determined that almost all of the surviving mutations were equivalent mutations. Therefor there was ittle thavery lt could be done to improve upon these scores. The only method that had a significant number of non-equivalent mutations was `Range.combineIgnoringNaN(Range, Range)` where an additional 8 mutants could be killed, increasing the coverage for this method by 9.65%.
 
 ### Test Case: intersectsWithReverse
 
@@ -238,7 +241,7 @@ By definition, equivalent mutants are the mutants that cannot be killed under an
 
 Since these mutants cannot be killed yet still counts as part of the mutation coverage, it will always contribute in the lowering the test cases mutation score accuracy.
 
-One of the equivalent mutant examples that we have come across are the post increment and decrement mutants that were injected into all of the methods where we have tried many ways to eliminate these mutants, yet we can never kill it.
+One of the equivalent mutant examples that we have come across are the post increment and decrement mutants that were injected into all of the methods where we have tried many ways to eliminate these mutants, yet we can not kill most of them. This is due to the variable being incremented after its last use, therefore having no effect on the remaining code.These mutations can only be detected if the variable is used again.
 
 Although equivalent mutations are hard to detect and they impede on the reliance of these results, there have been theoretically ways that can detect these mutations. Upon researching on this topic, there has been several methods proposed in different research in detecting equivalent mutations such as:
 
@@ -249,7 +252,7 @@ Although equivalent mutations are hard to detect and they impede on the reliance
 
 For this assignment, the objective is to create test cases that help improve the mutation score of the 5 methods that we focused on for the Range and DataUtilities class. However, the scores includes mutations that are of other methods within the class.
 
-As such, one way to improve the accuracy scores is to added additional test cases for the methods from the class source code that are not originally tested by our test cases.
+As such, one way to improve the accuracy scores is to added additional test cases for the methods from the class source code that are not originally tested by our test cases. As discussed above, our original test suite killed almost every mutation so there was little room for improvement. After adding test cases to kill the few killable mutants, we decided to add tests for two more methods in the Range class to increase the overall coverage. These were for `Range.combine` and `Range.expand()`. Covering more methods in the class significantly increased the overall coverage.
 
 ## Need for Mutation Testing
 
@@ -374,10 +377,12 @@ Each of the eight functionalities chosen was tested with different test data usi
    ```
 
    Later it was found that the problem is arising with newer version of the Eclipse. After downgrading Eclipse from **2021-12** to **2021-03**, Pitest was installed successfully.
+2. This was another error encountered when trying to run Pitest in Eclipse. The error was solved by ensuring Eclipse was using the Java8 JRE.
+<img src="images/eclipse_error.png" width="600">
 
-2. Some websites add an another authentication factor like **CAPTCHA** when they detect automated interactions with their websites. So, selenium test cases that includes login pause in the middle until the tester manually deals with those CAPTCHAs.
+3. Some websites add an another authentication factor like **CAPTCHA** when they detect automated interactions with their websites. So, selenium test cases that includes login pause in the middle until the tester manually deals with those CAPTCHAs.
 
-3. To objective for improving mutation scores to at least 10% for each class is very difficult to obtain because we are focusing on the 5 methods of each class from the previous assignments. Our test cases only yields a mutation coverage of 58% because they are designed to only cover the 5 methods from the class. If we were to delete all of the other methods besides the 5 methods that we wrote test cases for from our previous assignments, our tests yields 91% mutation coverage.
+4. To objective for improving mutation scores to at least 10% for each class is very difficult to obtain because we are focusing on the 5 methods of each class from the previous assignments. Our test cases only yields a mutation coverage of 58% because they are designed to only cover the 5 methods from the class. If we were to delete all of the other methods besides the 5 methods that we wrote test cases for from our previous assignments, our tests yields 91% mutation coverage.
 
 <img src="images/DataUtilities_5_Methods_Before.png" width="600">
 
