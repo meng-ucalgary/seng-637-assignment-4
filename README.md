@@ -10,7 +10,7 @@
 
 - The selenium IDE recorded test cases are [here](Selenium_Test_Indigo.side).
 
-- The demonstration video is _TBA_.
+- The demonstration video is [here](https://youtu.be/-5AMjgdIZHU).
 
 ## Contributors
 
