@@ -407,15 +407,17 @@ The functionalities tested using Selenium IDE by each member are summarized in t
 
    ![Pitest non JRE 8 error](images/eclipse_error.png)
 
-3. Some websites add an another authentication factor like **CAPTCHA** when they detect automated interactions with their websites. So, selenium test cases that includes login pause in the middle until the tester manually deals with those CAPTCHAs.
-
-4. To objective for improving mutation scores to at least 10% for each class is very difficult to obtain because we are focusing on the 5 methods of each class from the previous assignments. For example, our test cases for `DataUtilities` only yields a mutation coverage of 58% because they are designed to only cover the 5 methods from this class. If we were to delete all of the other methods besides the 5 methods that we wrote test cases for from our previous assignments, our tests yields 91% mutation coverage.
+3. To objective for improving mutation scores to at least 10% for each class is very difficult to obtain because we are focusing on the 5 methods of each class from the previous assignments. For example, our test cases for `DataUtilities` only yields a mutation coverage of 58% because they are designed to only cover the 5 methods from this class. If we were to delete all of the other methods besides the 5 methods that we wrote test cases for from our previous assignments, our tests yields 91% mutation coverage.
 
    ![DataUtilies only 5 methods before](images/DataUtilities_5_Methods_Before.png)
 
    We have also written 5 test cases for the data utilities class and with those 5 test cases, we have increase the mutations killed from 400 to 405 out of 441, which means we increased it by 1%.
 
    ![DataUtilies only 5 methods after](images/DataUtilities_5_Methods_After.png)
+
+4. Some websites add an another authentication factor like **CAPTCHA** when they detect automated interactions with their websites. So, selenium test cases that includes login pause in the middle until the tester manually deals with those CAPTCHAs.
+
+5. Most of the time, Selenium IDE test cases run fine however sometimes they get stuck in the middle for no apparent reason. Manual intervention is necessary to get the test cases to run.
 
 ## Comments and feedback
 
