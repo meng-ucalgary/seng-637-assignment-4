@@ -1,14 +1,18 @@
-# seng637-assignment4
+# SENG 637 - Winter 2022
 
-# Guidline
+**Assignment 4** - Mutation Testing and Web app testing
 
-- read [assignment guideline](assignment4.md)
-- commit and push output on **Github** ([assignment report template](./Assignment4-ReportTemplate.md))
+## Structure
 
-## Note:
+- The assignment report is [here](Assignment4-ReportTemplate.md).
 
-"RangeTest comment out: intersectsWithReverse, combineIgnoringNaNWithMinBoundNaN,intersectsWithInputNaNAnd1,combineIgnoringNaNWithMaxBoundNaN   to allow mutation test to run"
+- The demonstration video is _TBA_.
 
-"DataUtilities comment out: calculateColumnTotalMaxRowsMaxColumn, 
-calculateRowTotalBelowMaxRowsBelowMaxColumn, calculateRowTotalMaxRowsMaxColumn, calculateRowTotalFirstRowInvalidColumnBLB, calculateColumnTotalInvalidRowBLBFirstColumn, calculateColumnTotalBelowMaxRowsBelowMaxColumn    to allow mutation test to run"
+## Contributors
 
+| Group 5 students         | GitHub link                                 |
+| ------------------------ | ------------------------------------------- |
+| Bhavyai Gupta            | [zbhavyai](https://github.com/zbhavyai)     |
+| Drew Burritt             | [dburritt](https://github.com/dburritt)     |
+| Michael Man Yin Lee      | [mlee2021](https://github.com/mlee2021)     |
+| Okeoghenemarho Obuareghe | [oobuareghe](https://github.com/oobuareghe) |
