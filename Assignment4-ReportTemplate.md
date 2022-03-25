@@ -297,8 +297,8 @@ In the Selenium IDE, these functionalities are implemented using `assert` and `v
 | AddBooks_EmptyCart                   | Verifies number of books after books are added to cart                  |
 | ChangeAccount_correct_phonenumber    | Verifies phone number after changing and saving it                      |
 | ChangeAccount_incorrect_phonenumber  | Verifies error message after trying to save invalid phone number        |
-| EmailPreferences_opt_in              | Verfies preference change message                                       |
-| EmailPreferences_opt_out             | Verfies preference change message                                       |
+| EmailPreferences_opt_in              | Verifies preference change message                                      |
+| EmailPreferences_opt_out             | Verifies preference change message                                      |
 | Login_with_correct_password          | Verifies if correct user is logged in                                   |
 | Login_with_incorrect_password        | Verifies the error message                                              |
 | SelectStoreSearchCity                | Verifies store name after searching for 'edmonton'                      |
