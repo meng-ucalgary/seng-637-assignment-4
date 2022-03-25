@@ -359,7 +359,7 @@ Each of the eight functionalities chosen was tested with different test data usi
 
 **Division of mutation analysis and additional test cases**
 
-Drew, Michael, and Bhavyai wrote additional test cases for both the classes `Range` and `DataUtilities` that improved the mutation score. Then all four members did analysis of mutants in the Pitest report.
+First all four members did analysis of 10 mutants in the Pitest report. The analysis done by each member is summarized in the below table. Then Drew, Michael, and Bhavyai wrote additional test cases for both the classes `Range` and `DataUtilities` that improved the mutation score.
 
 | Mutation analysis | Tester                   |
 | ----------------- | ------------------------ |
@@ -369,6 +369,8 @@ Drew, Michael, and Bhavyai wrote additional test cases for both the classes `Ran
 | #7, #8, #9, #10   | Bhavyai Gupta            |
 
 **Division of Selenium IDE test cases**
+
+The functionalities tested using Selenium IDE by each member are summarized in the below table.
 
 | Tester                   | Functionality            |
 | ------------------------ | ------------------------ |
