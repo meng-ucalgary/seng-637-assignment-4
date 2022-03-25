@@ -292,22 +292,22 @@ For example, for the test cases with the Indigo's cart, we asserted the number o
 
 In the Selenium IDE, these functionalities are implemented using `assert` and `verify` commands (and their derivatives). According the [official Selenium IDE documentation](https://www.selenium.dev/selenium-ide/docs/en/api/commands), the test case stops if the `assert` fails, but continues even if `verify` fails.
 
-| Test script name                     | Example of automated verification checkpoint |
-| ------------------------------------ | -------------------------------------------- |
-| AddBooks_EmptyCart                   |                                              |
-| ChangeAccount_correct_phonenumber    |                                              |
-| ChangeAccount_incorrect_phonenumber  |                                              |
-| EmailPreferences_opt_in              | Verfies preference change message            |
-| EmailPreferences_opt_out             | Verfies preference change message            |
-| Login_with_correct_password          | Verifies if correct user is logged in        |
-| Login_with_incorrect_password        | Verifies the error message                   |
-| SelectStoreSearchCity                |                                              |
-| SelectStoreSearchPostalCode          |                                              |
-| Wishlist_Default_Test                |                                              |
-| filter_watches_from_jewelry_ON       |                                              |
-| filter_watches_from_jewelry_turn_OFF |                                              |
-| jobs_by_default                      |                                              |
-| jobs_by_location                     |                                              |
+| Test script name                     | Example of automated verification checkpoint                            |
+| ------------------------------------ | ----------------------------------------------------------------------- |
+| AddBooks_EmptyCart                   |                                                                         |
+| ChangeAccount_correct_phonenumber    |                                                                         |
+| ChangeAccount_incorrect_phonenumber  |                                                                         |
+| EmailPreferences_opt_in              | Verfies preference change message                                       |
+| EmailPreferences_opt_out             | Verfies preference change message                                       |
+| Login_with_correct_password          | Verifies if correct user is logged in                                   |
+| Login_with_incorrect_password        | Verifies the error message                                              |
+| SelectStoreSearchCity                |                                                                         |
+| SelectStoreSearchPostalCode          |                                                                         |
+| Wishlist_Default_Test                |                                                                         |
+| filter_watches_from_jewelry_ON       | Verifies the text "watches" in the Filter pane                          |
+| filter_watches_from_jewelry_turn_OFF | Verifies the absence of the text "watches" in the Filter pane           |
+| jobs_by_default                      | Verifies the presence of the "Results" element on the default jobs page |
+| jobs_by_location                     | Verifies the search location                                            |
 
 ## Testing functionalities with different test data
 
