@@ -294,7 +294,7 @@ In the Selenium IDE, these functionalities are implemented using `assert` and `v
 
 | Test script name                     | Example of automated verification checkpoint                            |
 | ------------------------------------ | ----------------------------------------------------------------------- |
-| AddBooks_EmptyCart                   |                                                                         |
+| AddBooks_EmptyCart                   | Verifies number of books after books are added to cart                  |
 | ChangeAccount_correct_phonenumber    |                                                                         |
 | ChangeAccount_incorrect_phonenumber  |                                                                         |
 | EmailPreferences_opt_in              | Verfies preference change message                                       |
@@ -303,7 +303,7 @@ In the Selenium IDE, these functionalities are implemented using `assert` and `v
 | Login_with_incorrect_password        | Verifies the error message                                              |
 | SelectStoreSearchCity                |                                                                         |
 | SelectStoreSearchPostalCode          |                                                                         |
-| Wishlist_Default_Test                |                                                                         |
+| Wishlist_Default_Test                | Verifies number of books after books are added to wishlist              |
 | filter_watches_from_jewelry_ON       | Verifies the text "watches" in the Filter pane                          |
 | filter_watches_from_jewelry_turn_OFF | Verifies the absence of the text "watches" in the Filter pane           |
 | jobs_by_default                      | Verifies the presence of the "Results" element on the default jobs page |
