@@ -8,6 +8,8 @@
 
 - The mutation coverage reports from Pitest for each of the classes before and after adding new test cases is in [this](pitest_reports) folder.
 
+- The selenium IDE recorded test cases are [here](Selenium_Test_Indigo.side).
+
 - The demonstration video is _TBA_.
 
 ## Contributors
