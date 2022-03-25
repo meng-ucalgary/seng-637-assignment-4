@@ -6,6 +6,8 @@
 
 - The assignment report is [here](Assignment4-ReportTemplate.md).
 
+- The mutation coverage reports from Pitest for each of the classes before and after adding new test cases is in [this](pitest_reports) folder.
+
 - The demonstration video is _TBA_.
 
 ## Contributors
