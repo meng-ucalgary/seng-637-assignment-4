@@ -101,7 +101,7 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
    return Double.isNaN(this.lower) && Double.isNaN(this.upper);
    ```
 
-   This mutation replaces the whole boolean statement with `false`. This change propagates to the output of the method, as all the test cases will fail even if both the lower and upper bounds are not equal to `Double.NaN`. This will make several of our test cases fail. Couple of the test cases that kills this mutation are `isNaNRangeWithBothBoundNOM` and `isNaNRangeWithUpperBoundNaN`. Hence this mutation was killed.
+   This mutation replaces the whole boolean statement with `false`. This change propagates to the output of the method, as all the test cases will fail even if both the lower and upper bounds are equal to `Double.NaN`. This will make one of our test case `isNaNRangeWithBothBoundNaN` fail. Hence this mutation was killed.
 
 8. #### Mutation #8 (on line #448, mutation #15)
 
