@@ -292,11 +292,15 @@ For example, for the test cases with the Indigo's cart, we asserted the number o
 
 In the Selenium IDE, these functionalities are implemented using `assert` and `verify` commands (and their derivatives). According the [official Selenium IDE documentation](https://www.selenium.dev/selenium-ide/docs/en/api/commands), the test case stops if the `assert` fails, but continues even if `verify` fails.
 
+| Test script name | Automated verification checkpoint |
+| ---------------- | --------------------------------- |
+| _TestScriptName_ |                                   |
+
 ## Testing functionalities with different test data
 
-Each of the eight functionalities chosen was tested with different test data using Selenium IDE. The table below summarizes functionalities and items that were tested.
+Each of the eight functionalities/test chosen was tested with different test data using Selenium IDE. The table below summarizes tests and test data that was used during testing.
 
-| Functionality            | Test                                                     |
+| Test                     | Test data                                                |
 | ------------------------ | -------------------------------------------------------- |
 | Login                    | Test login with invalid password                         |
 |                          | Test login with valid password                           |
